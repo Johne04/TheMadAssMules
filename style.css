@@ -195,7 +195,7 @@ section .container .photos-title {
   width: 300px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-  border: 4px solid #d6b056;
+  border: 2px solid #ffffff;
   border-radius: 5px;
 }
 
@@ -331,7 +331,7 @@ section .container .photos-title {
   align-items: center;
   position: relative;
   width: 90%;
-  height: 90%;
+  height: 80%;
   background-color: var(--ctr-1);
   border-radius: 0.5rem;
 }
@@ -340,7 +340,7 @@ section .container .photos-title {
 .contact-form::after{
   content: '';
   position: absolute;
-  inset: -5rem;
+  inset: -20px;
   background: conic-gradient(
     from var(--gradient-angle),
     var(--ctr-3),
@@ -350,7 +350,7 @@ section .container .photos-title {
     var(--ctr-3));
   border-radius: inherit;
   animation: rotation 20s linear infinite;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .contact-form::after{
