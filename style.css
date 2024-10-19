@@ -182,17 +182,17 @@ section .container .photos-title {
   width: 70%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, 350px);
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 3rem;
+  gap: 1rem;
   /* background-color: white; */
   padding: 6rem 0;
 }
 
 .photo-gallery img {
-  width: 300px;
+  width: 350px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
   border: 2px solid #ffffff;
