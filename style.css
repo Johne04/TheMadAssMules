@@ -37,7 +37,7 @@ section {
   justify-content: flex-end;
   align-items: center;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   top: 0;
   list-style: none;
 }
@@ -249,7 +249,7 @@ section .container .photos-title {
 }
 
 .setlist-container {
-  z-index: 1;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -257,7 +257,7 @@ section .container .photos-title {
   padding: 8rem 0;
 }
 
-.song-container-inner h3{
+.song-container-inner h3 {
   color: dodgerblue;
 }
 
@@ -280,91 +280,100 @@ section .container .photos-title {
   font-weight: 500;
 }
 
-/* .firstdance {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  justify-content: center;
-} */
-
 #contactus {
   background-color: #24272e;
-  height: 100vh;
-  width: 100vw;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-@property --gradient-angle{
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  width: 90%;
+  height: 80%;
+  position: relative;
+  min-height: 400px; /* Ensure minimum height */
+}
+
+@property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
-:root{
+:root {
   --ctr-1: #052b2f;
   --ctr-2: #073438;
   --ctr-3: #0e4b50;
   --ctr-4: #2d8f85;
   --ctr-5: #637c54;
 }
-@keyframes rotation{
-  0% {--gradient-angle: 0deg; }
-  100% {--gradient-angle: 360deg; }
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
 
-.contact-container{
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  width: 90%;
-  height: 80%;
-}
-
-.left-side, .right-side{
+.left-side,
+.right-side {
   border: 2px solid white;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-form{
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 90%;
-  height: 80%;
+  height: 100%; /* Fill parent height */
+  width: 100%; /* Fill parent width */
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%; /* Set explicit width */
+  height: 90%; /* Set explicit height */
   background-color: var(--ctr-1);
   border-radius: 0.5rem;
+  z-index: 100;
 }
 
 .contact-form::before,
-.contact-form::after{
-  content: '';
+.contact-form::after {
+  content: "";
   position: absolute;
-  inset: -20px;
+  inset: -10px;
   background: conic-gradient(
     from var(--gradient-angle),
     var(--ctr-3),
     var(--ctr-4),
     var(--ctr-5),
     var(--ctr-4),
-    var(--ctr-3));
+    var(--ctr-3)
+  );
   border-radius: inherit;
   animation: rotation 20s linear infinite;
-  /* z-index: -1; */
+  z-index: -1;
+  filter: blur(1.5rem);
 }
 
-.contact-form::after{
-  filter: blur(3.5rem);
-}
-/* .contact-form::after{
-  content: '';
+.contact-form::before {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  background: red;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  z-index: -2;
+}
+
+/* .contact-form::after {
   z-index: -1;
-  padding: 10px solid blue;
+  filter: blur(1.5rem);
+} */
+
+/* .firstdance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  justify-content: center;
 } */
