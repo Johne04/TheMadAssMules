@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@ section {
 .nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  /* gap: 1rem; */
 }
 .nav ul {
   background-color: rgba(48, 48, 48, 0.8);
@@ -115,7 +115,7 @@ main {
 
 .button-container {
   position: absolute;
-  bottom: 8rem;
+  bottom: 2rem;
   z-index: 10;
   display: flex;
   gap: 30px;
@@ -157,7 +157,7 @@ main {
 
 .main-video {
   position: absolute;
-  top: 12rem;
+  Margin: auto;
   z-index: 10;
   width: 50%;
   height: 56%;
@@ -165,6 +165,13 @@ main {
   display: none;
 }
 
+/* #videoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 56%;
+} */
 section:nth-child(odd) {
   background-color: #24272e;
 }
@@ -252,9 +259,11 @@ section .container .photos-title {
   z-index: 20;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 70%;
-  padding: 8rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
 }
 
 .song-container-inner h3 {
@@ -275,7 +284,7 @@ section .container .photos-title {
 
 .song-container-inner {
   min-height: 100vh;
-  padding: 30px 80px;
+  padding: 2rem 2rem;
   color: whitesmoke;
   font-weight: 500;
 }
