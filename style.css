@@ -115,8 +115,13 @@ main {
 
 .button-container {
   position: absolute;
+<<<<<<< Updated upstream
   bottom: 2rem;
   z-index: 10;
+=======
+  bottom: 8rem;
+  z-index: 1;
+>>>>>>> Stashed changes
   display: flex;
   gap: 30px;
 }
@@ -124,19 +129,30 @@ main {
 .enquiry {
   height: 50px;
   width: 150px;
-  font-weight: 800;
-  background-color: #24272e;
-  color: #d6b056;
   border: 3px solid silver;
   border-style: double;
-  border-radius: 5px;
+  border-radius: 1000px;
   letter-spacing: 1px;
   cursor: pointer;
+  color: white;
 }
 
-.button-container > *:hover {
-  background-color: #24272e;
+.button-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-vid,
+.enquiry a:hover {
+  text-decoration: none;
+  font-weight: 800;
+  color: dodgerblue;
   color: greenyellow;
+}
+
+.main-vid,
+.enquiry {
+  background-color: #2e2e2e;
 }
 .main-img {
   display: flex;
@@ -291,8 +307,8 @@ section .container .photos-title {
 
 #contactus {
   background-color: #24272e;
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,7 +347,7 @@ section .container .photos-title {
 
 .left-side,
 .right-side {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
