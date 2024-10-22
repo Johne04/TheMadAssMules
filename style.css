@@ -211,45 +211,109 @@ section .container .photos-title {
   border-radius: 5px;
 }
 
-/* .videos-grid-container {
-  width: 80%;
-  min-height: 20vh;
-  padding: 50px 0;
-  display: block;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  justify-content: center;
-  align-items: center;
-  align-content: end;
-  gap: 2rem;
-  border: 2px solid;
-} */
-
-/* .player {
-  display: flex;
-  margin-top: 20px;
-  justify-content: flex-start;
-  align-items: center;
-  width: 60%;
-  height: auto;
-  aspect-ratio: 16 /9 ;
-  border: 5px solid blue;
-  margin-bottom: 2rem;
-} */
-
-/* .video-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.photo-gallery img:hover {
+  transform: scale(1.05);
 }
 
-.video-gallery video {
-  width: 200px;
-  object-fit: cover;
+.slider-container {
+  position: relative;
+  width: 70%;
+  height: 70vh;
+  margin: 10vh auto;
+  overflow: hidden;
+  border: 5px solid dodgerblue;
+  border-style: double;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-main-container {
+  display: grid;
+  width: 70%;
+  min-height: 80vh;
+  grid-template-columns: repeat(auto-fit, 450px);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 2px solid red;
+}
+
+.video {
+  width: 450px;
   aspect-ratio: 16 / 9;
-  border: 2px solid #d6b056;
-  border-radius: 5px;
-} */
+  border: 2px solid blue;
+}
+
+.video-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+}
+
+.slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 1.2rem;
+  max-width: 70%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
 
 #setlist {
   background-image: url(./src/img/img7.jpg);
