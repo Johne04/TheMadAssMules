@@ -337,6 +337,8 @@ section .container .photos-title {
 
 .song-container-inner h3 {
   color: dodgerblue;
+  font-size: 1.3rem;
+  align-self: center;
 }
 
 .song-container-inner {
