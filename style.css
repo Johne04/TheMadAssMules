@@ -23,11 +23,11 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 6vh 0;
 }
-.nav {
-  display: flex;
-  justify-content: center;
-  /* gap: 1rem; */
+.nav{
+  display: block;
+  width: 100vw;
 }
 .nav ul {
   background-color: rgba(48, 48, 48, 0.8);
@@ -42,21 +42,25 @@ section {
   list-style: none;
 }
 
-.contact {
+/* .contact {
   padding-right: 8rem;
-}
+} */
 
 .nav ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 600;
-  margin: 1em;
-  margin-right: 5rem;
+  /* margin: 1em; */
+  margin-right: 2rem;
   display: inline-block;
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateY(-50px);
   animation: staggered-drop 1s ease forwards;
+}
+
+.nav ul .contact{
+  margin-right: 5rem;
 }
 
 .nav ul li a:nth-child(1) {
@@ -122,20 +126,23 @@ main {
   padding: 0 20px;
 }
 .btn {
-  height: 60px;
-  width: 180px;
+  height: 45px;
+  width: 150px;
   background-color: #2e2e2e;
   border: 3px solid silver;
   border-style: double;
-  border-radius: 1000px;
+  border-top-right-radius: 95px;
+  border-bottom-left-radius: 95px;
   letter-spacing: 1px;
   cursor: pointer;
-  color: white;
+  color: rgb(199, 199, 199);
   text-decoration: none;
 }
 .btn:hover {
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 400;
+  /* font-size: 1rem; */ 
+  background-color: #1a1a1a;
+  color: white;
 }
 
 .button-container a {
@@ -164,7 +171,7 @@ main {
   position: absolute;
   margin: auto;
   z-index: 10;
-  width: 60%;
+  width: 70%;
   height: 66%;
   aspect-ratio: 16 /9;
   display: none;
@@ -191,10 +198,10 @@ section .container .photos-title {
 }
 
 .photos-grid-container {
-  width: 70%;
+  width: 80%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -204,7 +211,7 @@ section .container .photos-title {
 }
 
 .photo-gallery img {
-  width: 350px;
+  width: 300px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
   border: 2px solid #ffffff;
@@ -228,20 +235,22 @@ section .container .photos-title {
 
 .video-main-container {
   display: grid;
-  width: 70%;
+  width: 80%;
   min-height: 80vh;
-  grid-template-columns: repeat(auto-fit, 450px);
+  grid-template-columns: repeat(auto-fit, 250px);
   gap: 2rem;
   justify-content: center;
   align-items: center;
   align-content: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  padding: 	20px 0;
 }
 
 .video {
-  width: 450px;
+  width: 250px;
   aspect-ratio: 16 / 9;
-  border: 2px solid blue;
+  border: 2px solid white;
+  border-radius: 5px;
 }
 
 .video-heading {
