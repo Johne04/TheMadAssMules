@@ -30,9 +30,9 @@ section {
   width: 100vw;
 }
 .nav ul {
-  background-color: rgba(48, 48, 48, 0.8);
+  background-color: white;
   display: flex;
-  height: 6vh;
+  height: 8vh;
   min-width: 100vw;
   justify-content: flex-end;
   align-items: center;
@@ -40,6 +40,7 @@ section {
   z-index: 1000;
   top: 0;
   list-style: none;
+  border-bottom: 2px solid gold;
 }
 
 /* .contact {
@@ -48,8 +49,8 @@ section {
 
 .nav ul li a {
   text-decoration: none;
-  color: white;
-  font-size: 14px;
+  color: black;
+  font-size: 1rem;
   font-weight: 600;
   /* margin: 1em; */
   margin-right: 2rem;
@@ -158,6 +159,7 @@ main {
   width: 100%;
   height: auto;
   gap: 2rem;
+  margin-top: 8vh;
 }
 
 .main-img img {
@@ -184,13 +186,13 @@ main {
   width: 50%;
   height: 56%;
 } */
-section:nth-child(odd) {
+/* section:nth-child(odd) {
   background-color: #24272e;
 }
 
 section:nth-child(even) {
   background-color: #484848;
-}
+} */
 
 section .container .photos-title {
   background-color: green;
@@ -237,20 +239,19 @@ section .container .photos-title {
   display: grid;
   width: 80%;
   min-height: 80vh;
-  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-columns: repeat(auto-fit, 350px);
   gap: 2rem;
   justify-content: center;
   align-items: center;
   align-content: center;
-  /* border: 2px solid red; */
   padding: 	20px 0;
 }
 
 .video {
-  width: 250px;
+  width: 350px;
   aspect-ratio: 16 / 9;
-  border: 2px solid white;
-  border-radius: 5px;
+  border: 2px solid dodgerblue;
+  border-radius: 5px solid blue;
 }
 
 .video-heading {
@@ -338,15 +339,21 @@ section .container .photos-title {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 10rem;
   width: 100%;
+  min-height: 100vh;
   /* padding: 2rem 0; */
+}
+
+.song-container-inner{
+  display: flex;
+  align-items: center;
 }
 
 .song-container-inner h3 {
   color: dodgerblue;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   align-self: center;
 }
 
