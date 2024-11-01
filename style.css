@@ -69,8 +69,14 @@ section {
 }
 
 .nav li a:last-child{
-  margin-right: 2rem;
+  margin-right: 3rem;
+  color: white;
+  font-weight: 600;
+  background-color: #A8996E;
+  padding: 0 5px;
 } 
+
+
 /* .nav-main li :first-child{
   position: relative;
   margin-right: auto;
@@ -112,6 +118,11 @@ section {
   animation-delay: 0.9s;
 }
 
+.nav ul li a:nth-child(9):hover{
+  color: #A8996E;
+  font-weight: 800;
+  border: 2px solid;
+}
 @keyframes staggered-drop {
   to {
     opacity: 1;
@@ -122,7 +133,7 @@ section {
 .nav .logo{
   position: relative;
   top: 10px;
-  left: 180px;
+  left: 150px;
 }
 .nav .sidebar{
   position: fixed;
@@ -153,7 +164,7 @@ section {
 
 .button-container {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   z-index: 1;
   display: flex;
   gap: 50px;
@@ -162,27 +173,27 @@ section {
 .btn {
   height: 45px;
   width: 130px;
-  background-color: goldenrod;
-  border: 3px solid silver;
-  border-style: double;
-  border-color: #271f06;
+  background-color: white;
   border-radius: 5px;
   cursor: pointer;
   color: #271f06;
   text-decoration: none;
+  font-weight: 600;
 }
 .btn:hover {
   font-weight: 400;
   /* font-size: 1rem; */ 
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
   color: white;
   font-weight: 600;
+  background-color: #271f06;
+  border-color: #A8996E;
 }
 
 .button-container a {
   text-decoration: none;
   color: #271f06;
- 
+  font-weight: 600;
 }
 
 .button-container a:hover{
@@ -291,7 +302,7 @@ section .container .photos-title {
 .video {
   width: 350px;
   aspect-ratio: 16 / 9;
-  border: 2px solid goldenrod;
+  border: 2px solid #A8996E;
   border-radius: 5px;
 }
 
@@ -499,7 +510,7 @@ details:open::details-content {
   }
 
   .questions-and-answers {
-    /* margin-block-start: 3.5rem; */
+    margin-block-start: 3.5rem;
     width: 60%;
   }
 
@@ -512,16 +523,16 @@ details:open::details-content {
     margin: 0;
   }
 
-  details > p {
-    padding-block: 1rem;
-  }
+  /* details  p {
+    padding-block: 25rem;
+  } */
 
   summary {
     color: #271f06;
-    line-height: 1.9;
+    line-height: 1.5;
     margin-inline-start: 1rem;
     list-style-position: outside;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   summary::marker {
@@ -530,8 +541,8 @@ details:open::details-content {
   }
 
  .questions-and-answers p{
+    padding: 0 3rem;
     background-color: rgb(238, 238, 238);
-    padding: 1rem;
   }
 
 .contact-container {
