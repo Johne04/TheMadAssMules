@@ -260,7 +260,7 @@ section .container .photos-title {
   width: 300px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-  border: 2px solid goldenrod;
+  border: 2px solid #a8996e;
   border-radius: 5px;
   filter: grayscale();
   transition: filter 0.4s ease in;
@@ -277,7 +277,7 @@ section .container .photos-title {
   height: 70vh;
   margin: 10vh auto;
   overflow: hidden;
-  border: 5px solid goldenrod;
+  border: 5px solid #a8996e;
   border-style: double;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -305,7 +305,7 @@ section .container .photos-title {
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 3px;
-  color: goldenrod;
+  color: #a8996e;
   padding: 30px 0;
 }
 
@@ -400,7 +400,7 @@ section .container .photos-title {
 }
 
 .song-container-inner h3 {
-  color: goldenrod;
+  color: #a8996e;
   font-size: 1.5rem;
   align-self: center;
 }
@@ -515,7 +515,7 @@ summary {
 
 summary::marker {
   font-size: 1.2em;
-  color: goldenrod;
+  color: #a8996e;
 }
 
 .questions-and-answers p {
