@@ -31,7 +31,6 @@ section {
 }
 
 .nav {
-  background-color: white;
   height: 8vh;
   width: 100vw;
   display: flex;
@@ -532,19 +531,29 @@ summary::marker {
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
   border: 3px solid #a8996e;
   border-radius: 2px;
-  width: 60%;
+  width: 70%;
   height: 60vh;
+}
+.contact-heading{
+  position: relative;
+  top: -5rem;
 }
 
 .right-side {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  border: 2px solid red;
 }
 
 .right-side #firstName {
   width: 70%;
+}
+
+.left-side{
+  border: 2px solid green;
 }
