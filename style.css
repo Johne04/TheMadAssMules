@@ -26,12 +26,12 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 8vh;
+  padding-top: 10vh;
   /* background-color: white; */
 }
 
 .nav {
-  height: 8vh;
+  height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -136,7 +136,7 @@ section {
 }
 .nav .sidebar {
   position: fixed;
-  top: 8vh;
+  top: 10vh;
   right: 0;
   height: 100vh;
   width: 300px;
@@ -201,13 +201,13 @@ section {
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 92vh;
+  height: 90vh;
   gap: 2rem;
 }
 
-.main-img img {
+#home-pic {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   object-fit: fill;
   aspect-ratio: 16/9;
 }
@@ -243,10 +243,10 @@ section .container .photos-title {
 }
 
 .photos-grid-container {
-  width: 80%;
+  width: 75%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, 550px);
   justify-content: center;
   align-items: center;
   align-content: flex-start;
@@ -256,17 +256,15 @@ section .container .photos-title {
 }
 
 .photo-gallery img {
-  width: 300px;
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-  border: 2px solid #a8996e;
-  border-radius: 5px;
+  width: 550px;
+  object-fit: fill;
   filter: grayscale();
   transition: filter 0.4s ease in;
+  border-radius: 10px;
 }
 
 .photo-gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   filter: none;
 }
 
@@ -304,8 +302,9 @@ section .container .photos-title {
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 3px;
-  color: #a8996e;
+  color: #007b7f;
   padding: 30px 0;
+  border-bottom: 1px solid #a8996e;
 }
 
 .slider {
@@ -373,7 +372,7 @@ section .container .photos-title {
 }
 
 #setlist {
-  background-image: url(./src/img/img7.jpg);
+  background-image: url(./src/img/song-container.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -398,10 +397,14 @@ section .container .photos-title {
   align-items: center;
 }
 
+.song-container-inner p {
+  color: white;
+}
+
 .song-container-inner h3 {
-  color: #a8996e;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   align-self: center;
+  text-shadow: -2px 3px black;
 }
 
 .song-container-inner {
@@ -415,8 +418,10 @@ section .container .photos-title {
 }
 
 #FAQs {
-  min-height: 60vh;
+  min-height: 100vh;
   padding: 8rem;
+  display: flex;
+  justify-content: flex-start;
 }
 details {
   background: white;
@@ -449,6 +454,7 @@ p,
 details,
 summary {
   margin-block-end: 0;
+  color: #007b7f;
 }
 
 .page-layout {
@@ -535,9 +541,9 @@ summary::marker {
   border: 3px solid #a8996e;
   border-radius: 2px;
   width: 70%;
-  height: 60vh;
+  height: 70vh;
 }
-.contact-heading{
+.contact-heading {
   position: relative;
   top: -5rem;
 }
@@ -554,6 +560,6 @@ summary::marker {
   width: 70%;
 }
 
-.left-side{
+.left-side {
   border: 2px solid green;
 }
