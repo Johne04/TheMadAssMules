@@ -243,10 +243,10 @@ section .container .photos-title {
 }
 
 .photos-grid-container {
-  width: 75%;
+  width: 80%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 550px);
+  grid-template-columns: repeat(auto-fit, 500px);
   justify-content: center;
   align-items: center;
   align-content: flex-start;
@@ -256,7 +256,7 @@ section .container .photos-title {
 }
 
 .photo-gallery img {
-  width: 550px;
+  width: 500px;
   object-fit: fill;
   filter: grayscale();
   transition: filter 0.4s ease in;
