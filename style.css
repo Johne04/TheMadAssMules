@@ -132,7 +132,7 @@ section {
 .nav .logo {
   position: relative;
   top: 10px;
-  left: 150px;
+  left: 5%;
 }
 .nav .sidebar {
   position: fixed;
@@ -170,8 +170,8 @@ section {
   padding: 0 20px;
 }
 .btn {
-  height: 55px;
-  width: 150px;
+  height: 45px;
+  width: 130px;
   background-color: #0f0f0f;
   border-radius: 5px;
   cursor: pointer;
