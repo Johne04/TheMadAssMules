@@ -18,6 +18,7 @@ body {
   font-family: poppins, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   color: #a8996e;
+  background-color: white;
 }
 
 section {
@@ -213,15 +214,6 @@ section {
   aspect-ratio: 16/9;
 }
 
-.main-video {
-  position: absolute;
-  margin: auto;
-  z-index: 10;
-  width: 70%;
-  height: 66%;
-  aspect-ratio: 16 /9;
-  display: none;
-}
 
 /* #videoContainer{
   display: flex;
@@ -248,10 +240,10 @@ section .container .photos-title {
 }
 
 .photos-grid-container {
-   width: 100%;
+   width: 70%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, 270px);
   justify-content: center;
   align-content: flex-start;
   gap: 1rem;
@@ -262,7 +254,7 @@ section .container .photos-title {
 }
 
 .photo-gallery img {
-  width: 350px;
+  width: 300px;
   max-height: 480px;
   object-fit: cover;
   filter: grayscale();
@@ -273,7 +265,7 @@ section .container .photos-title {
 }
 
 .photo-gallery img:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
   filter: none;
   opacity: 1;
 }
@@ -291,17 +283,32 @@ section .container .photos-title {
 
 #videos{
   height: auto;
+  background-color: #24272e;
+  margin: 5rem;
 }
 .video-main-container {
   display: grid;
-  width: 80%;
+  width: 70%;
   grid-template-columns: repeat(auto-fit, 550px);
   gap: 4rem;
   justify-content: center;
   /* align-items: flex-start; */
   align-content: flex-start;
   margin-top: 1rem;
+  background-color: white;
+  margin: 2rem;
+  padding: 2rem;
 }
+.main-video {
+  position: absolute;
+  margin: auto;
+  z-index: 10;
+  width: 70%;
+  height: 66%;
+  aspect-ratio: 16 /9;
+  display: none;
+}
+
 
 .video {
   width: 550px;
@@ -560,7 +567,7 @@ summary::marker {
   background-color: white;
   background-image: url(./src/img/imgSongs.JPG);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
@@ -575,7 +582,9 @@ summary::marker {
   font-size: 3em;
   color: white;
   font-weight: 500;
-  margin-top: 1rem
+  margin-top: 1rem;
+  line-height: 1.5;
+  box-shadow: -3px 3px 4px rgb(0, 0, 0, 0.2);
 }
 
 .contact .content p{
@@ -585,13 +594,13 @@ summary::marker {
 }
 
 .container{
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
   height: 500px;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.8);
   margin-top: 3rem;
   border: 1px solid #a8996e;
 }
@@ -599,8 +608,32 @@ summary::marker {
 .connect{
   color: #a8996e;
   font-weight: 400;
+  
 }
  .box h3{
   color: white;
   font-weight: 300;
+ }
+
+ .container .contact-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+ }
+
+ .container .contact-info .box{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+ }
+
+ .box p{
+  color: white;
+ }
+
+ .sci{
+  display: flex;
+  gap: 1rem;
  }
