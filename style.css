@@ -17,6 +17,7 @@ body {
   align-items: center;
   font-family: poppins, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  color: #a8996e;
 }
 
 section {
@@ -40,7 +41,7 @@ section {
   z-index: 1000;
   top: 0;
   border-bottom: 1px solid #a8996e;
-  background-color: #0f0f0f;
+  background-color: #24272e;
   z-index: 1000;
 }
 .nav .nav-main {
@@ -172,10 +173,10 @@ section {
 .btn {
   height: 45px;
   width: 130px;
-  background-color: #0f0f0f;
+  background-color: #24272e;
   border-radius: 5px;
   cursor: pointer;
-  color: #a8996e;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   outline: none;
@@ -187,7 +188,7 @@ section {
 
 .button-container a {
   text-decoration: none;
-  color: #a8996e;
+  color: white;
   font-weight: 500;
 }
 
@@ -242,30 +243,39 @@ section .container .photos-title {
   color: #24272e;
 }
 
+#photos{
+  background-color: white;
+}
+
 .photos-grid-container {
-  width: 80%;
+   width: 100%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 500px);
+  grid-template-columns: repeat(auto-fit, 350px);
   justify-content: center;
-  align-items: center;
   align-content: flex-start;
   gap: 1rem;
-  /* background-color: white; */
-  padding: 2rem 0;
+  column-count: 4;
+  background-color: #24272e;
+  padding: 4rem;
+  margin-top: 1rem;
 }
 
 .photo-gallery img {
-  width: 500px;
-  object-fit: fill;
+  width: 350px;
+  max-height: 480px;
+  object-fit: cover;
   filter: grayscale();
   transition: filter 0.4s ease in;
+  border: 2px solid white;
   border-radius: 10px;
+  opacity: 0.75;
 }
 
 .photo-gallery img:hover {
   transform: scale(1.03);
   filter: none;
+  opacity: 1;
 }
 
 .slider-container {
@@ -279,19 +289,22 @@ section .container .photos-title {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+#videos{
+  height: auto;
+}
 .video-main-container {
   display: grid;
   width: 80%;
-  min-height: 80vh;
-  grid-template-columns: repeat(auto-fit, 350px);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, 550px);
+  gap: 4rem;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  /* align-items: flex-start; */
+  align-content: flex-start;
+  margin-top: 1rem;
 }
 
 .video {
-  width: 350px;
+  width: 550px;
   aspect-ratio: 16 / 9;
   border: 2px solid #a8996e;
   border-radius: 5px;
@@ -302,7 +315,7 @@ section .container .photos-title {
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 3px;
-  color: #007b7f;
+  color: #a8996e;
   padding: 30px 0;
   border-bottom: 1px solid #a8996e;
 }
@@ -335,13 +348,18 @@ section .container .photos-title {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
+#testimonials{
+  background-color: #24272e;
+}
 .testimonial {
-  margin-top: 20px;
+  position: relative;
+  top: 8rem;
   font-style: italic;
   font-size: 1.2rem;
   max-width: 70%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 200;
 }
 
 .prev,
@@ -372,12 +390,12 @@ section .container .photos-title {
 }
 
 #setlist {
-  background-image: url(./src/img/song-container.jpg);
+  background-image: url(./src/img/imgSongs.JPG);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   background-attachment: fixed;
-  /* filter: brightness(0.7); */
+  min-height: 100vh;
 }
 
 .setlist-container {
@@ -385,11 +403,10 @@ section .container .photos-title {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 10rem;
-  width: 100%;
-  min-height: 100vh;
-  /* padding: 2rem 0; */
+  align-content: flex-start;
+  width: 90%; 
+  background-color: rgb(0, 0, 0, 0.4);
+  border: .5px solid #a8996e;
 }
 
 .song-container-inner {
@@ -402,6 +419,7 @@ section .container .photos-title {
 }
 
 .song-container-inner h3 {
+  color: #a8996e;
   font-size: 1.8rem;
   align-self: center;
   text-shadow: -2px 3px black;
@@ -425,7 +443,7 @@ section .container .photos-title {
 }
 details {
   background: white;
-  border: 1px solid #6b4f08;
+  border: 1px solid #a8996e;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
 
@@ -454,7 +472,7 @@ p,
 details,
 summary {
   margin-block-end: 0;
-  color: #007b7f;
+  color: #24272e;
 }
 
 .page-layout {
@@ -474,6 +492,7 @@ summary {
 }
 
 .section-title {
+  color:#a8996e;
   font-size: 2rem;
   margin: 0;
   line-height: 1;
@@ -494,12 +513,20 @@ summary {
 
 .questions-and-answers {
   margin-block-start: 3.5rem;
-  width: 60%;
+  width: 70%;
+  padding: 5rem;
+  /* border: 3px solid #24272e;
+  border-style: double; */
+  background: rgb(0, 0, 0, 0.1);
 }
 
 .questions-and-answers {
   display: grid;
   gap: 1rem;
+}
+
+.questions-and-answers p {
+  padding: 0 3rem;
 }
 
 details * {
@@ -522,44 +549,58 @@ summary::marker {
   font-size: 1.2em;
   color: #a8996e;
 }
-
-.questions-and-answers p {
-  padding: 0 3rem;
-  background-color: rgb(238, 238, 238);
-}
-
-#contactus {
-}
-
-.container-contact {
-  background-image: url(./src/img/Contact\ Page\ BG.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 2rem;
-  border: 3px solid #a8996e;
-  border-radius: 2px;
-  width: 70%;
-  height: 70vh;
-}
-.contact-heading {
+.contact{
   position: relative;
-  top: -5rem;
-}
-
-.right-side {
+  min-height: 100vh;
+  padding: 3rem 6rem ;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  flex-direction: column;
+  background-color: white;
+  background-image: url(./src/img/imgSongs.JPG);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-.right-side #firstName {
-  width: 70%;
+.contact .content{
+  max-width: 800px;
+  text-align: center;
 }
 
-.left-side {
-  border: 2px solid green;
+.contact .content h2{
+  font-size: 3em;
+  color: white;
+  font-weight: 500;
+  margin-top: 1rem
 }
+
+.contact .content p{
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 500px;
+  background-color: rgb(0, 0, 0, 0.7);
+  margin-top: 3rem;
+  border: 1px solid #a8996e;
+}
+
+.connect{
+  color: #a8996e;
+  font-weight: 400;
+}
+ .box h3{
+  color: white;
+  font-weight: 300;
+ }
