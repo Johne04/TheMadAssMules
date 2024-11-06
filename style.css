@@ -71,8 +71,8 @@ section {
 
 .nav li a:last-child {
   margin-right: 3rem;
-  color: white;
-  font-weight: 500;
+  color: #00afaf;
+  font-weight: 600;
   font-size: 1.1rem;
   /* background-color: #a8996e;
   padding: 5px;
@@ -722,6 +722,7 @@ textarea.input {
   background-color: transparent;
   color: #a8996e;
   font-weight: 500;
+  border: 1px solid ;
 }
 
 .input-container span {
@@ -778,7 +779,8 @@ textarea.input {
 }
 
 .contact-info .title {
-  color: #a8996e;
+  color: #00afaf;
+  font-weight: 600;
 }
 
 .text {
@@ -827,7 +829,7 @@ textarea.input {
 }
 
 .social-icons a:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* .contact-info:before {
