@@ -53,7 +53,7 @@ const navToggle = document.querySelector(
   '[aria-controls="primary-navigation"]'
 );
 
-navToggle.addEventListener("click", () => {
+navToggle?.addEventListener("click", () => {
   const navOpened = navToggle.getAttribute("aria-expanded");
 
   if (navOpened === "false") {
@@ -81,4 +81,41 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+// Show button when scrolling down
+window.onscroll = function() {
+  const button = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      button.classList.add("show");
+  } else {
+      button.classList.remove("show");
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+let isScrolling;
+
+window.addEventListener('scroll', () => {
+    scrollToTopBtn.classList.add('show');
+
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+        scrollToTopBtn.classList.add('hide');
+    }, 1000);
+
+    scrollToTopBtn.classList.remove('hide');
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
+
+
 
