@@ -501,7 +501,7 @@ summary {
 }
 
 .section-title {
-  color:#029696;
+  color: #00afaf;
   font-size: 2rem;
   margin: 0;
   line-height: 1;
@@ -780,7 +780,7 @@ textarea.input {
 }
 
 .contact-info .title {
-  color: #00afaf;
+  color: #24272e;
   font-weight: 600;
 }
 
@@ -821,11 +821,11 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background-color: #029696;
-  color: white;
+  background-color: #00afaf;
+  color: #24272e;
   text-align: center;
   line-height: 35px;
-  margin-right: 1.5rem;
+  margin-right: .8rem;
   transition: 0.3s;
 }
 
