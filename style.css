@@ -222,7 +222,6 @@ section {
   aspect-ratio: 16/9;
 }
 
-
 /* #videoContainer{
   display: flex;
   justify-content: center;
@@ -255,7 +254,7 @@ section .container .photos-title {
    width: 70%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 270px);
+  grid-template-columns: repeat(auto-fit, 340px);
   justify-content: center;
   align-content: center;
   gap: 1rem;
@@ -267,7 +266,7 @@ section .container .photos-title {
 }
 
 .photo-gallery img {
-  width: 300px;
+  width: 370px;
   max-height: 480px;
   object-fit: cover;
   filter: grayscale();
@@ -285,16 +284,16 @@ section .container .photos-title {
 
 .slider-container {
   position: relative;
-  width: 70%;
-  height: 70vh;
-  margin: 10vh auto;
+  width: 60%;
+  height: 60vh;
+  margin-top: 0 auto;
   overflow: hidden;
   border: 5px solid #a8996e;
   border-style: double;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-#videos{
+#videos {
   height: auto;
 }
 .video-main-container {
@@ -319,7 +318,6 @@ section .container .photos-title {
   aspect-ratio: 16 /9;
   display: none;
 }
-
 
 .video {
   width: 350px;
@@ -413,7 +411,7 @@ section .container .photos-title {
 #setlist {
   background-image: url(./src/img/imgSongs.JPG);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
@@ -428,9 +426,9 @@ section .container .photos-title {
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  width: 90%; 
+  width: 90%;
   background-color: rgb(0, 0, 0, 0.4);
-  border: .5px solid #a8996e;
+  border: 0.5px solid #a8996e;
 }
 
 .song-container-inner {
@@ -598,14 +596,13 @@ textarea {
   overflow: hidden;
   display: flex;
   align-items: center;
-  
+
   justify-content: center;
   background-image: url(./src/img/imgSongs.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
 }
 
 .form {
@@ -617,7 +614,7 @@ textarea {
   z-index: 1;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .contact-form {
@@ -738,7 +735,7 @@ textarea.input {
   background-color: transparent;
   color: #a8996e;
   font-weight: 500;
-  border: 1px solid ;
+  border: 1px solid;
 }
 
 .input-container span {
@@ -778,7 +775,7 @@ textarea.input {
   top: 0px;
   transform: translateY(-50%);
   left: 25px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .input-container.focus span:before,
@@ -840,7 +837,7 @@ textarea.input {
   color: #28313A;
   text-align: center;
   line-height: 35px;
-  margin-right: .8rem;
+  margin-right: 0.8rem;
   transition: 0.3s;
 }
 
@@ -880,7 +877,7 @@ textarea.input {
   transform: translateY(20px);
 }
 
-.wave{
+.wave {
   position: relative;
   top: -10vh;
   margin: auto;
@@ -1021,7 +1018,6 @@ textarea.input {
   }
 }
 
-
 /* #contactus{}
 .container {
   min-height: 100vh;
@@ -1111,7 +1107,6 @@ textarea.input {
     color: #fff;
     transition: .5s ease-in-out;
 } */
-
 
 /* #contact-sec{
   display: flex;
