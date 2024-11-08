@@ -26,7 +26,7 @@ section {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 10vh;
   /* background-color: white; */
@@ -35,59 +35,54 @@ section {
 .nav {
   height: 10vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   border-bottom: 1px solid #a8996e;
-  background-color: #24272e;
+  background-color: #28313A;
   z-index: 100;
 }
 .nav .nav-main {
-  width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .nav ul li {
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: flex-end;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .nav ul li a {
   text-decoration: none;
-  color: #a8996e;
+  color: #A8996E;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 300;
   display: inline-block;
   opacity: 0;
   transform: translateY(-50px);
   animation: staggered-drop 1s ease forwards;
-  padding: 0 30px;
+  padding: 0 10px; 
+   margin: auto;
 }
 
 .nav li a:last-child {
-  margin-right: 3rem;
-  color: #00afaf;
+  margin-right: 4rem;
+  margin-left: 7rem;
+  color: white;
   font-weight: 600;
-  font-size: 1.1rem;
-  /* background-color: #a8996e;
-  padding: 5px;
-  border-radius: 10px; */
+  border: 1px solid white;
+  border-color: #A8996E;
+  padding: 8px;
 }
 
-/* .nav-main li :first-child{
-  position: relative;
-  margin-right: auto;
-  color: goldenrod;
-  font-weight: 800;
-  font-size: 1.3rem;
-  letter-spacing: 3px;
-  cursor: grab;
-}  */
-
+.nav li a:last-child:hover{
+  background-color: #A8996E;
+}
 .nav-main {
   width: 100%;
 }
@@ -174,10 +169,10 @@ section {
 .btn {
   height: 45px;
   width: 130px;
-  background-color: #24272e;
+  background-color: #28313A;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: #A8996E;
   text-decoration: none;
   font-weight: 500;
   outline: none;
@@ -190,7 +185,7 @@ section {
 
 .button-container a {
   text-decoration: none;
-  color: white;
+  color: #A8996E;
   font-weight: 500;
 }
 
@@ -209,6 +204,17 @@ section {
   z-index: 10;
 }
 
+.banner{
+  height: 350px;
+  width: 2550px;
+  border: 2px solid #A8996E;
+  margin: 6rem;
+}
+
+.texture{
+  height: 100%;
+  width: 100%;
+}
 #home-pic {
   width: 100vw;
   height: 90vh;
@@ -234,25 +240,30 @@ section:nth-child(even) {
 
 section .container .photos-title {
   background-color: green;
-  color: #24272e;
+  color: #28313A;
 }
 
-#photos{
+/* #photos{
   background-color: white;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+} */
 
 .photos-grid-container {
    width: 70%;
-  min-height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 270px);
   justify-content: center;
-  align-content: flex-start;
+  align-content: center;
   gap: 1rem;
   column-count: 4;
   background-color: #918462;
   padding: 4rem;
-  margin: 6rem;
+  margin-top: -5rem;
+  margin-bottom: 6rem;
 }
 
 .photo-gallery img {
@@ -261,7 +272,7 @@ section .container .photos-title {
   object-fit: cover;
   filter: grayscale();
   transition: filter 0.4s ease in;
-  border: 2px solid #24272e;
+  border: 2px solid #28313A;
   border-radius: 10px;
   opacity: 0.9;
 }
@@ -285,7 +296,6 @@ section .container .photos-title {
 
 #videos{
   height: auto;
-  /* margin: 5rem; */
 }
 .video-main-container {
   display: grid;
@@ -296,7 +306,7 @@ section .container .photos-title {
   /* align-items: flex-start; */
   align-content: flex-start;
   margin-top: 1rem;
-  background-color: #24272e;
+  background-color: #28313A;
   padding: 4rem;
   margin-bottom: 6rem;
 }
@@ -327,6 +337,8 @@ section .container .photos-title {
   padding: 30px 0;
   border-bottom: 1px solid #a8996e;
   z-index: 1;
+  position: relative;
+  top: -10rem;
 }
 
 .slider {
@@ -405,6 +417,9 @@ section .container .photos-title {
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .setlist-container {
@@ -481,7 +496,7 @@ p,
 details,
 summary {
   margin-block-end: 0;
-  color: #24272e;
+  color: #28313A;
 }
 
 .page-layout {
@@ -526,7 +541,7 @@ summary {
   padding: 5rem;
   /* border: 3px solid #24272e;
   border-style: double; */
-  background: #24272e;
+  background: #28313A;
 }
 
 .questions-and-answers {
@@ -598,7 +613,7 @@ textarea {
   max-width: 920px;
   /* background-color: white; */
   border-radius: 10px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 1px #A8996E;
   z-index: 1;
   overflow: hidden;
   display: grid;
@@ -606,7 +621,7 @@ textarea {
 }
 
 .contact-form {
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   position: relative;
   backdrop-filter: blur;
 }
@@ -709,7 +724,7 @@ textarea.input {
   background-color: white;
   border: 2px solid white;
   font-size: 1.2rem;
-  color: #24272e;
+  color: #28313A;
   line-height: 1;
   border-radius: 25px;
   outline: none;
@@ -780,7 +795,7 @@ textarea.input {
 }
 
 .contact-info .title {
-  color: #24272e;
+  color: #28313A;
   font-weight: 600;
 }
 
@@ -791,7 +806,7 @@ textarea.input {
 
 .information {
   display: flex;
-  color: #24272e;
+  color: #28313A;
   margin: 0.7rem 0;
   align-items: center;
   font-size: 0.95rem;
@@ -800,7 +815,7 @@ textarea.input {
 .icon {
   width: 28px;
   margin-right: 0.7rem;
-  background-color: #24272e;
+  background-color: #28313A;
   color: #a8996e;
 }
 
@@ -809,7 +824,7 @@ textarea.input {
 }
 
 .social-media p {
-  color: #24272e;
+  color: #28313A;
 }
 
 .social-icons {
@@ -822,7 +837,7 @@ textarea.input {
   height: 35px;
   border-radius: 5px;
   background-color: #00afaf;
-  color: #24272e;
+  color: #28313A;
   text-align: center;
   line-height: 35px;
   margin-right: .8rem;
@@ -840,7 +855,7 @@ textarea.input {
   right: 20px;
   width: 50px;
   height: 50px;
-  background: #24272e;
+  background: #28313A;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
@@ -868,6 +883,7 @@ textarea.input {
 .wave{
   position: relative;
   top: -10vh;
+  margin: auto;
 }
 
 
