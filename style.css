@@ -70,15 +70,20 @@ section {
    margin: auto;
 }
 
+.show:hover{
+  font-weight: 500;
+}
+
 .nav li a:last-child {
   margin-right: 4rem;
   margin-left: 7rem;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   border: 1px solid white;
   border-color: #A8996E;
   padding: 8px;
 }
+
 
 .nav li a:last-child:hover{
   background-color: #A8996E;
