@@ -48,7 +48,7 @@ nextButton.addEventListener("click", () => showSlide(currentIndex + 1));
 // Optional: Auto-slide
 setInterval(() => showSlide(currentIndex + 1), 5000);
 
-/*FAQ's section*/ 
+/*FAQ's section*/
 const navToggle = document.querySelector(
   '[aria-controls="primary-navigation"]'
 );
@@ -83,39 +83,36 @@ inputs.forEach((input) => {
 });
 
 // Show button when scrolling down
-window.onscroll = function() {
+window.onscroll = function () {
   const button = document.getElementById("backToTop");
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      button.classList.add("show");
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    button.classList.add("show");
   } else {
-      button.classList.remove("show");
+    button.classList.remove("show");
   }
 };
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 let isScrolling;
 
-window.addEventListener('scroll', () => {
-    scrollToTopBtn.classList.add('show');
+window.addEventListener("scroll", () => {
+  scrollToTopBtn.classList.add("show");
 
-    window.clearTimeout(isScrolling);
-    isScrolling = setTimeout(() => {
-        scrollToTopBtn.classList.add('hide');
-    }, 1000);
+  window.clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    scrollToTopBtn.classList.add("hide");
+  }, 1000);
 
-    scrollToTopBtn.classList.remove('hide');
+  scrollToTopBtn.classList.remove("hide");
 });
 
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
-
-
-
-
-
