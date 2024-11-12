@@ -9,10 +9,9 @@ const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
-navLinks.forEach((link, index) => {
-  link.classList.add("show");
-  link.style.transitionDelay = `${index * 0.1}s`;
-});
+// navLinks.forEach((link, index) => {
+//   link.classList.add("show");
+// });
 
 showVid.addEventListener(
   "click",
