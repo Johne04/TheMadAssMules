@@ -230,25 +230,6 @@ section {
   font-weight: 700;
 }
 
-.banner {
-  height: 350px;
-  width: 2550px;
-  border: 2px solid #a8996e;
-  margin: 6rem;
-}
-
-.texture {
-  height: 100%;
-  width: 100%;
-}
-
-/*Photos start here*/
-
-.svg_wave{
-  position: relative;
-  top: 0;
-}
-
 .photos-grid-container {
   width: 80%;
   /* height: auto; */
@@ -292,7 +273,7 @@ section {
   justify-content: center;
   align-content: flex-start;
   background-color: #28313a;
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 
@@ -312,14 +293,13 @@ section {
   border-bottom: 2px solid #e7e7e7;
   z-index: 1;
   position: relative;
-  margin-bottom: 10px;
-  top: -2rem;
+  /* margin-bottom: 10px; */
+  top: -8rem;
 }
 /*Testimonials start here*/
 #testimonials {
   position: relative;
   min-height: 60vh;
-  /* top: -10vh; */
 }
 
 .slider-container {
@@ -406,10 +386,20 @@ section {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 10rem;
+  padding-top: 6rem;
+
 }
 
+.setlist-heading{
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family:  Oswald, Verdana;
+  letter-spacing: 2px;
+  color: #a8996e;
+  border-bottom: 2px solid #e7e7e7;
+  z-index: 1;
+  margin-bottom: -4rem;
+}
 .setlist-container {
   z-index: 20;
   display: flex;
@@ -418,6 +408,8 @@ section {
   align-content: center;
   background-color: rgb(0, 0, 0, 0.4);
   border: 0.5px solid #a8996e;
+  position: relative;
+  margin-top: 7rem;
 }
 
 .song-container-inner {
@@ -447,12 +439,6 @@ section {
 }
 
 /*FAQ's start here*/
-#FAQs {
-  /* width: 100vw; */
-  display: flex;
-  align-content: center;
-
-}
 
 .questions-and-answers {
   width: 70%;
@@ -505,42 +491,6 @@ summary {
   color: #28313a;
 }
 
-.page-layout {
-  display: grid;
-  grid-template-columns:
-    minmax(2rem, 1fr)
-    min(960px, 100% - 4rem)
-    minmax(2rem, 1fr);
-
-  & > * {
-    grid-column: 2 / 3;
-  }
-}
-
-.section-title {
-  color: #00afaf;
-  font-size: 2rem;
-  margin: 0;
-  line-height: 1;
-}
-
-.section-icon {
-  font-size: 3rem;
-  align-self: flex-start;
-  padding: 0;
-  position: relative;
-  top: -4rem;
-}
-
-.faq {
-  display: grid;
-  gap: clamp(1rem, 10vw, 2.5rem);
-
-  @container (width > 650px) {
-    grid-template-columns: 250px 1fr;
-  }
-}
-
 summary {
   color: #271f06;
   line-height: 1.5;
@@ -556,9 +506,6 @@ summary::marker {
 
 /*Contact form starts here*/
 
-/* #contact-us{
-  height: 100vh;
-} */
 .container {
   position: relative;
   width: 100%;
@@ -617,7 +564,7 @@ form {
 
 .title {
   color: #a8996e;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 0.7rem;
@@ -723,19 +670,6 @@ textarea.input {
   right: 50%;
 }
 
-.input-container.focus label {
-  top: 0px;
-  transform: translateY(-50%);
-  left: 25px;
-  font-size: 0.8rem;
-}
-
-.input-container.focus span:before,
-.input-container.focus span:after {
-  width: 50%;
-  opacity: 1;
-}
-
 .contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
@@ -743,10 +677,6 @@ textarea.input {
   filter: blur(5);
 }
 
-.contact-info .title {
-  color: #28313a;
-  font-weight: 600;
-}
 
 .text {
   color: #333;
@@ -832,6 +762,7 @@ textarea.input {
 .wave {
   position: relative;
   top: 0;
+  width: 100%;
   /* top: -10vh; */
   /* margin: auto; */
 }
@@ -843,6 +774,11 @@ textarea.input {
   left: 50%;
   transform: translate(181%, 11%);
   opacity: 0.2;
+}
+
+.cont{
+  position: relative;
+  top: -6rem;
 }
 
 @media (max-width: 850px) {
