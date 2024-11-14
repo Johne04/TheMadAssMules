@@ -23,19 +23,20 @@ body {
 }
 
 section {
-  min-height: 80vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 }
 
 /*Home starts here*/
 #home {
   position: relative;
   height: 100vh;
+  padding: 0;
 }
 
 .main-video {
@@ -94,12 +95,14 @@ section {
   margin-right: 5rem;
   margin-left: 4rem;
   color: #28313A;
-  border: 1px solid white;
+  border: 1px solid;
   border-color: #a8996e;
   padding: 8px;
 }
 
 .nav li a:last-child:hover {
+  border: 1px solid;
+  border-color: #28313A;
   background-color: #a8996e;
   color: #28313A;
 }
@@ -262,7 +265,6 @@ section {
 /*Videos start here*/
 #videos {
   position: relative;
-  min-height: 60vh;
 }
 
 .video-main-container {
@@ -292,9 +294,9 @@ section {
   color: #a8996e;
   border-bottom: 2px solid #e7e7e7;
   z-index: 1;
+  margin-bottom: 1rem;
   position: relative;
-  /* margin-bottom: 10px; */
-  top: -8rem;
+  top: -6rem;
 }
 /*Testimonials start here*/
 #testimonials {
@@ -525,7 +527,7 @@ summary::marker {
 
 .form {
   width: 100%;
-  max-width: 1120px;
+  max-width: 60%;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px #a8996e;
   z-index: 1;
@@ -763,8 +765,6 @@ textarea.input {
   position: relative;
   top: 0;
   width: 100%;
-  /* top: -10vh; */
-  /* margin: auto; */
 }
 
 .square {
@@ -776,10 +776,6 @@ textarea.input {
   opacity: 0.2;
 }
 
-.cont{
-  position: relative;
-  top: -6rem;
-}
 
 @media (max-width: 850px) {
   .form {
