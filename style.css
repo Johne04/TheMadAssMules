@@ -148,7 +148,7 @@ section {
   position: relative;
   top: 6px;
   left: 4%;
-  background-color: #28313A;
+  background-color: #203041;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   width: 160px;
   height: 145px;
@@ -184,9 +184,7 @@ section {
   align-items: center;
   align-content: center;
   width: 100%;
-  z-index: 10;
-  border: 2px solid red;
-  
+  z-index: 10; 
 }
 
 #home-pic {
@@ -264,7 +262,9 @@ section {
 }
 /*Videos start here*/
 #videos {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .video-main-container {
@@ -276,6 +276,7 @@ section {
   align-content: flex-start;
   background-color: #28313a;
   padding: 4rem 0;
+
 }
 
 
@@ -294,9 +295,8 @@ section {
   color: #a8996e;
   border-bottom: 2px solid #e7e7e7;
   z-index: 1;
-  margin-bottom: 1rem;
   position: relative;
-  top: -6rem;
+  top: 11rem;
 }
 /*Testimonials start here*/
 #testimonials {
@@ -762,13 +762,14 @@ textarea.input {
 }
 
 .wave {
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: -1;
 }
 
 .square {
-  position: absolute;
+  position: static;
   height: 400px;
   top: 50%;
   left: 50%;
@@ -776,6 +777,9 @@ textarea.input {
   opacity: 0.2;
 }
 
+.cont{
+  margin-top: 12rem;
+}
 
 @media (max-width: 850px) {
   .form {
