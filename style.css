@@ -723,6 +723,9 @@ textarea.input {
 }
 .media-heading {
   margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #a8996e;
 }
 
 /* Back-to-top button styles */
