@@ -22,7 +22,7 @@ body {
   background-color: white;
 }
 
-section {
+section:not(#contactus, #home) {
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -34,9 +34,12 @@ section {
 
 /*Home starts here*/
 #home {
-  position: relative;
+  /* position: relative; */
   height: 100vh;
+  width: 100vw;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .main-video {
@@ -196,6 +199,7 @@ section {
   display: flex;
   gap: 50px;
   padding: 0 20px;
+  margin-left: auto;
 }
 .btn {
   height: 45px;
@@ -500,7 +504,7 @@ summary::marker {
 
 .contact-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   padding-bottom: 0;
   background-color: white;
@@ -759,6 +763,7 @@ textarea.input {
   width: 100%;
   z-index: -1;
   /* height: 170px; */
+  color: #e4572e;
 }
 
 .square {
