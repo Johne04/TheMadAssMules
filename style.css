@@ -244,7 +244,7 @@ section:not(#contactus, #home) {
 
 .photo-gallery img {
   width: 270px;
-  max-height: 420px;
+  max-height: 480px;
   object-fit: cover;
   filter: grayscale();
   transition: filter 0.4s ease in;
@@ -285,7 +285,7 @@ section:not(#contactus, #home) {
 .video {
   width: 35%;
   aspect-ratio: 16 / 9;
-  border: 2px solid #a8996e;
+  border: 2px solid #ff6f61;
   border-radius: 5px;
 }
 
@@ -501,7 +501,7 @@ summary::marker {
 }
 
 /*Contact form starts here*/
-#contactus{
+#contactus {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -737,23 +737,27 @@ textarea.input {
   color: #a8996e;
 }
 
-.contact-banner{
-  height: 80px;
+.contact-banner {
+  height: auto;
   width: 90%;
   border: 1px 0 solid teal;
   /* position: relative;
   top: 80px; */
-  background-color: rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
-.contact-banner p{
-  color: teal;
+.contact-banner p {
+  color: #ff6f61;
   font-weight: 600;
-  font-family: poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  padding: 1rem;
 }
 /* Back-to-top button styles */
 .scroll-to-top {
@@ -809,6 +813,15 @@ textarea.input {
   margin-top: 12rem;
 } */
 
+@media (min-width: 2110px) {
+  .photos-grid-container {
+    grid-template-columns: repeat(auto-fit, 350px);
+  }
+
+  .photo-gallery img {
+    width: 370px;
+  }
+}
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
