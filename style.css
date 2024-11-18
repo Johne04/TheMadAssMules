@@ -232,7 +232,7 @@ section:not(#contactus, #home) {
   width: 80%;
   /* height: auto; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, 320px);
+  grid-template-columns: repeat(auto-fit, 250px);
   justify-content: center;
   align-content: center;
   gap: 1rem;
@@ -243,8 +243,8 @@ section:not(#contactus, #home) {
 }
 
 .photo-gallery img {
-  width: 340px;
-  max-height: 480px;
+  width: 270px;
+  max-height: 420px;
   object-fit: cover;
   filter: grayscale();
   transition: filter 0.4s ease in;
@@ -299,7 +299,7 @@ section:not(#contactus, #home) {
 
 .slider-container {
   position: relative;
-  width: 60%;
+  width: 70%;
   height: 60vh;
   overflow: hidden;
   border: 5px solid #a8996e;
@@ -501,7 +501,13 @@ summary::marker {
 }
 
 /*Contact form starts here*/
-
+#contactus{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .contact-container {
   position: relative;
   width: 100vw;
@@ -510,6 +516,7 @@ summary::marker {
   background-color: white;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url(./src/img/imgSongs.JPG);
@@ -521,16 +528,19 @@ summary::marker {
 
 .form {
   width: 100%;
-  max-width: 60%;
+  max-width: 70%;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px #a8996e;
   z-index: 1;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  top: 3rem;
 }
 #contact-us {
-  min-height: 100vh;
+  max-height: 100vh;
+  overflow-x: none;
 }
 
 .contact-form {
@@ -722,12 +732,29 @@ textarea.input {
   transform: scale(1.1);
 }
 .media-heading {
-  margin-top: 4rem;
   margin-bottom: 1rem;
   font-size: 2rem;
   color: #a8996e;
 }
 
+.contact-banner{
+  height: 80px;
+  width: 90%;
+  border: 1px 0 solid teal;
+  /* position: relative;
+  top: 80px; */
+  background-color: rgb(0, 0, 0,0.4);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-banner p{
+  color: teal;
+  font-weight: 600;
+  font-family: poppins, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 /* Back-to-top button styles */
 .scroll-to-top {
   position: fixed;
