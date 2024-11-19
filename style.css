@@ -72,7 +72,7 @@ section:not(#contactus, #home) {
 
 .nav ul li {
   display: flex;
-  width: 80%;
+  width: 90%;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 3rem;
@@ -106,7 +106,7 @@ section:not(#contactus, #home) {
   border: 1px solid;
   border-color: #28313a;
   background-color: #a8996e;
-  color: #28313a;
+  color: white;
 }
 .nav-main {
   width: 100%;
@@ -155,7 +155,11 @@ section:not(#contactus, #home) {
   width: 180px;
   height: 165px;
 }
-/* .nav .sidebar {
+
+.side-menu{
+  display: block;
+}
+.nav .sidebar {
   position: fixed;
   top: 10vh;
   right: 0;
@@ -164,10 +168,10 @@ section:not(#contactus, #home) {
   z-index: 101;
   background-color: white;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: flex-start; */
   background-color: rgb(46, 46, 46, 0.7);
 }
 
@@ -177,7 +181,7 @@ section:not(#contactus, #home) {
 
 .nav .sidebar li a {
   color: white;
-} */
+}
 
 .main-img {
   width: 100%;
@@ -248,7 +252,7 @@ section:not(#contactus, #home) {
   object-fit: cover;
   filter: grayscale();
   transition: filter 0.4s ease in;
-  border: 2px solid white;
+  border: 2px solid  #77919D;
   border-radius: 10px;
   opacity: 0.9;
 }
@@ -285,7 +289,7 @@ section:not(#contactus, #home) {
 .video {
   width: 35%;
   aspect-ratio: 16 / 9;
-  border: 2px solid #ff6f61;
+  border: 2px solid  #77919D;
   border-radius: 5px;
 }
 
@@ -735,6 +739,7 @@ textarea.input {
   margin-bottom: 1rem;
   font-size: 2rem;
   color: #a8996e;
+  border-bottom: 3px solid #a8996e;
 }
 
 .contact-banner {
@@ -752,7 +757,7 @@ textarea.input {
 }
 
 .contact-banner p {
-  color: #ff6f61;
+  color:  #77919D;
   font-weight: 600;
   font-family: poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -905,5 +910,14 @@ textarea.input {
 
   .btn {
     padding: 0.45rem 1.2rem;
+  }
+}
+
+@media (max-width: 1325px){
+  .nav {
+    display: none;
+  }
+  .logo{
+
   }
 }
