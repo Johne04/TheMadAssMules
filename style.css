@@ -32,6 +32,11 @@ section:not(#contactus, #home) {
   padding: 10rem;
 }
 
+.section-divider{
+  height: 280px;
+  width: 100vw;
+}
+
 /*Home starts here*/
 #home {
   /* position: relative; */
@@ -61,7 +66,7 @@ section:not(#contactus, #home) {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 1px solid #28313a;
+  border-bottom: 1px solid #8ABAAE;
   background-color: white;
   z-index: 100;
 }
@@ -232,6 +237,9 @@ section:not(#contactus, #home) {
   font-weight: 700;
 }
 
+#photos{
+  background-color: #28313a;
+}
 .photos-grid-container {
   width: 80%;
   /* height: auto; */
@@ -241,25 +249,27 @@ section:not(#contactus, #home) {
   align-content: center;
   gap: 1rem;
   column-count: 4;
-  background-color: #a8996e;
+  background-color: #28313a;
+  border: 20px solid white;
+  border-style: groove;
   padding: 4rem;
   /* margin-top: 10rem; */
 }
 
 .photo-gallery img {
-  width: 270px;
+  width: 260px;
   max-height: 480px;
   object-fit: cover;
-  filter: grayscale();
+  /* filter: grayscale(); */
   transition: filter 0.4s ease in;
-  border: 2px solid  #77919D;
+  border: 2px solid white;
   border-radius: 10px;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .photo-gallery img:hover {
   transform: scale(1.04);
-  filter: none;
+  /* filter: none; */
   opacity: 1;
 }
 /*Videos start here*/
@@ -281,24 +291,23 @@ section:not(#contactus, #home) {
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
-  background-color: #28313a;
+  /* background-color: #28313a; */
   height: auto;
-  gap: 6rem;
-  padding: 80px 0;
+  gap: 4rem;
+  padding: 40px 0;
 }
 .video {
-  width: 35%;
+  width: 45%;
   aspect-ratio: 16 / 9;
-  border: 2px solid  #77919D;
+  border: 2px solid  #a8996e;
   border-radius: 5px;
 }
 
 /*Testimonials start here*/
 #testimonials {
-  position: relative;
   min-height: 100vh;
-  background-color: #28313a;
-  /* margin: 20%; */
+  background-color: white;
+  width: 100vw;
 }
 
 .slider-container {
@@ -347,8 +356,6 @@ section:not(#contactus, #home) {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: white;
   font-weight: 200;
-  position: relative;
-  top: 10rem;
 }
 
 .prev,
@@ -398,7 +405,6 @@ section:not(#contactus, #home) {
   color: #a8996e;
   border-bottom: 2px solid #e7e7e7;
   z-index: 1;
-  margin-bottom: -4rem;
 }
 .setlist-container {
   z-index: 20;
@@ -409,7 +415,7 @@ section:not(#contactus, #home) {
   background-color: rgb(0, 0, 0, 0.4);
   border: 0.5px solid #a8996e;
   position: relative;
-  margin-top: 7rem;
+  /* margin-top: 7rem; */
 }
 
 .song-container-inner {
@@ -438,12 +444,13 @@ section:not(#contactus, #home) {
   justify-content: center;
 }
 
-/*FAQ's start here*/
+#FAQs{
+  background-color: #28313a;
+}
 
 .questions-and-answers {
-  width: 80%;
-  padding: 5rem;
-  background: rgb(0, 0, 0, 0.8);
+  width: 65%;
+  /* padding: 5rem; */
 }
 
 .questions-and-answers {
@@ -457,6 +464,7 @@ section:not(#contactus, #home) {
 
 details * {
   margin: 0;
+  
 }
 details {
   background: white;
@@ -464,6 +472,7 @@ details {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   overflow: hidden;
+  border: 3px solid #a8996e;
 }
 
 /* don't add margin/padding to this, add it to the actual
@@ -721,25 +730,65 @@ textarea.input {
 }
 
 .social-icons a {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 5px;
-  background-color: #00afaf;
-  color: #28313a;
+  background-color: #28313a;
+  color: white;
   text-align: center;
   line-height: 35px;
   margin-right: 0.8rem;
   transition: 0.3s;
 }
 
+.fa-facebook-f {
+  color: white;
+}
+
 .social-icons a:hover {
   transform: scale(1.1);
 }
 .media-heading {
+  margin-top: -2rem;
   margin-bottom: 1rem;
   font-size: 2rem;
   color: #a8996e;
   border-bottom: 3px solid #a8996e;
+  letter-spacing: 3px;
+}
+
+/* create wrapper */
+.brush-wrap {
+  position: relative;
+  bottom: 1rem;
+  display: inline-block;
+  padding: .8rem 5rem;
+}
+
+/* applying example animation (indefinite variant) */
+/* .brush-wrap.brush-wrap--indefinite:before {
+  clip-path: url(#clip-indefinite);
+} */
+
+/* clipping/animating object (pseudo element) */
+.brush-wrap:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #28313a;
+  z-index: -1;
+  clip-path: url(#clip); /* applying clip animation */
+}
+
+.brush-wrap p {
+  font-size: 2rem;
+  margin: 0;
+  color: teal;
+  filter: drop-shadow(0px 0px 2px black);
+  font-weight: 500;
 }
 
 .contact-banner {
@@ -757,7 +806,7 @@ textarea.input {
 }
 
 .contact-banner p {
-  color:  #77919D;
+  color:  #8ABAAE;
   font-weight: 600;
   font-family: poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -796,14 +845,14 @@ textarea.input {
   transform: translateY(20px);
 }
 
-.wave {
+/* .wave {
   position: fixed;
   top: 0;
+  height: 350px;
   width: 100%;
-  z-index: -1;
-  /* height: 170px; */
-  color: #e4572e;
-}
+  z-index: -8;
+  height: 170px; 
+} */
 
 .square {
   position: static;
