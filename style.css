@@ -153,9 +153,9 @@ section:not(#contactus, #home) {
 
 .nav .logo {
   position: relative;
-  top: 6px;
+  top: 0;
   left: 4%;
-  background-color: #28313a;
+  background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   width: 180px;
   height: 165px;
