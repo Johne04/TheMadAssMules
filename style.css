@@ -250,7 +250,7 @@ section:not(#contactus, #home) {
   gap: 1rem;
   column-count: 4;
   background-color: #28313a;
-  border: 20px solid white;
+  border: 12px solid white;
   border-style: groove;
   padding: 4rem;
   /* margin-top: 10rem; */
@@ -724,7 +724,7 @@ textarea.input {
   color: #28313a;
 }
 
-.social-icons {
+/* .social-icons {
   display: flex;
   margin-top: 0.5rem;
 }
@@ -741,8 +741,44 @@ textarea.input {
   transition: 0.3s;
 }
 
-.fa-facebook-f {
-  color: white;
+.social-icons a i {
+  color: red;
+} */
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #28313a; /* Outer color */
+  color: #a8996e; /* Inner color */
+  text-decoration: none;
+  font-size: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.instagram:hover {
+  color: #E1306C; /* Optional specific hover color */
+}
+
+.youtube:hover {
+  color: #FF0000; /* Optional specific hover color */
+}
+
+.facebook:hover {
+  color: #1877F2; /* Optional specific hover color */
 }
 
 .social-icons a:hover {
@@ -806,13 +842,17 @@ textarea.input {
 }
 
 .contact-banner p {
-  color:  #8ABAAE;
+  color:  #a8996e;
   font-weight: 600;
   font-family: poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 2.5rem;
   padding: 1rem;
 }
+
+
+
+
 /* Back-to-top button styles */
 .scroll-to-top {
   position: fixed;
@@ -937,6 +977,7 @@ textarea.input {
   .information,
   .social-media p {
     font-size: 0.8rem;
+
   }
 
   .title {
