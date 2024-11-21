@@ -81,37 +81,24 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-// Show button when scrolling down
-window.onscroll = function () {
-  const button = document.getElementById("backToTop");
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
-  ) {
-    button.classList.add("show");
-  } else {
-    button.classList.remove("show");
-  }
-};
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "200px";
+  document.querySelector('.hamburger').classList.add('change');
 }
 
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-let isScrolling;
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.querySelector('.hamburger').classList.remove('change');
+}
 
-window.addEventListener("scroll", () => {
-  scrollToTopBtn.classList.add("show");
-
-  window.clearTimeout(isScrolling);
-  isScrolling = setTimeout(() => {
-    scrollToTopBtn.classList.add("hide");
-  }, 1000);
-
-  scrollToTopBtn.classList.remove("hide");
-});
-
-scrollToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+function toggleNav() {
+  const navWidth = document.getElementById("mySidenav").style.width;
+  if (navWidth === "200px") {
+      closeNav();
+  } else {
+      openNav();
+  }
+}

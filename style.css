@@ -70,6 +70,10 @@ section:not(#contactus, #home) {
   background-color: white;
   z-index: 100;
 }
+
+.nav-min{
+  display: none;
+}
 .nav .nav-main {
   display: flex;
   justify-content: flex-end;
@@ -94,13 +98,17 @@ section:not(#contactus, #home) {
   animation: staggered-drop 1s ease forwards;
 }
 
-.nav ul li a:hover {
-  color: #917b44;
+.nav ul li a:hover{
+  color: #a8996e;
+}
+
+a:visited{
+  color: #a8996e;
 }
 
 .nav li a:last-child {
   margin-right: 5rem;
-  margin-left: 4rem;
+  /* margin-left: 2rem; */
   color: #28313a;
   border: 1px solid;
   border-color: #a8996e;
@@ -152,16 +160,89 @@ section:not(#contactus, #home) {
 }
 
 .nav .logo {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 4%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 180px;
-  height: 165px;
+  width: 140px;
+  height: 114px;
 }
 
-.side-menu{
+.sidenav {
+  height: 100vh;
+  width: 0; /* Initially hidden */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0; /* Align to the right */
+  background-color: white; /* White background */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* Transition effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* The links inside the navigation */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #28313a; /* Link color */
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #a8996e;
+}
+
+/* Styling the hamburger icon */
+.hamburger {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px; /* Align to the right */
+  z-index: 2;
+  display: block;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #a8996e;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Animation for hamburger icon transformation */
+.change .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line:nth-child(2) {
+  opacity: 0; /* Hide the middle line */
+}
+
+.change .line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Adjusting main content */
+#main {
+  transition: margin-right .5s;
+  padding: 16px;
+}
+
+#main {
+  transition: margin-right .5s;
+  padding: 0px;
+}
+
+/* .side-menu{
   display: block;
 }
 .nav .sidebar {
@@ -177,8 +258,6 @@ section:not(#contactus, #home) {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start; */
-  background-color: rgb(46, 46, 46, 0.7);
-}
 
 .nav .sidebar li {
   width: 100%;
@@ -186,7 +265,7 @@ section:not(#contactus, #home) {
 
 .nav .sidebar li a {
   color: white;
-}
+} */
 
 .main-img {
   width: 100%;
@@ -194,7 +273,7 @@ section:not(#contactus, #home) {
 }
 
 #home-pic {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   /* aspect-ratio: 16/9; */
@@ -294,7 +373,7 @@ section:not(#contactus, #home) {
   /* background-color: #28313a; */
   height: auto;
   gap: 4rem;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 .video {
   width: 45%;
@@ -557,7 +636,7 @@ summary::marker {
 }
 
 .contact-form {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(40, 49, 58, 0.9);
   position: relative;
   backdrop-filter: blur;
 }
@@ -915,7 +994,80 @@ textarea.input {
   .photo-gallery img {
     width: 370px;
   }
+
+  .nav .logo{
+    width: 180px;
+    height: 165px;
+  }   
 }
+
+@media (max-width: 1248px){
+  .nav {
+    display: none;
+  }
+
+  .nav-min{
+    position: fixed;
+    top: 0;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    border-bottom: 1px solid #8ABAAE;
+    background-color: white;
+    z-index: 100;
+    height: 10vh;
+    width: 100%;
+    gap: 2rem;
+   
+  }
+
+  .nav-min ul li{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    margin-right: 8rem;
+  }
+
+  .nav-min ul li a{
+    text-decoration: none;
+    color: #28313a;
+  }
+
+  .logo-min{
+    height: 100%;
+    width: 120px;
+    position: relative;
+    top: 0;
+    margin-left: 5rem;
+    background-color: #a8996e;
+  }
+  .cont{
+    width: 100%;
+  }
+
+  .photos-grid-container {
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, 200px);
+    border: none;
+  
+  }
+
+  .photo-gallery img{
+    width: 220px;
+    max-height: 480px;
+  }
+
+  .slider-container{
+    width: 100%;   
+  }
+
+  .setlist-container{
+    min-width: 90vw;
+  }
+  
+
+}
+
 @media (max-width: 850px) {
   .form {
     grid-template-columns: 1fr;
@@ -954,7 +1106,7 @@ textarea.input {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .container {
     padding: 1.5rem;
   }
@@ -1000,12 +1152,39 @@ textarea.input {
 
   .btn {
     padding: 0.45rem 1.2rem;
+    height: 40px;
+    font-size: 12px;
+    width: 110px;
+    padding: 0;
+  }
+  .main-video{
+    width: 95%;
+    height: auto;
+  }
+  section{
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  
+  .media-heading{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  
+  .cont{
+    width: 100vw;
+    padding: 10px;
+  }
+
+  .video-main-container{
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .video{
+    width: 90%;
   }
 }
 
-@media (max-width: 1325px){
-  .nav {
-    display: none;
-  }
- 
-}
