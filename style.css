@@ -162,7 +162,7 @@ a:visited {
 .nav .logo {
   position: absolute;
   top: 0;
-  left: 4%;
+  left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   width: 140px;
@@ -205,7 +205,7 @@ a:visited {
   position: fixed;
   top: 15px;
   right: 15px; /* Align to the right */
-  z-index: 2;
+  z-index: 122;
   display: block;
 }
 
@@ -327,14 +327,14 @@ a:visited {
   gap: 1rem;
   column-count: 4;
   background-color: #28313a;
-  border: 12px solid white;
+  border: 46px solid white;
   border-style: groove;
-  padding: 4rem;
+  padding: 2rem;
   /* margin-top: 10rem; */
 }
 
 .photo-gallery img {
-  width: 260px;
+  width: 270px;
   max-height: 480px;
   object-fit: cover;
   /* filter: grayscale(); */
@@ -991,7 +991,7 @@ textarea.input {
 
   .nav .logo {
     width: 180px;
-    height: 165px;
+    height: 100%;
   }
 }
 
@@ -1100,6 +1100,14 @@ textarea.input {
 }
 
 @media (max-width: 600px) {
+
+  .nav-main{
+    display: none;
+  }
+   #band-logo{
+    left: -4%;
+    width: 80px;
+  }
   .container {
     padding: 1.5rem;
   }
