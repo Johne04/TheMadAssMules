@@ -102,3 +102,9 @@ function toggleNav() {
       openNav();
   }
 }
+
+document.querySelectorAll('#mySidenav a').forEach(link => {
+  link.addEventListener('click', () => {
+    closeNav(); // Close the side nav
+  });
+});

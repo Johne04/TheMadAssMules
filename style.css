@@ -27,9 +27,9 @@ section:not(#contactus, #home) {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10rem;
+  padding: 9rem;
 }
 
 .section-divider {
@@ -173,7 +173,7 @@ a:visited {
   height: 100vh;
   width: 0; /* Initially hidden */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   right: 0; /* Align to the right */
   background-color: white; /* White background */
@@ -206,7 +206,7 @@ a:visited {
   top: 15px;
   right: 15px; /* Align to the right */
   z-index: 122;
-  display: block;
+  display: none;
 }
 
 .hamburger .line {
@@ -327,9 +327,8 @@ a:visited {
   gap: 1rem;
   column-count: 4;
   background-color: #28313a;
-  border: 46px solid white;
-  border-style: groove;
-  padding: 2rem;
+  border: 1px solid #a8996e;
+  padding: 4rem 2rem;
   /* margin-top: 10rem; */
 }
 
@@ -370,11 +369,11 @@ a:visited {
   width: 80%;
   /* background-color: #28313a; */
   height: auto;
-  gap: 4rem;
+  gap: 2rem;
   padding: 20px 0;
 }
 .video {
-  width: 45%;
+  width: 35%;
   aspect-ratio: 16 / 9;
   border: 2px solid #a8996e;
   border-radius: 5px;
@@ -382,7 +381,7 @@ a:visited {
 
 /*Testimonials start here*/
 #testimonials {
-  min-height: 100vh;
+  height: auto;
   background-color: white;
   width: 100vw;
 }
@@ -484,7 +483,7 @@ a:visited {
   z-index: 1;
 }
 .setlist-container {
-  z-index: 20;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -861,8 +860,8 @@ textarea.input {
   transform: scale(1.1);
 }
 .media-heading {
-  margin-top: -2rem;
-  margin-bottom: 1rem;
+  /* margin-top: -2rem; */
+  margin-bottom: 15px;
   font-size: 1.6rem;
   color: #a8996e;
   border-bottom: 3px solid #a8996e;
@@ -905,11 +904,11 @@ textarea.input {
 
 .contact-banner {
   height: auto;
-  width: 90%;
+  width: 100%;
   border: 1px 0 solid teal;
   /* position: relative;
   top: 80px; */
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0, 0.1);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -922,10 +921,13 @@ textarea.input {
   font-weight: 600;
   font-family: poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding: 1rem;
 }
 
+p span p{
+  color: white;
+}
 /* Back-to-top button styles */
 .scroll-to-top {
   position: fixed;
@@ -996,6 +998,9 @@ textarea.input {
 }
 
 @media (max-width: 1248px) {
+  .hamburger{
+    display: block;
+  }
   .nav {
     display: none;
   }
@@ -1058,10 +1063,8 @@ textarea.input {
   }
 }
 
-@media (max-width: 850px) {
-  .slider-container {
-    width: 100%;
-  }
+@media (max-width: 950px) {
+ 
   .form {
     grid-template-columns: 1fr;
   }
