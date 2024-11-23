@@ -925,7 +925,7 @@ textarea.input {
   padding: 1rem;
 }
 
-p span p{
+p span p {
   color: white;
 }
 /* Back-to-top button styles */
@@ -995,10 +995,18 @@ p span p{
     width: 180px;
     height: 100%;
   }
+
+  .video-main-container {
+    gap: 8rem;
+    padding-top: 2rem;
+  }
+  .nav .logo {
+    height: 125%;
+  }
 }
 
 @media (max-width: 1248px) {
-  .hamburger{
+  .hamburger {
     display: block;
   }
   .nav {
@@ -1064,7 +1072,6 @@ p span p{
 }
 
 @media (max-width: 950px) {
- 
   .form {
     grid-template-columns: 1fr;
   }
@@ -1103,11 +1110,10 @@ p span p{
 }
 
 @media (max-width: 600px) {
-
-  .nav-main{
+  .nav-main {
     display: none;
   }
-   #band-logo{
+  #band-logo {
     left: -4%;
     width: 80px;
   }
