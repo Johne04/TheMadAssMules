@@ -48,39 +48,6 @@ nextButton.addEventListener("click", () => showSlide(currentIndex + 1));
 setInterval(() => showSlide(currentIndex + 1), 5000);
 
 /*FAQ's section*/
-const navToggle = document.querySelector(
-  '[aria-controls="primary-navigation"]'
-);
-
-navToggle?.addEventListener("click", () => {
-  const navOpened = navToggle.getAttribute("aria-expanded");
-
-  if (navOpened === "false") {
-    navToggle.setAttribute("aria-expanded", true);
-  } else {
-    navToggle.setAttribute("aria-expanded", false);
-  }
-});
-
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
-
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
-
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
-
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "200px";
@@ -118,14 +85,39 @@ toggles.forEach(toggle => {
 });
 
 // SOCIAL PANEL JS
-const floating_btn = document.querySelector('.floating-btn');
-const close_btn = document.querySelector('.close-btn');
-const social_panel_container = document.querySelector('.social-panel-container');
+// const floating_btn = document.querySelector('.floating-btn');
+// const close_btn = document.querySelector('.close-btn');
+// const social_panel_container = document.querySelector('.social-panel-container');
 
-floating_btn.addEventListener('click', () => {
-	social_panel_container.classList.toggle('visible')
-});
+// floating_btn.addEventListener('click', () => {
+// 	social_panel_container.classList.toggle('visible')
+// });
 
-close_btn.addEventListener('click', () => {
-	social_panel_container.classList.remove('visible')
+// close_btn.addEventListener('click', () => {
+// 	social_panel_container.classList.remove('visible')
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryItems = document.querySelectorAll(".gallery-item img");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeLightbox = document.querySelector(".close-lightbox");
+
+  galleryItems.forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImg.src = item.src; // Set the lightbox image source
+      lightbox.style.display = "flex"; // Show the lightbox
+    });
+  });
+
+  closeLightbox.addEventListener("click", () => {
+    lightbox.style.display = "none"; // Hide the lightbox
+  });
+
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
 });

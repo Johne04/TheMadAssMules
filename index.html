@@ -88,73 +88,36 @@
     </section>
     <section id="photos">
       <!-- <img class="wave" src="./src/icons/wave-haikei.png" alt=""> -->
-      
       <div class="media-heading">PHOTO GALLERY</div>
-      <div class="photos-grid-container cont">
-        <div class="photo-gallery">
-          <img src="./src/img/img1.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img2.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img3.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img4.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img5.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img6.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img7.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img8.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img9.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img10.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img11.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img12.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img13.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img14.jpg" alt="" />
-        </div>
-
-        <div class="photo-gallery">
-          <img src="./src/img/img15.jpg" alt="" />
-        </div>
-        <div class="photo-gallery">
-          <img src="./src/img/img16.jpg" alt="" />
-        </div>
-
+      <div class="gallery-container">
+        <div class="gallery-item"><img src="./src/img/img1.jpg" alt="Photo 1"></div>
+        <div class="gallery-item"><img src="./src/img/img2.jpg" alt="Photo 2"></div>
+        <div class="gallery-item"><img src="./src/img/img3.jpg" alt="Photo 3"></div>
+        <div class="gallery-item"><img src="./src/img/img4.jpg" alt="Photo 4"></div>
+        <div class="gallery-item"><img src="./src/img/img5.jpg" alt="Photo 5"></div>
+        <div class="gallery-item"><img src="./src/img/img6.jpg" alt="Photo 6"></div>
+        <div class="gallery-item"><img src="./src/img/img7.jpg" alt="Photo 7"></div>
+        <div class="gallery-item"><img src="./src/img/img8.jpg" alt="Photo 8"></div>
+        <div class="gallery-item"><img src="./src/img/img9.jpg" alt="Photo 9"></div>
+        <div class="gallery-item"><img src="./src/img/img10.jpg" alt="Photo 10"></div>
+        <div class="gallery-item"><img src="./src/img/img11.jpg" alt="Photo 11"></div>
+        <div class="gallery-item"><img src="./src/img/img12.jpg" alt="Photo 12"></div>
+        <div class="gallery-item"><img src="./src/img/img13.jpg" alt="Photo 13"></div>
+        <div class="gallery-item"><img src="./src/img/img14.jpg" alt="Photo 14"></div>
+        <div class="gallery-item"><img src="./src/img/img15.jpg" alt="Photo 15"></div>
+        <div class="gallery-item"><img src="./src/img/img16.jpg" alt="Photo 16"></div>
+        <div class="gallery-item"><img src="./src/img/img17.jpg" alt="Photo 17"></div>
+        <div class="gallery-item"><img src="./src/img/img22.jpg" alt="Photo 20"></div>
+        
+        <!-- Add more gallery-item divs as needed -->
       </div>
+    
+      <!-- Lightbox for viewing photos -->
+      <div class="lightbox">
+        <img id="lightbox-img" src="" alt="Expanded Photo">
+        <span class="close-lightbox">&times;</span>
+      </div>
+     
     </section>
     <section id="testimonials">
       <!-- <img class="wave" src="./src/icons/wave-haikei.png" alt=""> -->
@@ -519,7 +482,9 @@
         </div>
     </section>
     
-    <script src="./script.js"></script>
+    <script src="./script.js">document.addEventListener("DOMContentLoaded", () => {
+      console.log("Script loaded and working");
+    });</script>
     <script
     src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"
   ></script>
