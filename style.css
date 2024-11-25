@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+/* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap'); */
 
 /* :root {
   interpolate-size: allow-keywords;
@@ -165,7 +166,7 @@ a:visited {
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 140px;
+  width: 130px;
   height: 114px;
 }
 
@@ -369,11 +370,11 @@ a:visited {
   width: 80%;
   /* background-color: #28313a; */
   height: auto;
-  gap: 2rem;
+  gap: 4rem;
   padding: 20px 0;
 }
 .video {
-  width: 35%;
+  width: 45%;
   aspect-ratio: 16 / 9;
   border: 2px solid #a8996e;
   border-radius: 5px;
@@ -521,12 +522,110 @@ a:visited {
 }
 
 #FAQs {
-  background-color: #28313a;
+  /* background-color: #28313a; */
 }
 
-.questions-and-answers {
+
+.faqs-container {
+	margin: 0 auto;
+	width: 60%;
+}
+
+.faq {
+	background-color: white;
+	border: 1px solid #a8996e;
+	border-radius: 10px;
+	padding: 1rem;
+	position: relative;
+	overflow: hidden;
+	margin: 1rem 0;
+	transition: 0.3s ease;
+}
+
+.faq.active {
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* .faq.active::after, .faq.active::before {
+	color: #2ecc71;
+	content: '';
+	font-family: 'Font Awesome 5 Free';
+	font-size: 7rem;
+	position: absolute;
+	opacity: 0.2;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+} */
+
+/* .faq.active::before {
+	color: #3498db;
+	top: -10px;
+	left: -30px;
+	transform: rotateY(180deg);
+} */
+
+.faq-title {
+	margin: 0 35px 0 0;
+  color: #28313a;
+  font-weight: 400;
+}
+
+.faq-text {
+	display: none;
+	margin: 1rem 1rem 0;
+  font-weight: 500;
+}
+
+.faq.active .faq-text {
+	display: block;
+}
+
+.faq-toggle {
+	background-color: #28313a;
+	border: none;
+	border-radius: 50%;
+	color: #28313a;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	padding: 0;
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+}
+
+.faq-toggle:focus {
+	outline: none;
+}
+
+.faq.active .faq-toggle {
+	background-color: #a8996e;
+}
+
+.faq-toggle .fa-times {
+	display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+	display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+	color: #a8996e;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+}
+
+/* .questions-and-answers {
   width: 50%;
-  /* padding: 5rem; */
 }
 
 .questions-and-answers {
@@ -548,11 +647,11 @@ details {
   border-radius: 0.25rem;
   overflow: hidden;
   border: 3px solid #a8996e;
-}
+} */
 
 /* don't add margin/padding to this, add it to the actual
    stuff inside the details content */
-details::details-content {
+/* details::details-content {
   color: hsl(0 0% 78%);
   font-size: 8rem;
   block-size: 0;
@@ -586,7 +685,7 @@ summary {
 summary::marker {
   font-size: 1.2em;
   color: #a8996e;
-}
+} */
 
 /*Contact form starts here*/
 #contactus {
