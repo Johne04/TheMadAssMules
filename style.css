@@ -1374,4 +1374,13 @@ p span p {
     height: 20px;
     width: 20px;
   }
+ 
+  .contact-container .form{
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .social-media p{
+    text-align: center;
+  }
 }
