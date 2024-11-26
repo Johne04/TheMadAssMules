@@ -949,12 +949,20 @@ textarea.input {
 
 .social-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
+.icon i{
+  /* height: 1.6rem;
+  width: 1.6rem; */
+  place-content: center;
+}
+
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -996,12 +1004,12 @@ textarea.input {
 }
 
 /* create wrapper */
-.brush-wrap {
+/* .brush-wrap {
   position: relative;
   bottom: 1rem;
   display: inline-block;
   padding: 0.8rem 5rem;
-}
+} */
 
 /* applying example animation (indefinite variant) */
 /* .brush-wrap.brush-wrap--indefinite:before {
@@ -1009,7 +1017,7 @@ textarea.input {
 } */
 
 /* clipping/animating object (pseudo element) */
-.brush-wrap:before {
+/* .brush-wrap:before {
   content: "";
   position: absolute;
   height: 100%;
@@ -1019,15 +1027,15 @@ textarea.input {
   background: #28313a;
   z-index: -1;
   clip-path: url(#clip); /* applying clip animation */
-}
+} */
 
-.brush-wrap p {
+/* .brush-wrap p {
   font-size: 2rem;
   margin: 0;
   color: teal;
   filter: drop-shadow(0px 0px 2px black);
   font-weight: 500;
-}
+} */
 
 /* .contact-banner {
   height: auto;
@@ -1200,6 +1208,10 @@ p span p {
 }
 
 @media (max-width: 950px) {
+
+  html{
+    font-size: 12px;
+  }
   .nav-min{
     height: 15vh;
   }
@@ -1242,7 +1254,13 @@ p span p {
 }
 
 @media (max-width: 600px) {
-
+  .gallery-container{
+    grid-template-columns: repeat(150px, 100px);
+    place-content: center;
+  }
+  .gallery-item img{
+    filter: none; 
+  }
 
   .media-heading{
     font-size: 1rem;
@@ -1347,15 +1365,13 @@ p span p {
   .video {
     width: 90%;
   }
-  .gallery-container{
-    display: flex;
-    flex-direction: column;
-  }
-  .gallery-item{
-    width: 300px;
-  }
 
   .faqs-container{
     width:85vw;
+  }
+
+  .faq-toggle{
+    height: 20px;
+    width: 20px;
   }
 }
