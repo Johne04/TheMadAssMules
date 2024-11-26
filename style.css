@@ -588,7 +588,7 @@ a:visited {
   padding: 1rem;
   position: relative;
   overflow: hidden;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
   transition: 0.3s ease;
 }
 
@@ -780,7 +780,7 @@ form {
   z-index: 10;
   overflow: hidden;
   position: relative;
-  filter: blur(7);
+  filter: blur(9);
 }
 
 .title {
@@ -1129,15 +1129,12 @@ p span p {
 
   .nav .logo {
     width: 180px;
-    height: 100%;
+    height: 125%;
   }
 
   .video-main-container {
     gap: 8rem;
     padding-top: 2rem;
-  }
-  .nav .logo {
-    height: 125%;
   }
 }
 
@@ -1278,7 +1275,7 @@ p span p {
   }
   
   #band-logo {
-    left: -4%;
+    left: -4rem;
     width: 80px;
   }
   .container {
@@ -1310,7 +1307,7 @@ p span p {
   }
 
   html {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .title {
@@ -1374,6 +1371,9 @@ p span p {
     height: 20px;
     width: 20px;
   }
+  .faq{
+    margin: 1.4rem 0;
+  }
  
   .contact-container .form{
     min-width: 100%;
@@ -1383,4 +1383,10 @@ p span p {
   .social-media p{
     text-align: center;
   }
+  input.input{
+    width: 60%;
+  }
+  /* .send-btn{
+    margin-bottom: 2rem;
+  } */
 }
