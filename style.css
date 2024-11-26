@@ -316,7 +316,7 @@ a:visited {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
   width: 70%;
-  background-color: #28313A;
+  background-color: #28313a;
   padding: 2rem;
   box-sizing: border-box;
 }
@@ -324,7 +324,7 @@ a:visited {
 /* Individual Items */
 .gallery-item {
   overflow: hidden;
-  border: 2px solid #A8996E;
+  border: 2px solid #a8996e;
   border-radius: 5px;
 }
 
@@ -344,7 +344,7 @@ a:visited {
   transform: scale(1.1);
   /* opacity: 1; */
   filter: none;
-  cursor: pointer;;
+  cursor: pointer;
 }
 
 /* Lightbox */
@@ -364,7 +364,7 @@ a:visited {
 .lightbox img {
   max-width: 80%;
   max-height: 80%;
-  border: 3px solid #A8996E;
+  border: 3px solid #a8996e;
   border-radius: 5px;
 }
 
@@ -582,35 +582,35 @@ a:visited {
 }
 
 .faq {
-	background-color: white;
-	border: 1px solid #a8996e;
-	border-radius: 10px;
-	padding: 1rem;
-	position: relative;
-	overflow: hidden;
-	margin: 1rem 0;
-	transition: 0.3s ease;
+  background-color: white;
+  border: 1px solid #a8996e;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0;
+  transition: 0.3s ease;
 }
 
 .faq.active {
-	background-color: #fff;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .faq-title {
-	margin: 0 35px 0 0;
+  margin: 0 35px 0 0;
   color: #28313a;
   font-weight: 400;
 }
 
 .faq-text {
-	display: none;
-	margin: 1rem 1rem 0;
+  display: none;
+  margin: 1rem 1rem 0;
   font-weight: 500;
 }
 
 .faq.active .faq-text {
-	display: block;
+  display: block;
 }
 
 .faq-toggle {
@@ -629,27 +629,27 @@ a:visited {
 }
 
 .faq-toggle:focus {
-	outline: none;
+  outline: none;
 }
 
 .faq.active .faq-toggle {
-	background-color: #a8996e;
+  background-color: #a8996e;
 }
 
 .faq-toggle .fa-times {
-	display: none;
+  display: none;
 }
 
 .faq.active .faq-toggle .fa-times {
-	display: block;
+  display: block;
 }
 
 .faq-toggle .fa-chevron-down {
-	color: #a8996e;
+  color: #a8996e;
 }
 
 .faq.active .faq-toggle .fa-chevron-down {
-	display: none;
+  display: none;
 }
 
 /* .questions-and-answers {
@@ -1108,12 +1108,15 @@ p span p {
 } */
 
 @media (min-width: 2110px) {
-  .photos-grid-container {
-    grid-template-columns: repeat(auto-fit, 350px);
+  .gallery-container {
+    grid-template-columns: repeat(auto-fit, 180px);
   }
 
-  .photo-gallery img {
-    width: 370px;
+  .gallery-item img {
+    height: 200px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    min-height: 200px;
   }
 
   .nav .logo {
