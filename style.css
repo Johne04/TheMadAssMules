@@ -1292,8 +1292,8 @@ p span p {
   }
 
   form,
-  .contact-info {
-    padding: 1.7rem 1.6rem;
+  .contact-info, .form {
+    padding: 1rem 1.6rem;
   }
 
   .text,
@@ -1347,8 +1347,11 @@ p span p {
   }
 
   .media-heading {
+    font-size: 1.2rem;
     letter-spacing: 1px;
-    margin: 0;
+    margin-bottom: .6rem;
+    padding: 0;
+    font-weight: 600;
   }
 
   /* .cont {
@@ -1385,6 +1388,7 @@ p span p {
   }
   .social-media p{
     text-align: center;
+    padding: 5px;
   }
   input.input{
     width: 60%;
