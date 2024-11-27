@@ -103,9 +103,9 @@ section:not(#contactus, #home) {
   color: #a8996e;
 }
 
-.nav ul li a:visited {
+/* .nav ul li a:visited {
   color: #a8996e !important;
-}
+} */
 
 .nav li a:last-child {
   margin-right: 5rem;
@@ -319,7 +319,7 @@ section:not(#contactus, #home) {
   background-color: #28313a;
   padding: 2rem;
   box-sizing: border-box;
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255, 0.1);
   border: 3px solid white;
   border-style: groove;
 }
@@ -328,7 +328,7 @@ section:not(#contactus, #home) {
 .gallery-item {
   overflow: hidden;
   border: 1.5px solid #a8996e;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .gallery-item img {
@@ -586,6 +586,7 @@ section:not(#contactus, #home) {
 
 .faq {
   background-color: white;
+  border: 2px solid #a8996e;
   border-radius: 10px;
   padding: 1rem;
   position: relative;
@@ -926,6 +927,10 @@ textarea.input {
 
 .social-media p {
   color: #28313a;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #28313a;
 }
 
 /* .social-icons {
@@ -954,6 +959,7 @@ textarea.input {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-top: 1rem;
 }
 
 .icon i{
@@ -1199,7 +1205,6 @@ p span p {
   .gallery-item img{
     height: 100px;
     filter: none; 
-    border: 5px solid red;
   }
 
   .slider-container {
@@ -1378,8 +1383,8 @@ p span p {
   }
 
   .media-heading {
-    font-size: 1.4rem;
-    width: 100vw;
+    font-size: 1.2rem;
+    width: 80vw;
     letter-spacing: 1px;
     /* margin-bottom: .6rem; */
     padding: 0;
