@@ -1251,6 +1251,10 @@ p span p {
 }
 
 @media (max-width: 600px) {
+
+  .sidenav a{
+    padding: 8px 8px 20px 32px;
+  }
   .gallery-container{
     grid-template-columns: repeat(150px, 100px);
     place-content: center;
