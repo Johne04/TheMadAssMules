@@ -1259,12 +1259,8 @@ p span p {
     filter: none; 
   }
 
-  .media-heading{
-    font-size: 1rem;
-    width: 100vw;
-    text-align: center;
-    border: none;
-    padding-bottom: 1rem;
+  .song-container-inner .song-category{
+    font-size: 1.2rem;
   }
   .nav-main {
     display: none;
@@ -1347,11 +1343,15 @@ p span p {
   }
 
   .media-heading {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    width: 100vw;
     letter-spacing: 1px;
-    margin-bottom: .6rem;
+    /* margin-bottom: .6rem; */
     padding: 0;
     font-weight: 600;
+    border: none;
+    display: flex;
+    justify-content: center;
   }
 
   /* .cont {
