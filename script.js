@@ -50,7 +50,7 @@ setInterval(() => showSlide(currentIndex + 1), 5000);
 /*FAQ's section*/
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "200px";
   document.querySelector('.hamburger').classList.add('change');
 }
@@ -63,7 +63,7 @@ function closeNav() {
 
 function toggleNav() {
   const navWidth = document.getElementById("mySidenav").style.width;
-  if (navWidth === "200px") {
+  if (navWidth === "250px") {
       closeNav();
   } else {
       openNav();
