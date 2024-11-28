@@ -166,7 +166,7 @@ section:not(#contactus, #home) {
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 130px;
+  width: 150px;
   height: 114px;
 }
 
@@ -445,6 +445,18 @@ section:not(#contactus, #home) {
   width: 100vw;
 }
 
+.review{
+  height: 15vh;
+  width: 100vw;
+  background-color: #a8996e;
+  color: #28313a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+}
+
 .slider-container {
   position: relative;
   width: 60%;
@@ -532,6 +544,8 @@ section:not(#contactus, #home) {
   padding-top: 6rem;
 }
 
+#setlist .
+
 .setlist-heading {
   font-size: 2.2rem;
   font-weight: 600;
@@ -556,6 +570,10 @@ section:not(#contactus, #home) {
 .song-container-inner {
   display: flex;
   align-items: center;
+}
+
+.song-container-inner .song-category{
+  font-size: 1.4rem;
 }
 
 .song-container-inner p {
@@ -746,7 +764,7 @@ summary::marker {
 
 .form {
   width: 100%;
-  max-width: 70%;
+  max-width: 60%;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px #a8996e;
   z-index: 1;
@@ -909,10 +927,11 @@ textarea.input {
 .information {
   display: flex;
   color: #28313a;
-  margin: 0.7rem 0;
+  margin: 2rem 0;
   align-items: center;
   font-size: 0.95rem;
 }
+
 
 .icon {
   width: 28px;
@@ -921,8 +940,9 @@ textarea.input {
   color: #a8996e;
 }
 
+
 .social-media {
-  padding: 2rem 0 0 0;
+  padding: 4rem 0 0 0;
 }
 
 .social-media p {
@@ -932,27 +952,6 @@ textarea.input {
   padding-bottom: 1rem;
   border-bottom: 1px solid #28313a;
 }
-
-/* .social-icons {
-  display: flex;
-  margin-top: 0.5rem;
-}
-
-.social-icons a {
-  width: 45px;
-  height: 45px;
-  border-radius: 5px;
-  background-color: #28313a;
-  color: white;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 0.8rem;
-  transition: 0.3s;
-}
-
-.social-icons a i {
-  color: red;
-} */
 
 .social-icons {
   display: flex;
@@ -1014,66 +1013,6 @@ textarea.input {
   box-shadow: 0px 1px 0px 0px;
 }
 
-
-/* create wrapper */
-/* .brush-wrap {
-  position: relative;
-  bottom: 1rem;
-  display: inline-block;
-  padding: 0.8rem 5rem;
-} */
-
-/* applying example animation (indefinite variant) */
-/* .brush-wrap.brush-wrap--indefinite:before {
-  clip-path: url(#clip-indefinite);
-} */
-
-/* clipping/animating object (pseudo element) */
-/* .brush-wrap:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #28313a;
-  z-index: -1;
-  clip-path: url(#clip); /* applying clip animation */
-} */
-
-/* .brush-wrap p {
-  font-size: 2rem;
-  margin: 0;
-  color: teal;
-  filter: drop-shadow(0px 0px 2px black);
-  font-weight: 500;
-} */
-
-/* .contact-banner {
-  height: auto;
-  width: 100%;
-  border: 1px 0 solid teal;
-  background-color: rgb(0, 0, 0, 0.1);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 4rem;
-}
-
-.contact-banner p {
-  color: #a8996e;
-  font-weight: 600;
-  font-family: poppins, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 1.5rem;
-  padding: 1rem;
-}
-
-p span p {
-  color: white;
-} */
-/* Back-to-top button styles */
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -1105,15 +1044,6 @@ p span p {
   transform: translateY(20px);
 }
 
-/* .wave {
-  position: fixed;
-  top: 0;
-  height: 350px;
-  width: 100%;
-  z-index: -8;
-  height: 170px; 
-} */
-
 .square {
   position: static;
   height: 400px;
@@ -1122,10 +1052,6 @@ p span p {
   transform: translate(181%, 11%);
   opacity: 0.2;
 }
-
-/* .cont {
-  margin-top: 12rem;
-} */
 
 @media (min-width: 2110px) {
   .gallery-container {
@@ -1208,7 +1134,7 @@ p span p {
   }
 
   .slider-container {
-    width: 90%;
+    width: 90vw;
   }
 
   .setlist-container {
@@ -1223,6 +1149,8 @@ p span p {
   
   .logo-min{
     width: 80px;
+    left: -40px;
+    width: 100px;
   }
 
   .gallery-container {
@@ -1244,6 +1172,10 @@ p span p {
 
   html{
     font-size: 12px;
+  }
+
+  .slider-container{
+    width: 70vw;
   }
   .nav-min{
     height: 15vh;
@@ -1292,11 +1224,15 @@ p span p {
     padding: 8px 8px 20px 32px;
   }
   .gallery-container{
-    grid-template-columns: repeat(150px, 100px);
-    place-content: center;
+    grid-template-columns: repeat(auto, 190px);
+    gap: .5rem;
+    border: 2px solid;
+   
   }
   .gallery-item img{
     filter: none; 
+    height: 200px;
+    /* width: 160px; */
   }
 
   .song-container-inner .song-category{
@@ -1307,7 +1243,7 @@ p span p {
   }
 
   .nav-min{
-    height: 10vh;
+    height: 8vh;
   }
   
   #band-logo {
@@ -1394,11 +1330,6 @@ p span p {
     justify-content: center;
   }
 
-  /* .cont {
-    width: 100vw;
-    padding: 10px;
-  } */
-
   .cont {
     width: 100vw;
     gap: 2rem;
@@ -1425,6 +1356,11 @@ p span p {
     min-width: 100%;
     padding: 0;
     margin: 0;
+  }
+
+  .social-media, .information{
+    padding: 0;
+    margin: 10px;
   }
   .social-media p{
     text-align: center;
