@@ -320,7 +320,7 @@ section:not(#contactus, #home) {
   padding: 2rem;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255, 0.1);
-  border: 3px solid white;
+  border: 2px solid #a8996e;
   border-style: groove;
 }
 
@@ -1112,10 +1112,10 @@ textarea.input {
 
   .logo-min {
     height: 100%;
-    width: 120px;
+    width: 100px;
     position: relative;
     top: 0;
-    margin-left: 5rem;
+    margin-left: 4rem;
     background-color: #a8996e;
   }
   .cont {
@@ -1149,9 +1149,8 @@ textarea.input {
   }
   
   .logo-min{
-    width: 80px;
-    left: -40px;
     width: 100px;
+    height: 100%;
   }
 
   .gallery-container {
@@ -1231,6 +1230,10 @@ textarea.input {
   .sidenav a{
     padding: 8px 8px 20px 32px;
   }
+
+  .nav-min{
+    height: 10vh;
+  }
   .gallery-container{
     /* grid-template-columns: repeat(auto-fit, 130px);
     gap: .5rem; */
@@ -1250,16 +1253,9 @@ textarea.input {
   .song-container-inner .song-category{
     font-size: 1.2rem;
   }
-  .nav-main {
-    display: none;
-  }
-
-  .nav-min{
-    height: 8vh;
-  }
   
   #band-logo {
-    left: -4rem;
+    /* left: -4rem; */
     width: 80px;
   }
   .container {
@@ -1384,4 +1380,14 @@ textarea.input {
   /* .send-btn{
     margin-bottom: 2rem;
   } */
+}
+
+@media (max-width: 400px) {
+     .logo-min{
+      left: -30px;
+    }
+
+    .nav-min li a{
+      display: none;
+    }
 }
