@@ -1155,14 +1155,14 @@ textarea.input {
 
   .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
-    width: 100vw;
+    width: 80vw;
   }
   
   /* Individual Items */
   .gallery-item img{
-    height: 220px;
+    height: 180px;
     filter: none; 
   }
 
