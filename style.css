@@ -1227,7 +1227,7 @@ textarea.input {
     padding: 8px 8px 20px 32px;
   }
   .gallery-container{
-    grid-template-columns: repeat(auto, 190px);
+    grid-template-columns: repeat(auto-fit, 130px);
     gap: .5rem;
     border: 2px solid;
    
