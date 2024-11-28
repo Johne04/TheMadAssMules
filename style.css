@@ -1093,7 +1093,7 @@ textarea.input {
     border-bottom: 1px solid #8abaae;
     background-color: white;
     z-index: 100;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     gap: 2rem;
   }
@@ -1122,14 +1122,12 @@ textarea.input {
     width: 100%;
   }
 
-  .photos-grid-container {
+  .gallery-container{
     width: 90vw;
-    grid-template-columns: repeat(auto-fit, 200px);
-    border: none;
   }
 
   .gallery-item img{
-    height: 100px;
+    height: 200px;
     filter: none; 
   }
 
@@ -1138,6 +1136,9 @@ textarea.input {
   }
 
   .setlist-container {
+    min-width: 90vw;
+  }
+  .form{
     min-width: 90vw;
   }
 }
@@ -1178,7 +1179,7 @@ textarea.input {
     width: 70vw;
   }
   .nav-min{
-    height: 15vh;
+    height: 8vh;
   }
 
   .form {
@@ -1219,6 +1220,10 @@ textarea.input {
   .send-btn{
     margin-bottom: 4rem;
   }
+
+  .form{
+    min-width: 80vw;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1227,15 +1232,19 @@ textarea.input {
     padding: 8px 8px 20px 32px;
   }
   .gallery-container{
-    grid-template-columns: repeat(auto-fit, 130px);
-    gap: .5rem;
+    /* grid-template-columns: repeat(auto-fit, 130px);
+    gap: .5rem; */
     border: 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
    
   }
   .gallery-item img{
     filter: none; 
-    height: 200px;
-    /* width: 160px; */
+    height: 160px;
+    width: 120px;
   }
 
   .song-container-inner .song-category{
