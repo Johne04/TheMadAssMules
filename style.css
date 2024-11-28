@@ -1216,6 +1216,9 @@ textarea.input {
   .social-media {
     padding: 1.5rem 0 0 0;
   }
+  .send-btn{
+    margin-bottom: 4rem;
+  }
 }
 
 @media (max-width: 600px) {
