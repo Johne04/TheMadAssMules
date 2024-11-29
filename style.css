@@ -60,7 +60,7 @@ section:not(#contactus, #home) {
 }
 
 .nav {
-  height: 10vh;
+  height: 75px;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -167,8 +167,8 @@ section:not(#contactus, #home) {
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 150px;
-  height: 134px;
+  width: 10px;
+  height: 104px;
 }
 
 .sidenav {
@@ -1110,7 +1110,7 @@ textarea.input {
     border-bottom: 1px solid #8abaae;
     background-color: white;
     z-index: 100;
-    height: 10vh;
+    height: 75px;
     width: 100%;
     gap: 2rem;
   }
@@ -1195,7 +1195,7 @@ textarea.input {
     width: 70vw;
   }
   .nav-min{
-    height: 10vh;
+    height: 75px;
   }
 
   .form {
@@ -1249,7 +1249,7 @@ textarea.input {
   }
 
   .nav-min{
-    height: 10vh;
+    height: 75px;
   }
   .gallery-container{
     /* grid-template-columns: repeat(auto-fit, 130px);
