@@ -67,9 +67,9 @@ section:not(#contactus, #home) {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border-bottom: 2px solid #28313a;
+  border-bottom: 1px solid #a8996e;
   border-style: groove;
-  background-color: white;
+  background-color: #28313a;
   z-index: 10;
 }
 
@@ -91,7 +91,7 @@ section:not(#contactus, #home) {
 
 .nav ul li a {
   text-decoration: none;
-  color: #28313a;
+  color: #a8996e;
   font-size: 1rem;
   font-weight: 500;
   display: inline-block;
@@ -101,7 +101,7 @@ section:not(#contactus, #home) {
 }
 
 .nav ul li a:hover {
-  color: #a8996e;
+  color: #c9b684;
 }
 
 /* .nav ul li a:visited {
@@ -111,6 +111,7 @@ section:not(#contactus, #home) {
 .nav li a:last-child {
   margin-right: 5rem;
   /* margin-left: 2rem; */
+  background-color: white;
   color: #28313a;
   border: 1px solid;
   border-color: #a8996e;
@@ -167,7 +168,7 @@ section:not(#contactus, #home) {
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 10px;
+  width: 125px;
   height: 104px;
 }
 
@@ -445,19 +446,6 @@ section:not(#contactus, #home) {
   background-color: white;
   width: 100vw;
 }
-
-.review{
-  height: 15vh;
-  width: 100vw;
-  background-color: #a8996e;
-  color: #28313a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 4rem;
-  font-size: 2.5rem;
-}
-
 .slider-container {
   position: relative;
   width: 60%;
@@ -546,16 +534,6 @@ section:not(#contactus, #home) {
   padding-top: 6rem;
 }
 
-
-.setlist-heading {
-  font-size: 2.2rem;
-  font-weight: 600;
-  font-family: Oswald, Verdana;
-  letter-spacing: 2px;
-  color: #a8996e;
-  border-bottom: 2px solid #e7e7e7;
-  z-index: 1;
-}
 .setlist-container {
   z-index: 1;
   display: flex;
@@ -602,8 +580,12 @@ section:not(#contactus, #home) {
  
 
 .faqs-container {
-	display:block;
+	display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
 	width: 60%;
+  height: 80vh;
 }
 
 .faq {
@@ -614,9 +596,13 @@ section:not(#contactus, #home) {
   padding: 1rem;
   position: relative;
   overflow: hidden;
-  margin: 1.2rem 0;
+  margin: .3rem 0;
   transition: 0.3s ease;
   color: white;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .faq.active {
@@ -636,9 +622,11 @@ section:not(#contactus, #home) {
 
 .faq-text {
   display: none;
-  margin: 1rem 1rem 0;
+  /* margin: 8rem 5rem 12rem; */
   font-weight: 500;
   color: #28313a;
+  margin-right: 5rem;
+
 }
 
 .faq.active .faq-text {
@@ -653,11 +641,9 @@ section:not(#contactus, #home) {
 	cursor: pointer;
 	font-size: 16px;
 	padding: 0;
-	position: absolute;
-	right: 2%;
-  top: 25%;
 	height: 30px;
 	width: 30px;
+ 
 }
 
 .faq-toggle:focus {
@@ -684,74 +670,12 @@ section:not(#contactus, #home) {
   padding: 7px;
   border: 2px solid #a8996e;
   border-radius: 50%;
+  align-self: flex-end;
 }
 
 .faq.active .faq-toggle .fa-chevron-down {
   display: none;
 }
-
-/* .questions-and-answers {
-  width: 50%;
-}
-
-.questions-and-answers {
-  display: grid;
-  gap: 1rem;
-}
-
-.questions-and-answers p {
-  padding: 0 3rem;
-}
-
-details * {
-  margin: 0;
-}
-details {
-  background: white;
-  border: 1px solid #a8996e;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  border: 3px solid #a8996e;
-} */
-
-/* don't add margin/padding to this, add it to the actual
-   stuff inside the details content */
-/* details::details-content {
-  color: hsl(0 0% 78%);
-  font-size: 8rem;
-  block-size: 0;
-  transition: block-size 1s, content-visibility 1s;
-  transition-behavior: allow-discrete;
-}
-
-details:open::details-content {
-  block-size: auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-details,
-summary {
-  margin-block-end: 0;
-  color: #28313a;
-}
-
-summary {
-  color: #271f06;
-  line-height: 1.5;
-  margin-inline-start: 1rem;
-  list-style-position: outside;
-  font-size: 1.1rem;
-}
-
-summary::marker {
-  font-size: 1.2em;
-  color: #a8996e;
-} */
 
 /*Contact form starts here*/
 #contactus {
@@ -1107,7 +1031,7 @@ textarea.input {
     display: flex;
     margin-left: auto;
     align-items: center;
-    border-bottom: 1px solid #8abaae;
+    border-bottom: 1px solid #28313a;
     background-color: white;
     z-index: 100;
     height: 75px;
@@ -1162,7 +1086,7 @@ textarea.input {
 
 @media (max-width: 950px) {
   .cont{
-    width: 80%;
+    width: 90%;
   }
   
   .logo-min{
@@ -1197,7 +1121,6 @@ textarea.input {
   .nav-min{
     height: 75px;
   }
-
   .form {
     grid-template-columns: 1fr;
   }
@@ -1345,7 +1268,7 @@ textarea.input {
 
   .media-heading {
     font-size: 1.2rem;
-    width: 80vw;
+    /* width: 80vw; */
     letter-spacing: 1px;
     /* margin-bottom: .6rem; */
     padding: 0;
@@ -1363,18 +1286,6 @@ textarea.input {
 
   .video {
     width: 90%;
-  }
-
-  .faqs-container{
-    width:85vw;
-  }
-
-  .faq-toggle{
-    height: 20px;
-    width: 20px;
-  }
-  .faq{
-    margin: 1.4rem 0;
   }
  
   .contact-container .form{
@@ -1397,14 +1308,32 @@ textarea.input {
   /* .send-btn{
     margin-bottom: 2rem;
   } */
+
+  .faqs-container{
+    gap: 5px;
+    width: 100%;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 414px) {
+/* 
+ section:nth-child(6){
+    border: 5px solid red;
+    padding: 0;
+    margin: 0;
+  } */
      .logo-min{
       left: -30px;
     }
 
     .nav-min li a{
       display: none;
+    }
+    .faqs-container{
+      gap: 5px;
+      width: 90vw;
+    }
+    html{
+      font-size: 11px;
     }
 }
