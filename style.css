@@ -163,14 +163,13 @@ section:not(#contactus, #home) {
 }
 
 .nav .logo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   width: 125px;
   height: 104px;
-  z-index: 10;
 }
 
 .sidenav {

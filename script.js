@@ -9,9 +9,6 @@ const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
-let lastScrollPosition = 0;
-const navbar = document.getElementById('navbar');
-
 // navLinks.forEach((link, index) => {
 //   link.classList.add("show");
 // });
@@ -123,101 +120,4 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.style.display = "none";
     }
   });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const galleryItems = document.querySelectorAll(".gallery-item img");
-  const lightbox = document.querySelector(".lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeLightbox = document.querySelector(".close-lightbox");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-
-  let currentIndex = -1;
-  let startX = 0; // To capture touch start position
-
-  // Function to show the lightbox with the image at the specified index
-  const showLightbox = (index) => {
-    currentIndex = index;
-    lightboxImg.src = galleryItems[index].src;
-    lightbox.style.display = "flex";
-  };
-
-  // Function to close the lightbox
-  const close = () => {
-    lightbox.style.display = "none";
-    currentIndex = -1;
-  };
-
-  // Navigate to the previous image
-  const prevImage = () => {
-    if (currentIndex > 0) {
-      showLightbox(currentIndex - 1);
-    }
-  };
-
-  // Navigate to the next image
-  const nextImage = () => {
-    if (currentIndex < galleryItems.length - 1) {
-      showLightbox(currentIndex + 1);
-    }
-  };
-
-  // Handle swipe gestures
-  const handleTouchStart = (e) => {
-    startX = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-
-    if (diff > 50) {
-      // Swipe left
-      nextImage();
-    } else if (diff < -50) {
-      // Swipe right
-      prevImage();
-    }
-  };
-
-  // Attach click event listeners to gallery items
-  galleryItems.forEach((item, index) => {
-    item.addEventListener("click", () => showLightbox(index));
-  });
-
-  // Attach click event listeners to lightbox controls
-  closeLightbox.addEventListener("click", close);
-  prevButton.addEventListener("click", prevImage);
-  nextButton.addEventListener("click", nextImage);
-
-  // Close lightbox when clicking outside the image
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
-  });
-
-  // Add touch event listeners to the lightbox for swipe functionality
-  lightbox.addEventListener("touchstart", handleTouchStart, { passive: true });
-  lightbox.addEventListener("touchend", handleTouchEnd, { passive: true });
-
-  // Add keyboard navigation support
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") close();
-    if (e.key === "ArrowLeft") prevImage();
-    if (e.key === "ArrowRight") nextImage();
-  });
-});
-
-
-window.addEventListener('scroll', () => {
-  const currentScrollPosition = window.pageYOffset;
-
-  if (currentScrollPosition > lastScrollPosition) {
-      // Scrolling down
-      navbar.style.top = '-80px'; // Adjust this to the navbar's height
-  } else {
-      // Scrolling up
-      navbar.style.top = '0';
-  }
-  lastScrollPosition = currentScrollPosition;
 });
