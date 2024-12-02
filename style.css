@@ -378,8 +378,7 @@ section:not(#contactus, #home) {
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 2rem;@media
   cursor: pointer;
 }
 
@@ -396,11 +395,11 @@ section:not(#contactus, #home) {
 }
 
 .lightbox .prev {
-  left: 10px;
+  left: 50px;
 }
 
 .lightbox .next {
-  right: 10px;
+  right: 50px;
 }
 
 
@@ -1329,7 +1328,7 @@ textarea.input {
 
   .faqs-container {
     gap: 5px;
-    width: 100%;
+    width: 90vw;
   }
 }
 
