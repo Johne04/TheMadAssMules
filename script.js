@@ -97,27 +97,86 @@ toggles.forEach(toggle => {
 // 	social_panel_container.classList.remove('visible')
 // });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const galleryItems = document.querySelectorAll(".gallery-item img");
   const lightbox = document.querySelector(".lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeLightbox = document.querySelector(".close-lightbox");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
 
-  galleryItems.forEach(item => {
-    item.addEventListener("click", () => {
-      lightboxImg.src = item.src; // Set the lightbox image source
-      lightbox.style.display = "flex"; // Show the lightbox
-    });
+  let currentIndex = -1;
+  let startX = 0; // To capture touch start position
+
+  // Function to show the lightbox with the image at the specified index
+  const showLightbox = (index) => {
+    currentIndex = index;
+    lightboxImg.src = galleryItems[index].src;
+    lightbox.style.display = "flex";
+  };
+
+  // Function to close the lightbox
+  const close = () => {
+    lightbox.style.display = "none";
+    currentIndex = -1;
+  };
+
+  // Navigate to the previous image
+  const prevImage = () => {
+    if (currentIndex > 0) {
+      showLightbox(currentIndex - 1);
+    }
+  };
+
+  // Navigate to the next image
+  const nextImage = () => {
+    if (currentIndex < galleryItems.length - 1) {
+      showLightbox(currentIndex + 1);
+    }
+  };
+
+  // Handle swipe gestures
+  const handleTouchStart = (e) => {
+    startX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (diff > 50) {
+      // Swipe left
+      nextImage();
+    } else if (diff < -50) {
+      // Swipe right
+      prevImage();
+    }
+  };
+
+  // Attach click event listeners to gallery items
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => showLightbox(index));
   });
 
-  closeLightbox.addEventListener("click", () => {
-    lightbox.style.display = "none"; // Hide the lightbox
-  });
+  // Attach click event listeners to lightbox controls
+  closeLightbox.addEventListener("click", close);
+  prevButton.addEventListener("click", prevImage);
+  nextButton.addEventListener("click", nextImage);
 
   // Close lightbox when clicking outside the image
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = "none";
-    }
+    if (e.target === lightbox) close();
+  });
+
+  // Add touch event listeners to the lightbox for swipe functionality
+  lightbox.addEventListener("touchstart", handleTouchStart, { passive: true });
+  lightbox.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+  // Add keyboard navigation support
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") prevImage();
+    if (e.key === "ArrowRight") nextImage();
   });
 });
