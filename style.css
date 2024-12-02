@@ -163,13 +163,14 @@ section:not(#contactus, #home) {
 }
 
 .nav .logo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   width: 125px;
   height: 104px;
+  z-index: 10;
 }
 
 .sidenav {
@@ -381,6 +382,27 @@ section:not(#contactus, #home) {
   color: #fff;
   cursor: pointer;
 }
+
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+}
+
+.lightbox .prev {
+  left: 10px;
+}
+
+.lightbox .next {
+  right: 10px;
+}
+
 
 /* .photos-grid-container {
   width: 80%;
