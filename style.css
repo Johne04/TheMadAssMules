@@ -174,7 +174,7 @@ section:not(#contactus, #home) {
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 125px;
+  width: 130px;
   height: 104px;
 }
 
@@ -275,6 +275,10 @@ section:not(#contactus, #home) {
   border-style: groove; */
 }
 
+.mobile-pic{
+  display: none;
+}
+
 .home-banner{
   width: 100vw;
   height: 100%;
@@ -286,8 +290,15 @@ section:not(#contactus, #home) {
   justify-content: center;
   align-items: center;
   font-family: ultra, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   letter-spacing: 5px;
+}
+
+.home-banner p{
+  background-color: #28313a;
+  color: #a8996e;
+  padding: 0 20px;
+  box-shadow: 3px -3px 0px #8aa7c4;
 }
 .button-container {
   position: absolute;
@@ -301,10 +312,10 @@ section:not(#contactus, #home) {
 .btn {
   height: 45px;
   width: 130px;
-  background-color: #28313a;
+  background-color: white;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: #28313a;
   text-decoration: none;
   font-weight: 400;
   outline: none;
@@ -312,12 +323,14 @@ section:not(#contactus, #home) {
   font-size: 1rem;
 }
 .btn:hover {
+  background-color: #a8996e;
+  color: white;
   font-weight: 700;
 }
 
 .button-container a {
   text-decoration: none;
-  color: white;
+  color: #28313a;
   font-weight: 500;
 }
 
@@ -645,6 +658,7 @@ section:not(#contactus, #home) {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .faq.active {
@@ -1373,6 +1387,20 @@ textarea.input {
 
   .nav-min li a {
     display: none;
+  }
+
+  .main-img > .home-pic{
+    display: none;
+    border: 12px solid red;
+  }
+
+  .mobile-pic{
+    display: flex;
+    /* width: 100vw;
+    height: 80vh; */
+    object-fit: cover;
+    object-position: top;
+    margin-top: 8vh;
   }
   .faqs-container {
     gap: 5px;
