@@ -76,13 +76,33 @@ document.querySelectorAll('#mySidenav a').forEach(link => {
   });
 });
 
-const toggles = document.querySelectorAll('.faq-toggle');
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    const toggle = question.querySelector('.faq-toggle');
 
-toggles.forEach(toggle => {
-	toggle.addEventListener('click', () => {
-		toggle.parentNode.classList.toggle('active');
-	});
+    // Collapse other open items (optional)
+    document.querySelectorAll('.faq-answer').forEach(ans => {
+      if (ans !== answer) {
+        ans.style.maxHeight = null;
+        ans.style.padding = '0 15px';
+        ans.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+      }
+    });
+
+    // Toggle current item
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+      answer.style.padding = '0 25px';
+      toggle.textContent = '+';
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      answer.style.padding = '25px';
+      toggle.textContent = '-';
+    }
+  });
 });
+
 
 // SOCIAL PANEL JS
 // const floating_btn = document.querySelector('.floating-btn');
