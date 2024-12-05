@@ -284,19 +284,39 @@ section:not(#contactus, #home) {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: ultra, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3rem;
-  letter-spacing: 5px;
   z-index: 11;
   position: relative;
-  bottom: 14rem;
+  bottom: 12rem;
+  background-color: #28313a;
 }
 
+.cutout-text {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #a8996e, #FFFFFF, #837656);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-move 5s infinite ease-in-out;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 0%; }
+}
+
+/* 
 .home-banner p {
   color: #28313A;
-  padding: 0 20px;
+  padding: 0 60px;
   background-color: #a8996e;
-}
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+
+ 
+} */
 .button-container {
   position: absolute;
   bottom: 15%;
@@ -312,26 +332,29 @@ section:not(#contactus, #home) {
   background-color: #28313a;
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: #a8996e;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 600;
   outline: none;
   z-index: 10;
   font-size: 1rem;
 }
 .btn:hover {
+  background-color: #a8996e;
+  color: #28313a;
   font-weight: 700;
 }
 
 .button-container a {
   text-decoration: none;
-  color: white;
-  font-weight: 500;
+  color: #a8996e;
+  font-weight: 600;
 }
 
 .button-container a:hover {
   font-weight: 700;
-  color: white;
+  background-color: #a8996e;
+  color: #28313a;
 }
 
 #photos {
@@ -475,11 +498,11 @@ section:not(#contactus, #home) {
   width: 80%;
   /* background-color: #28313a; */
   height: auto;
-  gap: 4rem;
+  gap: 3rem;
   padding: 20px 0;
 }
 .video {
-  width: 45%;
+  width: 35%;
   aspect-ratio: 16 / 9;
   border: 2px solid #a8996e;
   border-radius: 5px;
