@@ -357,9 +357,9 @@ section:not(#contactus, #home) {
   color: #28313a;
 }
 
-#photos {
+/* #photos {
   background-color: #28313a;
-}
+} */
 /* .gallery-section {
   display: flex;
   justify-content: center;
@@ -383,6 +383,7 @@ section:not(#contactus, #home) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #28313a;
 }
 
 /* Individual Items */
@@ -496,13 +497,12 @@ section:not(#contactus, #home) {
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
-  /* background-color: #28313a; */
-  height: auto;
-  gap: 3rem;
-  padding: 20px 0;
+  /* height: 250px; */
+  /* gap: 1rem; */
+  padding: 0;
 }
 .video {
-  width: 35%;
+  width: 45%;
   aspect-ratio: 16 / 9;
   border: 2px solid #a8996e;
   border-radius: 5px;
@@ -643,7 +643,12 @@ section:not(#contactus, #home) {
   flex-direction: column;
   justify-content: center;
 }
-
+/* .faqs-container{
+  border: 2px solid #837656;
+  width: 80%;
+  padding: 3rem 0;
+  background-color: #dbdbdb;
+} */
 .faq-section {
   max-width: 900px;
   margin: 0 auto;
@@ -666,16 +671,16 @@ section:not(#contactus, #home) {
   align-items: center;
   background-color: #28313a;
   color: #a8996e;
-  padding: 15px;
+  padding: 1rem;
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: 3px solid #a8996e;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .faq-question:hover {
-  background-color: #000000; /* Secondary color */
+  color: #d3bf8c;
 }
 
 .faq-toggle {
@@ -810,7 +815,7 @@ textarea.input {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  /* padding: 5REM 0.4rem; */
+  padding: 5REM 0.4rem;
   color: white;
   font-size: 0.9rem;
   font-weight: 400;
