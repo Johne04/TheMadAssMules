@@ -293,7 +293,7 @@ section:not(#contactus, #home) {
 .cutout-text {
   font-size: 4rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #a8996e, #FFFFFF, #837656);
+  background: linear-gradient(45deg, #373225, #7e7e7e, #302d26);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -302,8 +302,12 @@ section:not(#contactus, #home) {
 }
 
 @keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 0%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 /* 
@@ -815,7 +819,7 @@ textarea.input {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  padding: 5REM 0.4rem;
+  padding: 5rem 0.4rem;
   color: white;
   font-size: 0.9rem;
   font-weight: 400;
@@ -931,7 +935,6 @@ textarea.input {
 .input-container span {
   display: none; /* You can remove or repurpose this */
 }
-
 
 .contact-info {
   padding: 2.3rem 2.2rem;
@@ -1170,6 +1173,17 @@ textarea.input {
 }
 
 @media (max-width: 950px) {
+  .nav-min {
+    display: none;
+  }
+  .home-banner {
+    background: none;
+    position: relative;
+    bottom: 4rem;
+  }
+  .cutout-text {
+    font-size: 2.8rem;
+  }
   .cont {
     width: 90%;
   }
@@ -1408,16 +1422,14 @@ textarea.input {
     margin: 0;
   } */
 
-<<<<<<< Updated upstream
-  .gallery-container {
-=======
- #home-pic{
-    background-image: url(./src/img/Anastella_Photography-39.jpg);
-    border: 10px solid red;
+  .home-banner {
+    background: none;
+  }
+  .cutout-text {
+    font-size: 1.8rem;
   }
 
-  .gallery-container{
->>>>>>> Stashed changes
+  .gallery-container {
     width: 100vw;
   }
 
