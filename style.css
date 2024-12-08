@@ -39,10 +39,10 @@ section:not(#contactus, #home) {
   padding: 9rem;
 }
 
-.section-divider {
+/* .section-divider {
   height: 280px;
   width: 100vw;
-}
+} */
 
 /*Home starts here*/
 #home {
@@ -293,7 +293,7 @@ section:not(#contactus, #home) {
 .cutout-text {
   font-size: 4rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #373225, #7e7e7e, #302d26);
+  background: linear-gradient(45deg, #a8996e, #7e7e7e, #a8996e);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -1033,6 +1033,7 @@ textarea.input {
   letter-spacing: 3px;
   padding: 0 15px;
   box-shadow: 0px 1px 0px 0px;
+  text-wrap: none;
 }
 
 .scroll-to-top {
@@ -1108,6 +1109,7 @@ textarea.input {
 @media (max-width: 1248px) {
   .hamburger {
     display: block;
+    margin-right: 2rem;
   }
   .nav {
     display: none;
@@ -1177,10 +1179,6 @@ textarea.input {
 }
 
 @media (max-width: 950px) {
-  .nav-min {
-    display: none;
-  }
-
   #home-pic {
     height: auto;
     width: 100vw;
@@ -1279,11 +1277,6 @@ textarea.input {
     padding: 8px 8px 20px 32px;
   }
   #home-pic {
-    display: none;
-  }
-
-  .nav,
-  .nav-min {
     display: none;
   }
 
@@ -1390,10 +1383,10 @@ textarea.input {
     width: 95%;
     height: auto;
   }
-  section {
+  /* section {
     height: auto;
     width: 100vw;
-  }
+  } */
 
   .media-heading {
     font-size: 1.2rem;
@@ -1446,12 +1439,13 @@ textarea.input {
 }
 
 @media (max-width: 414px) {
-  /* 
- section:nth-child(6){
-    border: 5px solid red;
-    padding: 0;
-    margin: 0;
-  } */
+  .nav-min {
+    position: fixed;
+    top: 0;
+  }
+  section {
+    padding: 2rem;
+  }
 
   /* #home {
     height: 100vh;
@@ -1459,10 +1453,17 @@ textarea.input {
   } */
 
   .home-banner {
-    background: none;
+    width: 100%;
+    background-color: #28313a;
   }
+
+  .main-pic-small {
+    width: 100%;
+    height: auto;
+  }
+
   .cutout-text {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 
   .gallery-container {
