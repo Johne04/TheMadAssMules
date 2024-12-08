@@ -1127,6 +1127,10 @@ textarea.input {
     gap: 2rem;
   }
 
+  .cutout-text {
+    font-size: 2.2rem;
+  }
+
   .nav-min ul li {
     display: flex;
     justify-content: flex-end;
@@ -1175,6 +1179,12 @@ textarea.input {
 @media (max-width: 950px) {
   .nav-min {
     display: none;
+  }
+
+  #home-pic {
+    height: auto;
+    width: 100vw;
+    object-fit: cover;
   }
   .home-banner {
     background: none;
@@ -1268,9 +1278,30 @@ textarea.input {
   .sidenav a {
     padding: 8px 8px 20px 32px;
   }
+  #home-pic {
+    display: none;
+  }
 
+  .nav,
   .nav-min {
-    height: 65px;
+    display: none;
+  }
+
+  .mobile-pic {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  .mobile-pic .main-pic-small {
+    object-fit: cover;
+    height: auto;
+    width: 100vw;
+    position: relative;
+    top: 50px;
+  }
+
+  .cutout-text {
+    font-size: 1.8rem;
   }
   .gallery-container {
     /* grid-template-columns: repeat(auto-fit, 130px);
@@ -1421,31 +1452,11 @@ textarea.input {
     padding: 0;
     margin: 0;
   } */
-  .nav,
-  .nav-min {
-    display: none;
-  }
-
-  .mobile-pic {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-  }
-  .mobile-pic .main-pic-small {
-    object-fit: cover;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    top: 50px;
-  }
 
   /* #home {
     height: 100vh;
     width: 100vw;
   } */
-  #home-pic {
-    display: none;
-  }
 
   .home-banner {
     background: none;
@@ -1475,4 +1486,8 @@ textarea.input {
   html {
     font-size: 11px;
   }
+}
+
+form {
+  margin-bottom: 2rem;
 }
