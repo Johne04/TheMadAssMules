@@ -1421,6 +1421,31 @@ textarea.input {
     padding: 0;
     margin: 0;
   } */
+  .nav,
+  .nav-min {
+    display: none;
+  }
+
+  .mobile-pic {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  .mobile-pic .main-pic-small {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 50px;
+  }
+
+  /* #home {
+    height: 100vh;
+    width: 100vw;
+  } */
+  #home-pic {
+    display: none;
+  }
 
   .home-banner {
     background: none;
@@ -1443,30 +1468,6 @@ textarea.input {
     width: 100%;
   }
 
-  .nav-min {
-    height: 65px;
-  }
-  .logo-min {
-    left: -30px;
-  }
-
-  .nav-min li a {
-    display: none;
-  }
-
-  /* .main-img > .home-pic {
-    display: none;
-    border: 12px solid red;
-  } */
-
-  .mobile-pic {
-    display: flex;
-    /* width: 100vw;
-    height: 80vh; */
-    object-fit: cover;
-    object-position: top;
-    margin-top: 8vh;
-  }
   .faqs-container {
     gap: 5px;
     width: 90vw;
