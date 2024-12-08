@@ -1031,7 +1031,6 @@ textarea.input {
   border-bottom: 1px solid #a8996e;
   border-radius: 10px;
   letter-spacing: 3px;
-  padding: 0 15px;
   box-shadow: 0px 1px 0px 0px;
   text-wrap: none;
 }
@@ -1179,6 +1178,16 @@ textarea.input {
 }
 
 @media (max-width: 950px) {
+  .media-heading {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: #a8996e;
+    border-bottom: 1px solid #a8996e;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    box-shadow: 0px 1px 0px 0px;
+    text-wrap: none;
+  }
   #home-pic {
     height: auto;
     width: 100vw;
@@ -1280,6 +1289,11 @@ textarea.input {
     display: none;
   }
 
+  section:not(#home, #contactus) {
+    /* padding: 10rem 0 0 0 !important; */
+    position: relative;
+    top: 12vh;
+  }
   .mobile-pic {
     display: flex;
     width: 100vw;
@@ -1393,11 +1407,12 @@ textarea.input {
     /* width: 80vw; */
     letter-spacing: 1px;
     /* margin-bottom: .6rem; */
-    padding: 0;
+    padding: 0 2rem;
     font-weight: 600;
-    border: none;
+    /* border: none; */
     display: flex;
     justify-content: center;
+    /* border: 2px solid red; */
   }
 
   .cont {
@@ -1444,7 +1459,7 @@ textarea.input {
     top: 0;
   }
   section {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 
   /* #home {
@@ -1464,6 +1479,11 @@ textarea.input {
 
   .cutout-text {
     font-size: 1.4rem;
+  }
+
+  .test {
+    width: 320px;
+    margin: 0;
   }
 
   .gallery-container {
