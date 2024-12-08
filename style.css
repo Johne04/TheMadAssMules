@@ -1321,7 +1321,7 @@ textarea.input {
   }
   .gallery-item img {
     filter: none;
-    height: 140px;
+    height: 130px;
     /* width: 120px; */
   }
 
@@ -1496,7 +1496,7 @@ textarea.input {
 
   .gallery-item img {
     filter: none;
-    height: 110px;
+    height: 100px;
     width: 100%;
   }
 
