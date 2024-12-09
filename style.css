@@ -55,7 +55,7 @@ section:not(#contactus, #home) {
   align-items: center;
 }
 
-.main-video{
+.main-video {
   position: absolute;
   top: auto;
   z-index: 20;
@@ -63,7 +63,6 @@ section:not(#contactus, #home) {
   height: auto;
   aspect-ratio: 16 /9;
   display: none;
-
 }
 
 .nav {
@@ -85,7 +84,7 @@ section:not(#contactus, #home) {
 .nav-min {
   display: none;
 }
-.nav .nav-main{
+.nav .nav-main {
   display: flex;
   justify-content: flex-end;
 }
@@ -282,7 +281,7 @@ section:not(#contactus, #home) {
   display: none;
 }
 
-.home-banner {
+/* .home-banner {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -291,19 +290,20 @@ section:not(#contactus, #home) {
   position: relative;
   bottom: 12rem;
   background-color: #28313a;
-}
+} */
 
 .cutout-text {
   position: relative;
-  bottom: -20px;
-  font-size: 4rem;
+  bottom: 15%;
+  font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #a8996e, #7e7e7e, #a8996e);
+  background: linear-gradient(45deg, #28313a, #a8996e, white);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   animation: gradient-move 5s infinite ease-in-out;
+  z-index: 11;
 }
 
 @keyframes gradient-move {
@@ -328,7 +328,7 @@ section:not(#contactus, #home) {
 } */
 .button-container {
   position: absolute;
-  bottom: 0%;
+  bottom: 15%;
   /* z-index: 1; */
   display: flex;
   gap: 50px;
