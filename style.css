@@ -67,7 +67,7 @@ section:not(#contactus, #home) {
 
 .nav {
   width: 100vw;
-  height: 6vh;
+  height: 8vh;
   position: fixed;
   top: 0;
   display: flex;
@@ -89,12 +89,29 @@ section:not(#contactus, #home) {
   justify-content: flex-end;
 }
 
+.nav ul{
+  width: 100%;
+}
 .nav ul li {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 3rem;
+  gap: 2rem;
+}
+
+.nav-main .tagline{
+  color: white;
+  position:fixed;
+  left: 16rem;
+  text-shadow: 3px 1px 4px #a8996e;
+  font-size: 1.6rem;
+  font-family: Oswald, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.links{
+  position: relative;
+  bottom: 7px;
 }
 
 .nav ul li a {
@@ -292,20 +309,6 @@ section:not(#contactus, #home) {
   background-color: #28313a;
 } */
 
-.cutout-text {
-  position: relative;
-  bottom: 15%;
-  font-size: 3rem;
-  font-weight: bold;
-  background: linear-gradient(45deg, #28313a, #a8996e, white);
-  background-size: 300%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: gradient-move 5s infinite ease-in-out;
-  z-index: 11;
-}
-
 @keyframes gradient-move {
   0% {
     background-position: 0% 50%;
@@ -334,7 +337,6 @@ section:not(#contactus, #home) {
   gap: 50px;
   padding: 0 20px;
   margin-left: auto;
-  border: 5px solid red;
 }
 .btn {
   height: 45px;
@@ -1081,7 +1083,7 @@ textarea.input {
   opacity: 0.2;
 }
 
-@media (min-width: 2110px) {
+/* @media (min-width: 2110px) {
   .media-heading {
     margin-bottom: 3rem;
   }
@@ -1102,14 +1104,14 @@ textarea.input {
 
   .nav .logo {
     width: 150px;
-    height: 130px;
+    height: 110px;
   }
 
   .video-main-container {
     gap: 8rem;
     padding-top: 2rem;
   }
-}
+} */
 
 @media (max-width: 1248px) {
   .hamburger {
@@ -1183,7 +1185,7 @@ textarea.input {
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 768px) {
   .media-heading {
     margin-bottom: 10px;
     font-size: 1.6rem;
@@ -1459,7 +1461,7 @@ textarea.input {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .nav-min {
     position: fixed;
     top: 0;
