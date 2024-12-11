@@ -24,7 +24,6 @@ body {
   background-color: white;
 }
 
-
 section:not(#contactus, #home) {
   height: auto;
   width: 100vw;
@@ -32,10 +31,10 @@ section:not(#contactus, #home) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 8vh;
+  padding-top: 10vh;
 }
 
-#testimonials{
+#testimonials {
   min-height: 100vh;
 }
 
@@ -90,7 +89,7 @@ section:not(#contactus, #home) {
   justify-content: flex-end;
 }
 
-.nav ul{
+.nav ul {
   width: 100%;
 }
 .nav ul li {
@@ -101,16 +100,16 @@ section:not(#contactus, #home) {
   gap: 2rem;
 }
 
-.nav-main .tagline{
+.nav-main .tagline {
   color: white;
-  position:fixed;
+  position: fixed;
   left: 16rem;
   text-shadow: 3px 1px 4px #a8996e;
   font-size: 1.6rem;
   font-family: Oswald, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.links{
+.links {
   position: relative;
   bottom: 7px;
 }
@@ -295,7 +294,7 @@ section:not(#contactus, #home) {
   border-style: groove;
 } */
 
-.main-img{
+.main-img {
   background-image: url(./src/img/img9.jpg);
   background-size: cover;
   background-position: center;
@@ -620,7 +619,6 @@ section:not(#contactus, #home) {
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
-
 }
 
 .setlist-container {
@@ -726,7 +724,6 @@ section:not(#contactus, #home) {
   font-weight: 600;
   margin: 10px 0;
 }
-
 
 /*Contact form starts here*/
 #contactus {
@@ -1042,7 +1039,7 @@ textarea.input {
 }
 .media-heading {
   /* margin-top: -2rem; */
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 1.6rem;
   color: #a8996e;
   border-bottom: 1px solid #a8996e;
@@ -1126,7 +1123,6 @@ textarea.input {
   .hamburger {
     display: block;
     margin-right: 2rem;
-
   }
   .nav {
     display: none;
@@ -1310,7 +1306,7 @@ textarea.input {
   section:not(#home, #contactus) {
     /* padding: 10rem 0 0 0 !important; */
     position: relative;
-    top: 12vh;
+    top: 14vh;
     min-height: 60vh;
   }
   .mobile-pic {
