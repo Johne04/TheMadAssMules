@@ -331,7 +331,7 @@ section:not(#contactus, #home) {
 } */
 .button-container {
   position: absolute;
-  bottom: 15%;
+  bottom: 5%;
   /* z-index: 1; */
   display: flex;
   gap: 50px;
@@ -510,7 +510,7 @@ section:not(#contactus, #home) {
   flex-wrap: wrap;
   width: 80%;
   /* height: 250px; */
-  /* gap: 1rem; */
+  gap: 3rem;
   padding: 0;
 }
 .video {
@@ -608,10 +608,11 @@ section:not(#contactus, #home) {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
-  padding-top: 6rem;
+  align-items: center;
+  /* padding-top: 6rem; */
 }
 
 .setlist-container {
@@ -622,8 +623,7 @@ section:not(#contactus, #home) {
   align-content: center;
   background-color: rgb(0, 0, 0, 0.4);
   border: 0.5px solid #a8996e;
-  position: relative;
-  /* margin-top: 7rem; */
+
 }
 
 .song-container-inner {
@@ -717,7 +717,9 @@ section:not(#contactus, #home) {
   display: flex;
   align-items: center;
   font-weight: 600;
+  margin: 10px 0;
 }
+
 
 /*Contact form starts here*/
 #contactus {
@@ -1117,6 +1119,7 @@ textarea.input {
   .hamburger {
     display: block;
     margin-right: 2rem;
+
   }
   .nav {
     display: none;
@@ -1301,6 +1304,7 @@ textarea.input {
     /* padding: 10rem 0 0 0 !important; */
     position: relative;
     top: 12vh;
+    min-height: 60vh;
   }
   .mobile-pic {
     display: flex;

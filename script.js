@@ -49,32 +49,18 @@ setInterval(() => showSlide(currentIndex + 1), 5000);
 
 /*FAQ's section*/
 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "200px";
-  document.querySelector('.hamburger').classList.add('change');
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.querySelector('.hamburger').classList.remove('change');
-}
-
 function toggleNav() {
-  const navWidth = document.getElementById("mySidenav").style.width;
-  if (navWidth === "250px") {
-      closeNav();
+  const sidenav = document.getElementById("mySidenav");
+  const hamburger = document.querySelector('.hamburger');
+
+  if (sidenav.style.width === "250px") {
+    sidenav.style.width = "0";
+    hamburger.classList.remove('change');
   } else {
-      openNav();
+    sidenav.style.width = "250px";
+    hamburger.classList.add('change');
   }
 }
-
-document.querySelectorAll('#mySidenav a').forEach(link => {
-  link.addEventListener('click', () => {
-    closeNav(); // Close the side nav
-  });
-});
 
 document.querySelectorAll('.faq-question').forEach(question => {
   question.addEventListener('click', () => {
