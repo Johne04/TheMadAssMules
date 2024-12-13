@@ -186,3 +186,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowRight") nextImage();
   });
 });
+
+const prevImage = () => {
+  const newIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  showLightbox(newIndex);
+};
+
+const nextImage = () => {
+  const newIndex = (currentIndex + 1) % galleryItems.length;
+  showLightbox(newIndex);
+};
+
