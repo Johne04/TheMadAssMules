@@ -25,6 +25,37 @@ mainPic.addEventListener(
 
 let currentIndex = 0;
 
+function startSlideshow(slideshow) {
+  const images = slideshow.querySelectorAll("img");
+  let currentIndex = 0;
+
+  // Initially hide all images except the first one
+  images.forEach((img, index) => {
+    if (index !== 0) {
+      img.style.display = "none";
+    }
+  });
+
+  function showNextImage() {
+    // Hide the current image
+    images[currentIndex].style.display = "none";
+
+    // Move to the next image (or back to the first if we're at the end)
+    currentIndex = (currentIndex + 1) % images.length;
+
+    // Show the next image
+    images[currentIndex].style.display = "block";
+  }
+
+  // Change image every 3 seconds
+  setInterval(showNextImage, 3000);
+}
+
+// Start a slideshow for each '.slideshow' container when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".slideshow").forEach(startSlideshow);
+});
+
 // Preload images and set as background
 slides.forEach((slide, index) => {
   const img = slide.querySelector("img");
@@ -51,44 +82,44 @@ setInterval(() => showSlide(currentIndex + 1), 5000);
 
 function toggleNav() {
   const sidenav = document.getElementById("mySidenav");
-  const hamburger = document.querySelector('.hamburger');
+  const hamburger = document.querySelector(".hamburger");
 
   if (sidenav.style.width === "250px") {
     sidenav.style.width = "0";
-    hamburger.classList.remove('change');
+    hamburger.classList.remove("change");
   } else {
     sidenav.style.width = "250px";
-    hamburger.classList.add('change');
+    hamburger.classList.add("change");
   }
 }
 
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', () => {
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
     const answer = question.nextElementSibling;
-    const toggle = question.querySelector('.faq-toggle');
+    const toggle = question.querySelector(".faq-toggle");
 
     // Collapse other open items (optional)
-    document.querySelectorAll('.faq-answer').forEach(ans => {
+    document.querySelectorAll(".faq-answer").forEach((ans) => {
       if (ans !== answer) {
         ans.style.maxHeight = null;
-        ans.style.padding = '0 15px';
-        ans.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+        ans.style.padding = "0 15px";
+        ans.previousElementSibling.querySelector(".faq-toggle").textContent =
+          "+";
       }
     });
 
     // Toggle current item
     if (answer.style.maxHeight) {
       answer.style.maxHeight = null;
-      answer.style.padding = '0 25px';
-      toggle.textContent = '+';
+      answer.style.padding = "0 25px";
+      toggle.textContent = "+";
     } else {
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-      answer.style.padding = '25px';
-      toggle.textContent = '-';
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      answer.style.padding = "25px";
+      toggle.textContent = "-";
     }
   });
 });
-
 
 // SOCIAL PANEL JS
 // const floating_btn = document.querySelector('.floating-btn');
@@ -102,7 +133,6 @@ document.querySelectorAll('.faq-question').forEach(question => {
 // close_btn.addEventListener('click', () => {
 // 	social_panel_container.classList.remove('visible')
 // });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const galleryItems = document.querySelectorAll(".gallery-item img");
@@ -188,7 +218,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const prevImage = () => {
-  const newIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  const newIndex =
+    (currentIndex - 1 + galleryItems.length) % galleryItems.length;
   showLightbox(newIndex);
 };
 
@@ -196,4 +227,3 @@ const nextImage = () => {
   const newIndex = (currentIndex + 1) % galleryItems.length;
   showLightbox(newIndex);
 };
-
