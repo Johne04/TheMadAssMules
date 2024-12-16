@@ -529,16 +529,24 @@ section:not(#contactus, #home) {
   border: 2px solid #a8996e;
   border-radius: 5px;
 }
+.audio-gal-header{
+  text-align: center;
+  background-color: #28313a;
+  color: #a8996e;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px;
+}
 .card-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding-bottom: 3rem;
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 4rem;
 }
 
