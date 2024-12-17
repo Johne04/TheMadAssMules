@@ -544,6 +544,32 @@ section:not(#contactus, #home) {
   padding-bottom: 3rem;
 }
 
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fdf8ea;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 5px solid #28313a;
+  border-style: double;
+}
+
+.banner h1{
+  color: #28313a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0 2rem;
+}
+
+.checked{
+  color: #a8996e;
+  font-weight: bolder;
+  padding: 10px;
+  font-size: 2.6rem;
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -740,7 +766,7 @@ audio {
 .faq-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   font-family: Arial, sans-serif;
 }
 
