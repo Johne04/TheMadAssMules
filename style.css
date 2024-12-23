@@ -575,6 +575,7 @@ section:not(#contactus, #home) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  padding: 2rem;
 }
 
 .content-box {
@@ -598,8 +599,9 @@ section:not(#contactus, #home) {
 
 .slideshow img {
   width: 100%;
-  height: auto;
+  height: 350px;
   object-fit: cover;
+  object-position: top;
   position: relative;
   /* top: 80px; */
 }
