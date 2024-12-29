@@ -193,8 +193,8 @@ section:not(#contactus, #home) {
   left: 3%;
   background-color: #a8996e;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  width: 120px;
-  height: 104px;
+  width: 7rem;
+  height: 5rem;
 }
 
 .sidenav {
@@ -394,17 +394,15 @@ section:not(#contactus, #home) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
-  width: 70%;
-  background-color: #28313a;
+  width: 80%;
   padding: 2rem;
-  box-sizing: border-box;
-  background-color: rgb(255, 255, 255, 0.1);
+  /* box-sizing: border-box;
   border: 2px solid #a8996e;
-  border-style: groove;
+  border-style: groove; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #28313a;
+  /* background-color: whitesmoke; */
 }
 
 /* Individual Items */
@@ -550,25 +548,23 @@ section:not(#contactus, #home) {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #fdf8ea;
+  background-color: #a8996e;
   padding: 2rem;
   margin-bottom: 2rem;
-  border: 2px solid #28313a;
-  border-style: double;
 }
 
 .banner h1{
   color: #28313a;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .checked{
-  color: #a8996e;
+  color: white;
   font-weight: bolder;
   padding: 10px;
-  font-size: 2.6rem;
+  font-size: 1.6rem;
 }
 
 .content {
@@ -771,15 +767,15 @@ audio {
 .faq-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  margin-bottom: 3rem;
+  border-radius: 15px;
 }
 
 .faq-item {
   margin-bottom: 1rem;
-}
-
-.faq-item {
   border-bottom: 3px solid #a8996e;
   border-radius: 5px;
 }
