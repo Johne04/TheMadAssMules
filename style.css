@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: ;
   font-family: poppins, Arial, Helvetica, sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   color: #a8996e;
   background-color: white;
 }
