@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ultra&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&family=Ultra&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Pacifico&family=Ultra&display=swap");
 /* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap'); */
 
 /* :root {
   interpolate-size: allow-keywords;
 } */
 
-html, body {
+html,
+body {
   max-width: 100% !important;
   overflow-x: hidden !important;
 }
@@ -22,7 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: ;
   font-family: poppins, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   color: #a8996e;
@@ -30,7 +30,7 @@ body {
 }
 
 section:not(#contactus, #home) {
-  height: auto;
+  min-height: 100vh;
   /* width: 100vw; */
   display: flex;
   flex-direction: column;
@@ -46,7 +46,8 @@ section:not(#contactus, #home) {
 .section-divider {
   height: 280px;
   width: 100vw;
-} */
+}
+*/
 
 /*Home starts here*/
 #home {
@@ -125,12 +126,11 @@ section:not(#contactus, #home) {
   animation: staggered-drop 1s ease forwards;
 }
 
-.mam_logo{
+.mam_logo {
   position: relative;
-  right: 30%;
-  top: 10px;
-  height: 85px;
-  z-index: 55555;
+  left: 10%;
+  top: 12px;
+  height: 8vh;
 }
 
 .nav ul li a:hover {
@@ -348,10 +348,9 @@ section:not(#contactus, #home) {
   display: inline-flex;
   position: relative;
   align-content: center;
-  
+
   gap: 50px;
   padding: 0 20px;
-  
 }
 .btn {
   height: 45px;
@@ -533,7 +532,7 @@ section:not(#contactus, #home) {
   border: 2px solid #a8996e;
   border-radius: 5px;
 }
-.audio-gal-header{
+.audio-gal-header {
   text-align: center;
   background-color: #28313a;
   color: #a8996e;
@@ -549,7 +548,7 @@ section:not(#contactus, #home) {
   padding-bottom: 3rem;
 }
 
-.banner{
+.banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,14 +558,14 @@ section:not(#contactus, #home) {
   margin-bottom: 2rem;
 }
 
-.banner h1{
+.banner h1 {
   color: #28313a;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0 1rem;
 }
 
-.checked{
+.checked {
   color: white;
   font-weight: bolder;
   padding: 10px;
@@ -1148,7 +1147,7 @@ textarea.input {
   text-wrap: none;
 }
 
-.genre{
+.genre {
   background-color: #28313a;
   padding: 0 20px;
   box-shadow: 0px 2px 6px 0px;
@@ -1405,7 +1404,7 @@ textarea.input {
 }
 
 @media (max-width: 600px) {
-  body{
+  body {
     width: 100%;
     overflow-y: none;
   }
