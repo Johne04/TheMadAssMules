@@ -31,7 +31,6 @@ body {
 
 section:not(#contactus, #home) {
   min-height: 100vh;
-  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -52,7 +51,7 @@ section:not(#contactus, #home) {
 /*Home starts here*/
 #home {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   align-items: center;
   display: flex;
@@ -474,25 +473,23 @@ section:not(#contactus, #home) {
 /*Videos start here*/
 
 .video_upper_grid{
-  grid-template-rows: 1fr 1fr;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
  .audio_slide_container{
-  max-height: 40vh;
-  width: 60vw;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 2rem;
 }
 
-.youtube_vids{
-  height: 50vh;
-  width: 60vw;
-}
+
 
 .slideshow img {
-  height: 350px;
+  max-height: 450px;
   object-fit: contain;
   object-position: top;
   position: relative;
@@ -501,19 +498,37 @@ section:not(#contactus, #home) {
 .slideshow {
   background-color: #e0e0e0;
   border: 2px solid #28313a;
-  padding: 10px;
-
+  padding: 1rem;
+  border-radius: 5px;
 }
 
  .audio-player {
-  width: 35px;
-  padding: 10px;
   background-color: #f0f0f0;
 }
 
-audio {
-  width: 350px;
-} 
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #a8996e;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.banner h1 {
+  color: #28313a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+
+.checked {
+  color: white;
+  font-weight: bolder;
+  padding: 10px;
+  font-size: 1.6rem;
+}
 
 
 /* .video-main-container {
@@ -548,29 +563,9 @@ audio {
   padding-bottom: 3rem;
 }
 
-.banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #a8996e;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
 
-.banner h1 {
-  color: #28313a;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 0 1rem;
-}
 
-.checked {
-  color: white;
-  font-weight: bolder;
-  padding: 10px;
-  font-size: 1.6rem;
-}
+
 
 .content {
   display: grid;
@@ -703,6 +698,7 @@ audio {
   justify-content: center;
   /* align-content: center; */
   margin-bottom: 8vh;
+ 
 }
 
 .song-container-inner {
