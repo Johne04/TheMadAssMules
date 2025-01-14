@@ -530,6 +530,14 @@ section:not(#contactus, #home) {
   font-size: 1.6rem;
 }
 
+.video {
+  width: 55vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #a8996e;
+  border-radius: 5px;
+}
+
 
 /* .video-main-container {
   display: flex;
@@ -541,12 +549,7 @@ section:not(#contactus, #home) {
   padding: 0;
   height: auto;
 }
-.video {
-  width: 45%;
-  aspect-ratio: 16 / 9;
-  border: 2px solid #a8996e;
-  border-radius: 5px;
-}
+
 .audio-gal-header {
   text-align: center;
   background-color: #28313a;
