@@ -496,7 +496,7 @@ section:not(#contactus, #home) {
 } 
 
 .slideshow {
-  background-color: whitesmoke;
+  background-color: #e0e0e0;
   border: 2px solid #28313a;
   padding: 1rem;
   border-radius: 5px;
@@ -511,24 +511,25 @@ section:not(#contactus, #home) {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #28313a;
-  background-image: radial-gradient(circle, #666666 10%, transparent 31%),
-                    radial-gradient(circle, #666666 10%, transparent 11%);
-  background-position: 0 0, 25px 25px;
-  background-size: 7px 7px; 
-  padding: 3rem;
+  background-color: #a8996e;
+  padding: 1rem;
   margin-bottom: 2rem;
 }
 
 .banner h1 {
+<<<<<<< HEAD
   color:white;
   font-size: 1.8rem;
+=======
+  color: #28313a;
+  font-size: 1.5rem;
+>>>>>>> parent of 3ec7d8a (Banner and Navbar update)
   font-weight: 700;
   padding: 0 1rem;
 }
 
 .checked {
-  color: #a8996e;
+  color: white;
   font-weight: bolder;
   padding: 10px;
   font-size: 1.6rem;
