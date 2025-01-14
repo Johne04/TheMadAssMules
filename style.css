@@ -81,6 +81,11 @@ section:not(#contactus, #home) {
   border-bottom: 1px solid #a8996e;
   /* border-style: groove; */
   background-color: #28313a;
+  background-color: #28313a;
+  background-image: radial-gradient(circle, #fff 10%, transparent 31%),
+                    radial-gradient(circle, #fff 10%, transparent 11%);
+  background-position: 0 0, 25px 25px;
+  background-size: 2px 3px; 
   z-index: 12;
   position: fixed;
   top: 0;
@@ -496,7 +501,7 @@ section:not(#contactus, #home) {
 } 
 
 .slideshow {
-  background-color: #e0e0e0;
+  background-color: whitesmoke;
   border: 2px solid #28313a;
   padding: 1rem;
   border-radius: 5px;
@@ -511,20 +516,24 @@ section:not(#contactus, #home) {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #a8996e;
-  padding: 1rem;
+  background-color: #28313a;
+  background-image: radial-gradient(circle, #666666 10%, transparent 31%),
+                    radial-gradient(circle, #666666 10%, transparent 11%);
+  background-position: 0 0, 25px 25px;
+  background-size: 7px 7px; 
+  padding: 3rem;
   margin-bottom: 2rem;
 }
 
 .banner h1 {
-  color: #28313a;
-  font-size: 1.5rem;
-  font-weight: 700;
+  color:white;
+  font-size: 1.8rem;
+  font-weight: 900;
   padding: 0 1rem;
 }
 
 .checked {
-  color: white;
+  color: #a8996e;
   font-weight: bolder;
   padding: 10px;
   font-size: 1.6rem;
