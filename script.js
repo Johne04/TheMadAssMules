@@ -4,14 +4,34 @@ const mainPic = document.getElementById("main-pic");
 // const showVid = document.getElementById("showVideoBtn");
 const videoContainer = document.getElementById("videoContainer");
 
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
+// const slider = document.querySelector(".slider");
+// const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
 // navLinks.forEach((link, index) => {
 //   link.classList.add("show");
 // });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var slideshows = document.getElementsByClassName("slideshow-container");
+  for (var i = 0; i < slideshows.length; i++) {
+      showSlides(slideshows[i]);
+  }
+});
+
+function showSlides(slideshow) {
+  var slides = slideshow.getElementsByClassName("mySlides");
+  var index = 0;
+  setInterval(function() {
+      for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      index++;
+      if (index > slides.length) {index = 1}
+      slides[index-1].style.display = "block";
+  }, 3000); // Change image every 3 seconds
+}
 
 
 mainPic.addEventListener(
