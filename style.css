@@ -38,7 +38,7 @@ section:not(#contactus) {
 
 /* Home starts here*/ 
 #home{
-  height: auto;
+  max-height: 100vh;
   background-color: #28313A;
   display: flex;
   justify-content: center;
@@ -47,7 +47,6 @@ section:not(#contactus) {
 }
 
 .home-pic-container{
-  height: 100%;
   width: 100%;
   overflow: hidden;
 }
@@ -426,6 +425,7 @@ audio {
   font-size: 1.6rem;
   font-weight: 700;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .checked {
@@ -468,7 +468,7 @@ audio {
 .slider-container {
   position: relative;
   width: 60%;
-  height: 60vh;
+  height: 70%;
   overflow: hidden;
   margin: auto;
 }
@@ -496,7 +496,7 @@ audio {
 
 .slide img {
   max-width: 100%;
-  max-height: 70%;
+  max-height: 100%;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -540,7 +540,7 @@ audio {
 }
 /*Set List starts here*/
 #setlist {
-  background-image: url(./assests/img/main-gal7.jpg);
+  background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -561,7 +561,12 @@ audio {
 }
 
 .song-container-inner {
+  height: auto;
+  padding: 2rem 2rem;
+  color: whitesmoke;
+  font-weight: 500;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -580,15 +585,7 @@ audio {
   text-shadow: -2px 3px black;
 }
 
-.song-container-inner {
-  height: auto;
-  padding: 2rem 2rem;
-  color: whitesmoke;
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 /* .faqs-container{
   border: 2px solid #837656;
   width: 80%;
@@ -673,7 +670,7 @@ audio {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./assests/img/main-gal7.jpg);
+  background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -940,6 +937,7 @@ textarea.input {
   font-size: 1.6rem;
   color: #a8996e;
   border-bottom: 1px solid #a8996e;
+  padding: 0 20px;
   border-radius: 10px;
   letter-spacing: 3px;
   box-shadow: 0px 1px 0px 0px;
@@ -947,9 +945,10 @@ textarea.input {
 }
 
 .genre {
-  background-color: #28313a;
+  background-color: rgb(40, 49, 58, 0.3);
   padding: 0 20px;
   box-shadow: 0px 2px 6px 0px;
+  color: white;
 }
 
 .scroll-to-top {
@@ -990,6 +989,10 @@ textarea.input {
   left: 50%;
   transform: translate(181%, 11%);
   opacity: 0.2;
+}
+
+#testimonials{
+  height: 100vh;
 }
 
 @media (max-width: 1484px) {
