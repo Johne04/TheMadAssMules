@@ -1,7 +1,7 @@
 const navLinks = document.querySelectorAll(".nav ul li a");
 
 const mainPic = document.getElementById("main-pic");
-const showVid = document.getElementById("showVideoBtn");
+// const showVid = document.getElementById("showVideoBtn");
 const videoContainer = document.getElementById("videoContainer");
 
 const slider = document.querySelector(".slider");
@@ -13,10 +13,6 @@ const nextButton = document.querySelector(".next");
 //   link.classList.add("show");
 // });
 
-showVid.addEventListener(
-  "click",
-  () => (videoContainer.style.display = "block")
-);
 
 mainPic.addEventListener(
   "click",
