@@ -39,7 +39,6 @@ section:not(#contactus) {
 /* Home starts here*/
 #home {
   max-height: 100vh;
-  background-color: #28313a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +55,8 @@ section:not(#contactus) {
   height: 40%;
   object-fit: cover;
   display: block;
+  position: relative;
+  top: 0;
 }
 
 .nav {
@@ -87,7 +88,7 @@ section:not(#contactus) {
   width: 100%;
   justify-content: flex-end;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-main .tagline {
@@ -112,7 +113,7 @@ section:not(#contactus) {
 
 .mam_logo {
   position: relative;
-  left: 10%;
+  left: 5%;
   top: 12px;
   height: 80px;
   width: 120px;
@@ -486,6 +487,11 @@ audio {
   font-size: 1.6rem;
 }
 
+.video-main-container{
+  display: flex;
+  justify-content: center;
+}
+
 .video {
   width: 55vw;
   height: auto;
@@ -493,19 +499,6 @@ audio {
   border: 2px solid #a8996e;
   border-radius: 5px;
 }
-
-@media screen and (max-width: 768px) {
-  .content {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
-}
-*/
 
 /*Testimonials start here*/
 #testimonials {
@@ -633,6 +626,12 @@ audio {
   font-size: 0.4rem;
   align-self: center;
   text-shadow: -2px 3px black;
+}
+
+#FAQs{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* .faqs-container{
@@ -1045,13 +1044,12 @@ textarea.input {
 }
 
 @media (max-width: 1484px) {
-  html {
-    font-size: 13px;
+  .slideshow-main-container{
+    width: 75%;
   }
-  .nav ul li;
 }
 
-@media (max-width: 1248px) {
+@media (max-width: 1100px) {
   .nav{
     display: none;
   }
@@ -1072,19 +1070,29 @@ textarea.input {
     border-bottom: 1px solid #a8996e;
     background-color: #28313a;
     z-index: 100;
-    height: 55px;
+    height: 8vh;
     width: 100%;
     gap: 2rem;
   }
 
-  .cutout-text {
-    font-size: 2.2rem;
+  .nav-min li{
+    display: flex;
+    align-items: center;
+  }
+
+  .mam_logo{
+    position: relative;
+    top: 0;
+    left: 10px;
+    margin-right: auto;
+    height: 50px;
+    width: 90px;
   }
 
   .nav-min ul li {
     display: flex;
     justify-content: flex-end;
-    gap: 3rem;
+    gap: 2rem;
     margin-right: 8rem;
   }
 
@@ -1093,16 +1101,12 @@ textarea.input {
     color: #a8996e;
   }
 
-  .logo-min {
-    height: 100%;
-    width: 100px;
-    position: relative;
-    top: 0;
-    margin-left: 4rem;
-    background-color: #a8996e;
-  }
   .cont {
     width: 100%;
+  }
+
+  .slideshow-main-container{
+    width: 85%;
   }
 
   .gallery-container {
@@ -1142,9 +1146,6 @@ textarea.input {
     position: relative;
     bottom: 4rem;
   }
-  .cutout-text {
-    font-size: 2.8rem;
-  }
   .cont {
     width: 90%;
   }
@@ -1159,7 +1160,6 @@ textarea.input {
     width: 80vw;
   }
 
-  /* Individual Items */
   .gallery-item img {
     height: 120px;
     filter: none;
@@ -1245,9 +1245,20 @@ textarea.input {
     position: relative;
     top: 50px;
   }
+  
+  .hamburger{
+    margin: 0;
+    right: 10px;
+  }
 
-  .cutout-text {
-    font-size: 1.8rem;
+  .slideshow-main-container{
+    justify-content: center;
+  }
+  .slideshow-container{
+    min-width: 320px;
+  }
+  .hamburger .line{
+    width: 25px;
   }
   .gallery-container {
     /* grid-template-columns: repeat(auto-fit, 130px);
@@ -1381,5 +1392,23 @@ textarea.input {
   .faqs-container {
     gap: 5px;
     width: 90vw;
+  }
+}
+
+@media (max-width: 400px){
+  .nav-min ul li{
+    gap: 1rem;
+    margin: 6rem;
+  }
+  .nav-min ul li {
+    margin-left: auto;
+  }
+
+  .mam_logo{
+    height: 40px;
+    width: 70px;
+  }
+  .slideshow-main-container{
+    max-width: 200px;
   }
 }

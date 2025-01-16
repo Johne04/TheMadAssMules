@@ -1,12 +1,12 @@
 const navLinks = document.querySelectorAll(".nav ul li a");
 const mainPic = document.getElementById("main-pic");
-// const showVid = document.getElementById("showVideoBtn");
 const videoContainer = document.getElementById("videoContainer");
 
 // const slider = document.querySelector(".slider");
 // const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
+
 //Audio Controls for slideshow
 const audio = document.getElementById('audio');
 const playAudio = () =>  audio.play();
@@ -19,11 +19,13 @@ const progressBarFill = document.getElementById('progress-bar-fill');
             const progress = (audio.currentTime / audio.duration) * 100;
             progressBarFill.style.width = progress + '%';
         });
+//End of Audio controls
 
 // navLinks.forEach((link, index) => {
 //   link.classList.add("show");
 // });
 
+//Audio Slideshow
 document.addEventListener('DOMContentLoaded', function() {
   var slideshows = document.getElementsByClassName("slideshow-container");
   for (var i = 0; i < slideshows.length; i++) {
@@ -107,6 +109,7 @@ setInterval(() => showSlide(currentIndex + 1), 5000);
 
 /*FAQ's section*/
 
+//Hamburger side menu
 function toggleNav() {
   const sidenav = document.getElementById("mySidenav");
   const hamburger = document.querySelector(".hamburger");
@@ -119,6 +122,7 @@ function toggleNav() {
     hamburger.classList.add("change");
   }
 }
+
 
 document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
@@ -148,18 +152,6 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 
-// SOCIAL PANEL JS
-// const floating_btn = document.querySelector('.floating-btn');
-// const close_btn = document.querySelector('.close-btn');
-// const social_panel_container = document.querySelector('.social-panel-container');
-
-// floating_btn.addEventListener('click', () => {
-// 	social_panel_container.classList.toggle('visible')
-// });
-
-// close_btn.addEventListener('click', () => {
-// 	social_panel_container.classList.remove('visible')
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const galleryItems = document.querySelectorAll(".gallery-item img");
