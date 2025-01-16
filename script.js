@@ -1,5 +1,4 @@
 const navLinks = document.querySelectorAll(".nav ul li a");
-
 const mainPic = document.getElementById("main-pic");
 // const showVid = document.getElementById("showVideoBtn");
 const videoContainer = document.getElementById("videoContainer");
@@ -8,6 +7,18 @@ const videoContainer = document.getElementById("videoContainer");
 // const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
+//Audio Controls for slideshow
+const audio = document.getElementById('audio');
+const playAudio = () =>  audio.play();
+const pauseAudio = () => audio.pause();
+const stopAudio = () => {  audio.pause();   audio.currentTime = 0;  }
+
+const progressBarFill = document.getElementById('progress-bar-fill');
+
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBarFill.style.width = progress + '%';
+        });
 
 // navLinks.forEach((link, index) => {
 //   link.classList.add("show");
@@ -243,3 +254,4 @@ const nextImage = () => {
   const newIndex = (currentIndex + 1) % galleryItems.length;
   showLightbox(newIndex);
 };
+
