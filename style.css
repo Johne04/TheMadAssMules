@@ -221,8 +221,7 @@ section:not(#contactus) {
 .hamburger {
   cursor: pointer;
   position: fixed;
-  top: 5px;
-  right: 5px; /* Align to the right */
+  right: 1rem;
   z-index: 122;
   display: none;
 }
@@ -1003,6 +1002,9 @@ textarea.input {
 }
 
 @media (max-width: 1248px) {
+  .nav{
+    display: none;
+  }
   .hamburger {
     display: block;
     margin-right: 2rem;
