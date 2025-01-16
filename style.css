@@ -31,31 +31,31 @@ body {
 section:not(#contactus) {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   padding-top: 8vh;
 }
 
-/* Home starts here*/ 
-#home{
+/* Home starts here*/
+#home {
   max-height: 100vh;
-  background-color: #28313A;
+  background-color: #28313a;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.home-pic-container{
+.home-pic-container {
   width: 100%;
   overflow: hidden;
 }
 
-.home-pic{
+.home-pic {
   width: 100%;
   height: 40%;
   object-fit: cover;
-  display: block
+  display: block;
 }
 
 .nav {
@@ -121,7 +121,6 @@ section:not(#contactus) {
 .nav ul li a:hover {
   color: #c9b684;
 }
-
 
 .nav li a:last-child {
   margin-right: 5rem;
@@ -289,7 +288,6 @@ section:not(#contactus) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 /* Individual Items */
@@ -369,7 +367,7 @@ section:not(#contactus) {
 }
 
 /*Videos start here*/
-.slideshow-main-container{
+.slideshow-main-container {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
@@ -392,14 +390,23 @@ img {
 }
 
 .caption {
-  font-size: 18px;
+  background-color: #28313a;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  padding: 1rem 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 audio {
   width: 100%;
   margin-top: 10px;
+  background-color: #28313a;
+}
+
+.player {
+  background-color: #28313a;
+  color: #a8996e;
 }
 .banner {
   display: flex;
@@ -411,12 +418,11 @@ audio {
   margin-bottom: 2rem;
   width: 100%;
   height: 200px;
-  background-color: #28313A; /* Base color */
+  background-color: #28313a; /* Base color */
   background-image: radial-gradient(circle, #6e6e6e 10%, transparent 11%),
-                    radial-gradient(circle, #888888 10%, transparent 11%);
+    radial-gradient(circle, #888888 10%, transparent 11%);
   background-position: 0 0, 25px 25px; /* Adjust position for alignment */
   background-size: 5px 5px; /* Adjust the size of the pinholes */
-  
 }
 
 .banner h1 {
@@ -442,7 +448,6 @@ audio {
   border-radius: 5px;
 }
 
-
 @media screen and (max-width: 768px) {
   .content {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -453,10 +458,11 @@ audio {
   .content {
     grid-template-columns: 1fr;
   }
-}  */
+}
+*/
 
 /*Testimonials start here*/
-#testimonials{
+#testimonials {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -556,7 +562,6 @@ audio {
   justify-content: center;
   /* align-content: center; */
   margin-bottom: 8vh;
- 
 }
 
 .song-container-inner {
@@ -583,7 +588,6 @@ audio {
   align-self: center;
   text-shadow: -2px 3px black;
 }
-
 
 /* .faqs-container{
   border: 2px solid #837656;
@@ -990,7 +994,7 @@ textarea.input {
   opacity: 0.2;
 }
 
-#testimonials{
+#testimonials {
   height: 100vh;
 }
 
