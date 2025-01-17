@@ -1157,11 +1157,11 @@ textarea.input {
 
   .gallery-container {
     gap: 15px;
-    width: 80vw;
+    width: 90%;
   }
 
   .gallery-item img {
-    height: 120px;
+    height: 160px;
     filter: none;
   }
 
