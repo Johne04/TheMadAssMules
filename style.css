@@ -454,6 +454,10 @@ audio {
   /* background-color: #28313a; */
 }
 
+.banner-mobile{
+  display: none;
+}
+
 .banner {
   display: flex;
   justify-content: center;
@@ -1107,6 +1111,27 @@ textarea.input {
     color: #a8996e;
   }
 
+  .banner{
+    display: none;
+  }
+
+  .banner-mobile{
+    width: 100%;
+    height: 200px;
+    background-color: #28313a; /* Base color */
+  background-image: radial-gradient(circle, #6e6e6e 10%, transparent 11%),
+    radial-gradient(circle, #888888 10%, transparent 11%);
+  background-position: 0 0, 25px 25px; /* Adjust position for alignment */
+  background-size: 5px 5px; /* Adjust the size of the pinholes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .banner-heading{
+    text-align: center;
+  }
   .cont {
     width: 100%;
   }
@@ -1311,6 +1336,12 @@ textarea.input {
     border-radius: 8px; /* Optional rounded corners */
   }
 
+  .banner span{
+    display: none;
+  }
+  .banner h1{
+    font-size: 1.4rem;
+  }
   .song-container-inner .song-category {
     font-size: 1.2rem;
   }
