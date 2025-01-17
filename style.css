@@ -88,7 +88,7 @@ section:not(#contactus) {
   width: 100%;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .nav-main .tagline {
@@ -116,7 +116,7 @@ section:not(#contactus) {
   left: 5%;
   top: 12px;
   height: 80px;
-  width: 120px;
+  width: 135px;
 }
 
 .nav ul li a:hover {
@@ -1448,8 +1448,8 @@ textarea.input {
 }
 
 .gallery-item{
-  flex: 1 1 calc(33.333% - 20px); /* Adjust width dynamically */
-  max-width: calc(33.333% - 20px); /* Set maximum width */
+  flex: 1 1 calc(50% - 20px); /* Adjust width dynamically */
+  max-width: calc(50% - 20px); /* Set maximum width */
   box-sizing: border-box; /* Include padding and border in size */
 }
 .gallery-item img {
