@@ -1131,6 +1131,7 @@ textarea.input {
 }
 
 @media (max-width: 768px) {
+
   .media-heading {
     margin-bottom: 10px;
     font-size: 1.6rem;
@@ -1226,26 +1227,44 @@ textarea.input {
     width: 100%;
     overflow-y: none;
   }
+
+  #home{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: #28313a; */
+  }
+
+  .home-pic {
+    display: none;
+  }
+  .home-pic-container{
+    padding: 10px;
+  }
+
+  .mobile-pic{
+    display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center top;
+  }
+
+  /* .home-banner{
+    background-color: #28313a;
+    min-height: 10vh;
+    margin-top: auto;
+  } */
+
   .sidenav a {
     padding: 8px 8px 20px 32px;
   }
-  /* #home-pic {
-    display: none;
-  } */
-
-  .mobile-pic {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-  }
-  .mobile-pic .main-pic-small {
-    object-fit: cover;
-    height: auto;
-    width: 100%;
-    position: relative;
-    top: 50px;
-  }
-  
+ 
   .hamburger{
     margin: 0;
     right: 10px;
