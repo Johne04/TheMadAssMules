@@ -453,9 +453,9 @@ audio {
 /* Individual Items */
 .gallery-item {
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
   max-width: 350px !important;
-  border: 5px solid red;
+  border: 2px solid #28313a;
 }
 
 .gallery-item img {
