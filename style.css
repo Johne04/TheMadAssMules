@@ -454,7 +454,7 @@ audio {
 .gallery-item {
   overflow: hidden;
   border-radius: 10px;
-  max-width: 350px !important;
+  max-width: 300px !important;
   border: 2px solid #28313a;
 }
 
@@ -1074,14 +1074,14 @@ textarea.input {
 
 @media (max-width: 1484px) {
   .slideshow-main-container{
-    width: 75%;
+    width: 85%;
   }
 
   .gallery-container{
-    min-width: 80%;
+    min-width: 90%;
   }
-  .gallery-item{
-    max-width: 280px;
+  .gallery-container .gallery-item{
+    max-width: 220px !important;
   }
 }
 
@@ -1518,5 +1518,4 @@ textarea.input {
   height: auto; /* Maintain aspect ratio */
   display: block; /* Prevent extra space below images */
   border-radius: 8px; /* Optional rounded corners */
-}
 }
