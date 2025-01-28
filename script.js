@@ -1,9 +1,9 @@
 const navLinks = document.querySelectorAll(".nav ul li a");
-const mainPic = document.getElementById("main-pic");
-const videoContainer = document.getElementById("videoContainer");
+// const mainPic = document.getElementById("main-pic");
+// const videoContainer = document.getElementById("videoContainer");
 
-// const slider = document.querySelector(".slider");
-// const slides = document.querySelectorAll(".slide");
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
@@ -47,10 +47,10 @@ function showSlides(slideshow) {
 }
 
 
-mainPic.addEventListener(
-  "click",
-  () => (videoContainer.style.display = "none")
-);
+// mainPic.addEventListener(
+//   "click",
+//   () => (videoContainer.style.display = "none")
+// );
 
 let currentIndex = 0;
 
