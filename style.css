@@ -303,25 +303,31 @@ section:not(#contactus) {
 .slideshow-main-container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: wrap; /* This is fine, allows wrapping if needed */
+  justify-content: space-evenly; /* Distributes space between slideshows */
   padding-bottom: 1rem;
-  gap: 1rem;
+  gap: 1rem; /* Adds consistent spacing */
 }
+
 .slideshow-container {
-  min-width: 25%;
-  max-width: 280px;
+  min-width: 25%; /* Ensures each container takes at least 25% of the width */
+  max-width: 280px; /* Caps the width */
   position: relative;
   text-align: center;
-  min-height: 450px;
+  min-height: 450px; /* Keeps the height consistent */
+  flex: 1 1 auto; /* Allows containers to grow/shrink while respecting min/max widths */
 }
 
 .mySlides {
   display: none;
 }
 
-.mySlides img{
-  width: 100%;
+.mySlides:first-child {
+  display: block; /* Show the first slide immediately */
+}
+
+.mySlides img {
+  width: 100%; /* Ensures images fill their container */
 }
 
 /* img {
@@ -396,6 +402,7 @@ audio {
 
 .banner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -408,16 +415,23 @@ audio {
     radial-gradient(circle, #888888 10%, transparent 11%);
   background-position: 0 0, 25px 25px; /* Adjust position for alignment */
   background-size: 5px 5px; /* Adjust the size of the pinholes */
+  margin-bottom: 5rem;
 }
 
 .banner h1 {
   color: whitesmoke;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   padding: 0 1rem;
   text-align: center;
 }
 
+.star{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 3rem;
+}
 .checked {
   color: #a8996e;
   font-weight: bolder;
@@ -446,17 +460,18 @@ audio {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #28313a;
 }
+
 .gallery-container {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
   gap: 1rem;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 70%;
+  max-width: 80%;
+  margin-bottom: 2rem;
 }
 
 /* Individual Items */
@@ -464,7 +479,7 @@ audio {
   overflow: hidden;
   border-radius: 10px;
   max-width: 300px !important;
-  border: 2px solid #28313a;
+  border: 2px solid #a8996e;
 }
 
 .gallery-item img {
@@ -481,7 +496,6 @@ audio {
 
 .gallery-item:hover img {
   transform: scale(1.1);
-  /* opacity: 1; */
   filter: none;
   cursor: pointer;
 }
@@ -492,8 +506,8 @@ audio {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
-  height: 60%;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
@@ -501,8 +515,9 @@ audio {
 }
 
 .lightbox img {
-  max-width: auto;
-  max-height: auto;
+  max-width: 90%; /* Limits width to fit screen */
+  max-height: 90%; /* Limits height to fit screen */
+  object-fit: contain; /* Maintains aspect ratio, no stretching */
   border: 2px solid #a8996e;
   border-radius: 10px;
 }
@@ -512,6 +527,7 @@ audio {
   top: 10px;
   right: 20px;
   font-size: 2rem;
+  color: #fff; /* Added for visibility */
   cursor: pointer;
 }
 
@@ -682,11 +698,11 @@ audio {
 .faq-section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
   font-family: Arial, sans-serif;
   background-color: whitesmoke;
   margin-bottom: 3rem;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .faq-item {
@@ -1034,10 +1050,11 @@ textarea.input {
 }
 
 .genre {
-  background-color: rgb(40, 49, 58, 0.3);
-  padding: 0 20px;
-  box-shadow: 0px 2px 6px 0px;
-  color: white;
+  background-color: rgb(40, 49, 58, 0.5);
+  /* padding: 0 20px; */
+  /* box-shadow: 0px 2px 6px 0px; */
+  color: #a8996e;
+  font-weight: bolder;
 }
 
 .scroll-to-top {
