@@ -1104,6 +1104,7 @@ textarea.input {
 @media (max-width: 1484px) {
   .slideshow-main-container {
     width: 85%;
+    gap: 2rem;
   }
 
   .gallery-container {
@@ -1183,7 +1184,8 @@ textarea.input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
   }
   .banner-heading {
     text-align: center;
