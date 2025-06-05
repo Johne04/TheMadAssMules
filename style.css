@@ -70,7 +70,7 @@ section:not(#contactus) {
   justify-content: flex-end;
   align-items: center;
   border-bottom: 1px solid var(--accent-color);
-  background-color: var(--primary-color);
+  background-color: red;
   z-index: 12;
 }
 
