@@ -1,6 +1,4 @@
 const navLinks = document.querySelectorAll(".nav ul li a");
-// const mainPic = document.getElementById("main-pic");
-// const videoContainer = document.getElementById("videoContainer");
 
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
