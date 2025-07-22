@@ -5,7 +5,7 @@
 /* @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap'); */
 
 :root {
-  --primary-color: #28313A;
+  --primary-color: #28313a;
   --accent-color: #a8996e;
   --background-color: White;
 }
@@ -70,7 +70,7 @@ section:not(#contactus) {
   justify-content: flex-end;
   align-items: center;
   border-bottom: 1px solid var(--accent-color);
-  background-color: red;
+  background-color: var(--primary-color);
   z-index: 12;
 }
 
@@ -897,7 +897,6 @@ audio {
 .genre{
   display: flex;
   justify-content: center;
-  background-color: var(--primary-color);
   border-bottom: none;
   width: 100vw;
 }
@@ -1251,7 +1250,7 @@ textarea.input {
   margin-bottom: 2rem;
   font-size: 1.6rem;
   color: var(--accent-color);
-  border-bottom: 1px solid #a8996e;
+  /* border-bottom: 1px solid #a8996e; */
   padding: 0 20px;
   border-radius: 10px;
   letter-spacing: 3px;
@@ -1260,7 +1259,6 @@ textarea.input {
 }
 
 .genre {
-  background-color: rgb(40, 49, 58, 0.5);
   color: #a8996e;
   font-weight: bolder;
 }
