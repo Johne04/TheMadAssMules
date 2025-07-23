@@ -98,14 +98,15 @@ function toggleNav() {
   const sidenav = document.getElementById("mySidenav");
   const hamburger = document.querySelector(".hamburger");
 
-  if (sidenav.style.width === "100%") {
+  if (sidenav.style.width === "250px") {
     sidenav.style.width = "0";
     hamburger.classList.remove("change");
   } else {
-    sidenav.style.width = "100%";
+    sidenav.style.width = "250px";
     hamburger.classList.add("change");
   }
 }
+
 
 document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
