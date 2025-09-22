@@ -459,13 +459,12 @@ audio {
   margin-bottom: 4rem;
 }
 
-.vid1, .vid2 {
-  width: 320px;
+.video {
+  width: 40%;
   height: auto;
   aspect-ratio: 16 / 9;
   border: 2px solid var(--accent-color);
   border-radius: 5px;
-  border: 5px solid red;
 }
 
 .vid1{

@@ -284,45 +284,35 @@ section:not(#contactus) {
 
 /*Videos start here*/
 #media {
-  min-width: 100%;
-  min-height: 100vh !important;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .media-upper-container,
 .media-lower-container {
-  /* min-height: 40%;
- 
-  /* margin-bottom: 1rem;
+  min-height: 40%;
+  width: 70% !important;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center; */
-}
-
-.media-upper-container, .media-lower-container{
-  margin-bottom: 5rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-
 }
 
 .slideshow-main-container {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap; /* This is fine, allows wrapping if needed */
   justify-content: space-evenly; /* Distributes space between slideshows */
-  align-content: center;
+  padding-bottom: 1rem;
+  gap: 1rem; /* Adds consistent spacing */
 }
 
 .slideshow-container {
   min-width: 25%; /* Ensures each container takes at least 25% of the width */
-  max-width: 320px; /* Caps the width */
-  /* height: 400px; */
+  max-width: 280px; /* Caps the width */
   position: relative;
   text-align: center;
   min-height: 450px; /* Keeps the height consistent */
@@ -340,7 +330,6 @@ section:not(#contactus) {
 
 .mySlides img {
   width: 100%; /* Ensures images fill their container */
-  height: 430px;
 }
 
 /* img {
@@ -423,6 +412,7 @@ audio {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
+  border: ;
 }
 
 .banner h1 {
@@ -451,21 +441,19 @@ audio {
 
 .video-main-container {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
   gap: 2rem;
   margin-bottom: 4rem;
 }
 
-.vid1, .vid2 {
-  width: 320px;
+.video {
+  width: 60%;
   height: auto;
   aspect-ratio: 16 / 9;
   border: 2px solid var(--accent-color);
   border-radius: 5px;
-  border: 5px solid red;
 }
 
 .vid1{
@@ -1459,7 +1447,7 @@ textarea.input {
 
   .banner-mobile {
     min-width: 100vw;
-    max-height: 200px;
+    height: 200px;
     background-color: var(--primary-color);
     background-image: radial-gradient(circle, #6e6e6e 10%, transparent 11%),
       radial-gradient(circle, #888888 10%, transparent 11%);

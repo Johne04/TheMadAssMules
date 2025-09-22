@@ -291,6 +291,7 @@ section:not(#contactus) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 6px solid green;
 }
 .media-upper-container,
 .media-lower-container {
@@ -302,7 +303,7 @@ section:not(#contactus) {
   align-items: center; */
 }
 
-.media-upper-container, .media-lower-container{
+.media-upper-container{
   margin-bottom: 5rem;
   display: flex;
   align-items: center;
@@ -317,6 +318,7 @@ section:not(#contactus) {
   flex-wrap: wrap; /* This is fine, allows wrapping if needed */
   justify-content: space-evenly; /* Distributes space between slideshows */
   align-content: center;
+  border: 5px solid pink;
 }
 
 .slideshow-container {
@@ -328,6 +330,7 @@ section:not(#contactus) {
   min-height: 450px; /* Keeps the height consistent */
   flex: 1 1 auto; /* Allows containers to grow/shrink while respecting min/max widths */
   margin-bottom: 2rem;
+  border: 5px solid purple;
 }
 
 .mySlides {
@@ -423,6 +426,7 @@ audio {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
+  border: 3px solid red;
 }
 
 .banner h1 {
@@ -457,15 +461,15 @@ audio {
   width: 100%;
   gap: 2rem;
   margin-bottom: 4rem;
+  border: 2px solid green;
 }
 
-.vid1, .vid2 {
-  width: 320px;
+.video {
+  width: 60%;
   height: auto;
   aspect-ratio: 16 / 9;
   border: 2px solid var(--accent-color);
   border-radius: 5px;
-  border: 5px solid red;
 }
 
 .vid1{

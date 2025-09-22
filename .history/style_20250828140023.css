@@ -97,8 +97,8 @@ section:not(#contactus) {
   color: white;
   position: fixed;
   left: 16rem;
-  /* text-shadow: 3px 1px 4px var(--accent-color); */
-  font-size: 1.4rem;
+  text-shadow: 3px 1px 4px var(--accent-color);
+  font-size: 1.6rem;
   font-family: Oswald, Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -115,7 +115,7 @@ section:not(#contactus) {
 
 .mam_logo {
   position: relative;
-  left: 3%;
+  left: 5%;
   top: 12px;
   height: 80px;
   width: 135px;
@@ -284,45 +284,35 @@ section:not(#contactus) {
 
 /*Videos start here*/
 #media {
-  min-width: 100%;
-  min-height: 100vh !important;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .media-upper-container,
 .media-lower-container {
-  /* min-height: 40%;
- 
-  /* margin-bottom: 1rem;
+  min-height: 40%;
+  width: 70% !important;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center; */
-}
-
-.media-upper-container, .media-lower-container{
-  margin-bottom: 5rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-
 }
 
 .slideshow-main-container {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap; /* This is fine, allows wrapping if needed */
   justify-content: space-evenly; /* Distributes space between slideshows */
-  align-content: center;
+  padding-bottom: 1rem;
+  gap: 1rem; /* Adds consistent spacing */
 }
 
 .slideshow-container {
   min-width: 25%; /* Ensures each container takes at least 25% of the width */
-  max-width: 320px; /* Caps the width */
-  /* height: 400px; */
+  max-width: 280px; /* Caps the width */
   position: relative;
   text-align: center;
   min-height: 450px; /* Keeps the height consistent */
@@ -340,7 +330,6 @@ section:not(#contactus) {
 
 .mySlides img {
   width: 100%; /* Ensures images fill their container */
-  height: 430px;
 }
 
 /* img {
@@ -414,15 +403,16 @@ audio {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #28313a;
+  background-color: #a8996e;
+  /* padding: 1rem; */
+  margin-bottom: 2rem;
+  min-height: 120px;
+  background-color: #28313a; /* Base color */
   background-image: radial-gradient(circle, #6e6e6e 10%, transparent 11%),
     radial-gradient(circle, #888888 10%, transparent 11%);
-  background-position: 0 0, 25px 25px;
-  background-size: 5px 5px;
+  background-position: 0 0, 25px 25px; /* Adjust position for alignment */
+  background-size: 5px 5px; /* Adjust the size of the pinholes */
   margin-bottom: 5rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  text-align: center;
 }
 
 .banner h1 {
@@ -430,109 +420,40 @@ audio {
   font-size: 2rem;
   font-weight: 700;
   padding: 0 1rem;
-  word-wrap: break-word;
-  max-width: 100%;
+  text-align: center;
 }
 
-.star {
+.star{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem; /* Reduced gap for small screens */
   width: 100%;
+  justify-content: center;
+  gap: 3rem;
 }
-
 .checked {
   color: var(--accent-color);
   font-weight: bolder;
+  padding: 10px;
   font-size: 1.6rem;
-  padding: 5px;
+  gap: 2rem;
 }
 
 .video-main-container {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
   gap: 2rem;
   margin-bottom: 4rem;
 }
 
-.vid1, .vid2 {
-  width: 320px;
+.video {
+  width: 60%;
   height: auto;
   aspect-ratio: 16 / 9;
   border: 2px solid var(--accent-color);
   border-radius: 5px;
-  border: 5px solid red;
 }
 
-.vid1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.vid2.placeholder {
-  background-color: var(--primary-color); /* or use var(--primary-color) */
-  color: #ffffff; /* or use var(--background-color) */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  font-family: sans-serif;
-  border: 2px dashed #555; /* gives it a "not yet available" look */
-  aspect-ratio: 16 / 9;
-  padding: 20px;
-}
-
-/* Content inside placeholder */
-.placeholder-content h2 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.placeholder-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
-/* Optional shimmer loading effect */
-.placeholder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150px;
-  height: 100%;
-  width: 150px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -150px;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-
-.vid2 h1{
-  font-size: 3.6rem;
-}
-
-.placeholder-content > *{
-  color: var(--accent-color);
-}
 /* Photos start here */
 #photos {
   min-height: 100vh;
@@ -1051,6 +972,7 @@ audio {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 4rem 0;
 }
 .contact-container {
   position: relative;
@@ -1242,6 +1164,7 @@ textarea.input {
   position: relative;
   background-color: rgb(255, 255, 255, 0.8);
   filter: blur(5);
+  border: 2px solid red;
 }
 
 .text {
@@ -1459,12 +1382,12 @@ textarea.input {
 
   .banner-mobile {
     min-width: 100vw;
-    max-height: 200px;
-    background-color: var(--primary-color);
+    height: 200px;
+    background-color: var(--primary-color); /* Base color */
     background-image: radial-gradient(circle, #6e6e6e 10%, transparent 11%),
       radial-gradient(circle, #888888 10%, transparent 11%);
-    background-position: 0 0, 25px 25px;
-    background-size: 5px 5px;
+    background-position: 0 0, 25px 25px; /* Adjust position for alignment */
+    background-size: 5px 5px; /* Adjust the size of the pinholes */
     display: flex;
     flex-direction: column;
     justify-content: center;

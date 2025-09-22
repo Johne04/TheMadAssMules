@@ -284,7 +284,7 @@ section:not(#contactus) {
 
 /*Videos start here*/
 #media {
-  min-width: 100%;
+  min-width: 100vw;
   min-height: 100vh !important;
   display: flex;
   flex-wrap: wrap;
@@ -294,40 +294,39 @@ section:not(#contactus) {
 }
 .media-upper-container,
 .media-lower-container {
-  /* min-height: 40%;
- 
-  /* margin-bottom: 1rem;
+  width: 100%;
+  /* min-height: 40%; */
+  /* width: 70% !important; */
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
-.media-upper-container, .media-lower-container{
-  margin-bottom: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-
+.media-upper-container{
+  border: 5px solid purple;
 }
 
 .slideshow-main-container {
-  width: 70%;
+  min-width: 100%;
   display: flex;
   flex-wrap: wrap; /* This is fine, allows wrapping if needed */
   justify-content: space-evenly; /* Distributes space between slideshows */
-  align-content: center;
+  padding-bottom: 1rem;
+  gap: 1rem; /* Adds consistent spacing */
+  border: 5px solid pink;
 }
 
 .slideshow-container {
   min-width: 25%; /* Ensures each container takes at least 25% of the width */
-  max-width: 320px; /* Caps the width */
-  /* height: 400px; */
+  max-width: 280px; /* Caps the width */
+  height: 350px;
   position: relative;
   text-align: center;
   min-height: 450px; /* Keeps the height consistent */
   flex: 1 1 auto; /* Allows containers to grow/shrink while respecting min/max widths */
   margin-bottom: 2rem;
+  border: 5px solid purple;
 }
 
 .mySlides {
@@ -340,7 +339,6 @@ section:not(#contactus) {
 
 .mySlides img {
   width: 100%; /* Ensures images fill their container */
-  height: 430px;
 }
 
 /* img {
@@ -423,6 +421,7 @@ audio {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
+  border: 3px solid red;
 }
 
 .banner h1 {
@@ -457,15 +456,15 @@ audio {
   width: 100%;
   gap: 2rem;
   margin-bottom: 4rem;
+  border: 2px solid green;
 }
 
-.vid1, .vid2 {
-  width: 320px;
+.video {
+  width: 60%;
   height: auto;
   aspect-ratio: 16 / 9;
   border: 2px solid var(--accent-color);
   border-radius: 5px;
-  border: 5px solid red;
 }
 
 .vid1{

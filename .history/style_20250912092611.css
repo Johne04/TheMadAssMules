@@ -459,7 +459,7 @@ audio {
   margin-bottom: 4rem;
 }
 
-.vid1, .vid2 {
+.vid1 {
   width: 320px;
   height: auto;
   aspect-ratio: 16 / 9;
