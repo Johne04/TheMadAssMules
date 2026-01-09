@@ -135,7 +135,7 @@ section:not(#contactus, #setlist) {
   color: var(--primary-color);
   border: 1px solid;
   border-color: var(--accent-color);
-  padding: 5px 8px;
+  /* padding: 8px; */
 }
 
 .nav li a:last-child:hover {

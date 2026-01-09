@@ -62,7 +62,7 @@ section:not(#contactus, #setlist) {
   width: 100%;
   height: auto ;
   position: relative;
-  top: -30px;
+  top: -50px;
 }
 
 .nav {
@@ -135,7 +135,7 @@ section:not(#contactus, #setlist) {
   color: var(--primary-color);
   border: 1px solid;
   border-color: var(--accent-color);
-  padding: 5px 8px;
+  padding: 8px;
 }
 
 .nav li a:last-child:hover {
@@ -749,7 +749,7 @@ audio {
   font-weight: 300;
 }
 /* arrows */
-/* .arrows{
+.arrows{
   position: absolute;
   top: 60%;
   right: 82%;
@@ -760,7 +760,7 @@ audio {
   gap: 10px;
   align-items: center;
   /* border: 30px solid; */
-} */
+}
 .arrows button{
   width: 40px;
   height: 40px;
