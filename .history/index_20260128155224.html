@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Ass Mules | Live Wedding & Event Band</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    
+    <section id="home">
+      <div class="home-pic-container">
+        <img class="home-pic" src="./img/home/Anastella_Photography-21.avif" alt="">
+        <img src="./img/home/mobile-pic.jpg" class="mobile-pic" alt="">
+      </div>
+
+      <!-- Desktop Nav -->
+<div class="nav">
+  <div class="nav-container">
+    <img class="mam_logo" src="./img/Logos/MAM_Logo.png" alt="Mad Ass Mules Logo">
+
+    <ul class="nav-main">
+      <li><a href="#home" class="links">Home</a></li>
+      <li><a href="#media" class="links">Media</a></li>
+      <li><a href="#photos" class="links">Photos</a></li>
+      <li><a href="#testimonials" class="links">Testimonials</a></li>
+      <li><a href="#setlist" class="links">Set List</a></li>
+      <li><a href="#FAQs" class="links">FAQ's</a></li>
+      <li><a href="tel:0871234432" class="links phone">0871234432</a></li>
+      <li><a href="#contactus" class="links contact-btn">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Mobile Nav -->
+<div class="nav-min">
+  <div class="nav-container">
+    <img class="mam_logo" src="./img/Logos/MAM_Logo.png" alt="Mad Ass Mules Logo">
+
+    <div class="nav-min-right">
+      <a href="tel:0871234432" class="phone">0871234432</a>
+      <a href="#contactus" class="contact-btn">Contact</a>
+      <div class="hamburger" id="main" onclick="toggleNav()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="nav-min">
+  <img class="mam_logo" src="./img/Logos/MAM_Logo.png" alt="Band Logo">
+
+  <div class="nav-min-right">
+    <a href="tel:0871234432" class="phone-link">0871234432</a>
+    <a href="#contactus" class="contact-btn">Contact Us</a>
+    <div class="hamburger" id="main" onclick="toggleNav()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+</div>
+
+      <div id="mySidenav" class="sidenav">
+
+        <a href="#home">Home</a>
+        <a href="#media">Media</a>
+        <a href="#photos">Photos</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#setlist">Set List</a>
+        <a href="#FAQs">FAQ's</a>
+        <a href="tel:0871234432">0871234432</a>
+        <a href="#contactus">Contact Us</a>
+      </div>
+
+    </section>
+ 
+    <section id="media">
+      <div class="media-heading">MEDIA</div>
+      <div class="media-upper-container">
+      <div class="slideshow-main-container">
+      <div class="slideshow-container">
+        <div class="caption">Mix1</div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide1.jpg" alt="Image 1">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide2.jpg" alt="Image 2">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide3.jpg" alt="Image 3">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide4.jpg" alt="Image 4">
+        </div>
+        <audio controls id="audio">
+            <source src="./Audio/Rumbling_Wind.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+        <div class="media-controls">
+          <button onclick="playAudio()">Play</button>
+          <button onclick="pauseAudio()">Pause</button>
+          <button onclick="stopAudio()">Stop</button>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="caption">Mix2</div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide5.jpg" alt="Image 5">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide6.jpg" alt="Image 6">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide7.jpg" alt="Image 7">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide8.jpg" alt="Image 8">
+        </div>
+        <audio controls>
+            <source src="audio2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+        <div class="media-controls">
+          <button onclick="playAudio()">Play</button>
+          <button onclick="pauseAudio()">Pause</button>
+          <button onclick="stopAudio()">Stop</button>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="caption">Mix3</div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide9.jpg" alt="Image 9">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide10.jpg" alt="Image 10">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide11.jpg" alt="Image 11">
+        </div>
+        <div class="mySlides">
+            <img src="./img/slideshow/slide12.jpg" alt="Image 12">
+        </div>
+        
+        <audio controls>
+            <source src="audio3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="progress-bar">
+          <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+        <div class="media-controls">
+          <button onclick="playAudio()">Play</button>
+          <button onclick="pauseAudio()">Pause</button>
+          <button onclick="stopAudio()">Stop</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="banner">
+        <div class="star">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+        <div class="banner-heading">
+          <h1>THE FLOOR WAS FULL ALL NIGHT LONG, WE CAN'T THANK YOU GUYS ENOUGH!</h1>
+        </div>
+        <div class="star">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </div>
+
+       <div class="banner-mobile">
+        <div class="star1">
+          <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        </div>
+        <div class="banner-heading">
+          <h1>THE FLOOR WAS FULL ALL NIGHT LONG, WE CAN'T THANK YOU GUYS ENOUGH!</h1>
+        </div>
+        <div class="star2">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+    </div>
+        
+      </div>
+      <div class="media-lower-container">
+      <div class="video-main-container vid cont">
+        <div class="video vid1">
+      <iframe 
+          width="100%"
+          height="100%"
+        src="https://www.youtube.com/embed/IaRmPOdDgTg" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+      </div>
+        <div class="video vid2 placeholder">
+          <div class="placeholder-content">
+            <h2>Promo Video</h2>
+            <p>Coming Soon</p>
+          </div>
+      </div>
+
+      </div>
+    </section>
+    <section id="photos">
+      <div class="lightbox">
+        <span class="prev">&larr;</span>
+        <img id="lightbox-img" src="" alt="Expanded Photo">
+        <span class="next">&rarr;</span>
+        <span class="close-lightbox">&times;</span>
+        
+      </div>
+      <div class="media-heading">PHOTO GALLERY</div>
+      <div class="gallery-container">
+        <div class="gallery-item"><img src="./img/photos/photo1.jpg" alt="Photo 1"></div>
+        <div class="gallery-item"><img src="./img/photos/photo2.jpg" alt="Photo 2"></div>
+        <div class="gallery-item"><img src="./img/photos/photo3.jpg" alt="Photo 3"></div>
+        <div class="gallery-item"><img src="./img/photos/photo4.jpg" alt="Photo 4"></div>
+        <div class="gallery-item"><img src="./img/photos/photo5.jpg" alt="Photo 5"></div>
+        <div class="gallery-item"><img src="./img/photos/photo6.jpg" alt="Photo 6"></div>
+        <div class="gallery-item"><img src="./img/photos/photo7.jpg" alt="Photo 7"></div>
+        <div class="gallery-item"><img src="./img/photos/photo8.jpg" alt="Photo 8"></div>
+        <div class="gallery-item"><img src="./img/photos/photo9.jpg" alt="Photo 9"></div>
+        <div class="gallery-item"><img src="./img/photos/photo10.jpg" alt="Photo 10"></div>
+        <div class="gallery-item"><img src="./img/photos/photo11.jpg" alt="Photo 11"></div>
+        <div class="gallery-item"><img src="./img/photos/photo12.jpg" alt="Photo 12"></div>
+        <div class="gallery-item"><img src="./img/photos/photo13.jpg" alt="Photo 13"></div>
+        <div class="gallery-item"><img src="./img/photos/photo14.jpg" alt="Photo 14"></div>
+        <div class="gallery-item"><img src="./img/photos/photo15.jpg" alt="Photo 15"></div>
+        
+      </div>
+   
+     
+      
+     
+    </section>
+    <section id="testimonials">
+      <div class="test"><h2 class="media-heading">WHAT OUR CLIENTS ARE SAYING</h2></div>
+      <div class="carousel">
+        <div class="list">
+          <div class="item active">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="James & Jane">
+            <div class="content">
+              <div class="des">
+                "The Mad Ass Mules made our wedding unforgettable! Dance floor packed all night — professional, fun, and incredibly talented. Thank you so much!"
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Paul & Anna">
+            <div class="content">
+              <div class="des">
+                "Best live band we could have hired. They learned our first dance perfectly and kept everyone dancing until the end. Our guests loved it!"
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Rajan & Sean">
+            <div class="content">
+              <div class="des">
+                "Shane and the band were fantastic — great song choices, amazing energy, and they had the whole place rocking. Highly recommend!"
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="John & Debbie">
+            <div class="content">
+              <div class="des">
+                "Incredible musicians and vibe. From slow songs to party anthems — they nailed it. We’d book them again in a heartbeat!"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="thumbnail">
+          <div class="item active">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="James & Jane">
+            <div class="content"><div class="title">James & Jane</div></div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Paul & Anna">
+            <div class="content"><div class="title">Paul & Anna</div></div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Rajan & Sean">
+            <div class="content"><div class="title">Rajan & Sean</div></div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="John & Debbie">
+            <div class="content"><div class="title">John & Debbie</div></div>
+          </div>
+        </div>
+
+        <div class="arrows">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+
+        <div class="time"></div>
+      </div>
+    </section>
+    <section id="setlist">
+      <div class="media-heading genre">SONG LIST</div>
+      <div class="setlist-container">
+        <div class="song-container-inner">
+          <h3 class="song-category">First Dances</h3>
+          <p>Bryan Adams - Heaven</p> 
+          <p>Ed Sheeran - Thinking Out Loud</p>
+          <p>Ed Sheeran - Perfect</p> 
+          <p>Ed Sheeran - How Would You Feel</p>  
+          <p>Imelda May - Kentish Town Waltz</p> 
+          <p>Kodaline - The One</p> 
+          <p>U2 - All I Want Is You</p> 
+          <p>Waterboys/Ellie Goulding - How Long Will I Love You</p> 
+          <p>Luke Combs - Forever After All</p>
+          <p>Luke Combs - Better Together</p>
+          <p>Saw Doctors - Never Mind the Strangers</p> 
+          <p>The Fureys - I Will Love You</p> 
+          <p>Paul Weller - You Do Something to Me</p> 
+          <p>The Lumineers - Ho Hey</p> 
+          <p>Jason Mraz - I Won't Give Up</p> 
+          <p>Jason Mraz - I'm Yours</p> 
+          <p>Jimmy Buckley - On Your Wedding Day</p> 
+          <p>James Arthur - Say You Won't Let Go</p> 
+          <p>The Temptations - My Girl</p> 
+          <p>Garth Brooks - The River</p> 
+          <p>Picture This - Never Change</p> 
+          <p>Lick the Tins - I Can’t Help Falling in Love</p> 
+          <p>Picture This - Take My Hand</p> 
+          <p>The Wannadies - You and Me</p> 
+          <p>Elvis Presley - Can’t Help Falling in Love</p> 
+          <p>Bruce Springsteen - Dancing in the Dark</p> 
+          <p>Ben E. King - Stand by Me</p> 
+          <p>David Gray - The One I Love</p> 
+          <p>David Gray - This year's love</p> 
+          <p>Hall and Oates - Making My Dreams Come True</p> 
+          <p>Waterboys - Fisherman’s Blues</p> 
+          <p>Randy Travis - Forever and Ever, Amen</p> 
+          <p>Cascada - Every Time We Touch</p>
+          <p>Van Morrison - Brown Eyed Girl</p>
+          <p>Bruno Mars - Marry You</p>
+        </div>
+        <div class="song-container-inner">
+          <h3 class="song-category">Dance</h3>
+          <p>Olly Murs - Dance with Me Tonight</p>
+          <p>The Blues Brothers - Everybody Needs Somebody</p>
+          <p>Paolo Nutini - Pencil Full of Lead</p>
+          <p>Gala - Freed from Desire</p>
+          <p>George Ezra - Shotgun</p>
+          <p>George Ezra - Blame It on Me</p>
+          <p>Richie Valens - La Bamba</p>
+          <p>Mark Ronson & Bruno Mars - Uptown Funk</p>
+          <p>Daft Punk - Get Lucky</p>
+
+          <div class="song-container-inner">
+            <h3 class="song-category">Floor Fillers</h3>
+            <p>John Cougar Mellencamp - Hurt so Good</p>
+            <p>Neil Diamond - Sweet Caroline</p>
+            <p>Byran Adams - Summer of 69</p>
+            <p>Kenny Loggins - Footloose</p>
+            <p>Gala - Freed From Desire</p>
+            <p>Walk the Moon - Shut Up and Dance</p>
+            <p>Dexys Midnight Runners - Come On Eileen</p>
+            <p>Chic - Le Freak</p>
+            <p>A-Ha - Take On Me</p>
+            <p>The Killers - Mr. Brightside</p>
+            <p>Wheatus - Teenage Dirtbag</p>
+
+          </div>
+
+        </div>
+        <div class="song-container-inner">
+          <h3 class="song-category">Rock</h3>
+          <p>John Cougar Mellencamp - Hurt So Good</p>
+          <p>Bon Jovi - Living on a Prayer</p>
+          <p>AC/DC - You Shook Me All Night Long</p>
+          <p>AC/DC - Thunderstruck</p>
+          <p>Tina Turner - Proud Mary</p>
+          <p>Walk the Moon - Shut Up and Dance</p>
+          <p>The Killers - Mr. Brightside</p>
+          <p>Byran Adams - Summer of 69</p>
+          <p>Kings of Leon - Sex on fire</p>
+          <p>Queen - Dont stop me know</p>
+          <p>Journey - Don’t Stop Believin</p>
+
+          <div class="song-container-inner">
+            <h3 class="song-category">Sixties</h3>
+            <p>Elvis - Jailhouse Rock</p>
+            <p>Elvis - Suspicious Minds</p>
+            <p>The Temptations - My girl</p>
+            <p>The Kingsmen - Louie Louie</p>
+            <p>Ike & Tina Turner - River deep moutain high</p>
+            <p>The Holding Company - Piece of my heart</p>
+          </div>
+
+          <div class="song-container-inner">
+            <h3 class="song-category">Seventies</h3>
+            <p>Wild Cherry - Play that funky music</p>
+            <p>Elvis - Burning love</p>
+            <p>Wild Cherry - Play that funky music</p>
+            <p>John Denver - Take me home country roads</p>
+            <p>Abba - Dancing Queen</p>
+            <p>Abba - Mama Mia</p>
+            <p>Meat Loaf - Bat out of hell</p>
+          </div>
+
+        </div>
+        <div class="song-container-inner">
+          <h3 class="song-category">Jives</h3>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <p>Ed Sheerin <span>Perfect</span></p>
+          <div class="song-container-inner">
+            <h3 class="song-category">Waltzes</h3>
+            <p>Your Wedding Day - Jimmy Buckley</p>
+            <p>The Furey's - Red rose cafe</p>
+            <p>The Fureys - When You Were Sweet Sixteen</p>
+            <p>Dean Martin - That's Amore</p>
+            <p>John Sheahan - The Marino waltz</p>
+            <p></p>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+    <section id="FAQs" class="cont">
+      <div class="media-heading test">Frequently Asked Questions</div>
+<div class="faqs-container cont">
+  <div class="faq-section">
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        What is your band's availability?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our band is available for bookings throughout the year. Contact us to check specific dates.</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        How long do you typically perform?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our standard performance is 2.15 - 2.30 hours. We can take a break during when the tea is being served, or play through, the choice is yours</p>
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <div class="faq-question">
+        Can you play music during breaks?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, we provide background music during the break, let us know if you have any requests, we will be more than happy to accomodate you.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        How long does setup and soundcheck take?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>We typically need approx. 60 minutes for setup and sound check. We aim to arrive well in advance to ensure everything runs smoothly</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Do you offer a DJ service?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, we can provide a DJ service to keep the party going after our performance. This can be added to any package for an additional fee.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Can we see you perform live before booking?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, please contact us and we will try to arrange a date and suitable location where you can view the band live</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        How can I book your band?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>You can book our band by filling out the contact form on our website, email us or contact us by phone</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Do you have a written contract?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, once your date have been agreed we will send you the contract link via email, then simply fill it in and hit the submit button 
+          and your all set
+        </p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        What happens if a band member is unavailable on the day?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>We have cover for all our band members. In the event that a band member is unable to attend, we will notify you ASAP. We can assure you that 
+          you will have a great night as we are fully prepared for events like this
+        </p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Can we contact you by phone to discuss any queries we may have?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Absolutely! You can contact Shane on - 0851005374. If he can't take your call, please leave a message and he'll get back to you ASAP.
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    <section id="contactus">
+      <div class="contact-container">
+       
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title touch">Let's get in touch</h3>
+  
+            <div class="info">
+              <div class="information">
+                <a href="mailto:themadassmules@gmail.com" class="icon email">
+                  <i class="fas fa-envelope"></i>
+              </a>
+              <p>themadassmules@gmail.com</p>
+              </div>
+
+              <div class="information">
+                <a href="tel:0851005374" class="icon phone">
+                  <i class="fas fa-phone-alt"></i>
+              </a>
+              <p>0851005374</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Connect with us</p>
+              <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank" class="icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <form action="index.html" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input" placeholder=" " />
+                <label for="">Name</label>
+                <span>Name</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" placeholder=" " />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" placeholder=" " />
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input" placeholder=" "></textarea>
+                <label for="">Event details - Please include the date and location if known</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="send-btn" />
+            </form>
+          </div>
+        </div>
+    </section>
+    
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  
+  </body>
+</html>

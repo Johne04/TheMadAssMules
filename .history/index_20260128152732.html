@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Ass Mules | Live Band</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+
+    <!-- Home / Hero -->
+    <section id="home">
+      <div class="home-pic-container">
+        <img class="home-pic" src="./img/home/Anastella_Photography-21.avif" alt="Band performing">
+        <img src="./img/home/mobile-pic.jpg" class="mobile-pic" alt="Band mobile view">
+      </div>
+
+      <div class="nav">
+        <img class="mam_logo" src="./img/Logos/MAM_Logo.png" alt="Mad Ass Mules Logo">
+        <ul class="nav-main">
+          <li>
+            <a href="#home" class="links">Home</a>
+            <a href="#media" class="links">Media</a>
+            <a href="#photos" class="links">Photos</a>
+            <a href="#testimonials" class="links">Testimonials</a>
+            <a href="#setlist" class="links">Set List</a>
+            <a href="#FAQs" class="links">FAQ's</a>
+            <a href="tel:0871234432" class="links">0871234432</a>
+            <a href="#contactus" class="links contact-btn">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-min">
+        <ul class="nav-main">
+          <li>
+            <img class="mam_logo" src="./img/Logos/MAM_Logo.png" alt="Mad Ass Mules Logo">
+            <a href="tel:0871234432">0871234432</a>
+            <a class="contact-btn" href="#contactus">Contact Us</a>
+          </li>
+        </ul>
+        <div class="hamburger" id="main" onclick="toggleNav()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="#home">Home</a>
+        <a href="#media">Media</a>
+        <a href="#photos">Photos</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#setlist">Set List</a>
+        <a href="#FAQs">FAQ's</a>
+        <a href="tel:0871234432">0871234432</a>
+        <a href="#contactus">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+      <div class="media-heading">MEDIA</div>
+      <div class="media-upper-container">
+        <div class="slideshow-main-container">
+          <!-- Mix 1 -->
+          <div class="slideshow-container">
+            <div class="caption">Mix 1</div>
+            <div class="mySlides"><img src="./img/slideshow/slide1.jpg" alt="Mix 1 - Slide 1"></div>
+            <div class="mySlides"><img src="./img/slideshow/slide2.jpg" alt="Mix 1 - Slide 2"></div>
+            <div class="mySlides"><img src="./img/slideshow/slide3.jpg" alt="Mix 1 - Slide 3"></div>
+            <div class="mySlides"><img src="./img/slideshow/slide4.jpg" alt="Mix 1 - Slide 4"></div>
+            <audio controls id="audio">
+              <source src="./Audio/Rumbling_Wind.mp3" type="audio/mpeg">
+            </audio>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+            <div class="media-controls">
+              <button onclick="playAudio()">Play</button>
+              <button onclick="pauseAudio()">Pause</button>
+              <button onclick="stopAudio()">Stop</button>
+            </div>
+          </div>
+
+          <!-- Mix 2 & 3 similar... (unchanged) -->
+          <!-- ... keep your existing Mix2 and Mix3 blocks ... -->
+        </div>
+      </div>
+
+      <!-- Banner & Videos (unchanged) -->
+      <!-- ... keep your banner and video section ... -->
+    </section>
+
+    <!-- Photos (unchanged) -->
+    <!-- ... keep your photos section ... -->
+
+    <!-- FIXED TESTIMONIALS SECTION -->
+    <section id="testimonials">
+      <div class="test">
+        <h2 class="media-heading">WHAT OUR CLIENTS ARE SAYING</h2>
+      </div>
+
+      <div class="carousel">
+        <div class="list">
+          <div class="item active">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="James & Jane">
+            <div class="content">
+              <div class="des">
+                "The Mad Ass Mules turned our wedding into an absolute blast! The dance floor never emptied — they had everyone from kids to grandparents dancing all night. Pure class!"
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Paul & Anna">
+            <div class="content">
+              <div class="des">
+                "Hands down the best band we've ever booked. They learned our first dance song perfectly and kept the energy electric. Our guests are still raving about it!"
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Rajan & Sean">
+            <div class="content">
+              <div class="des">
+                "Shane and the lads were unreal — spot-on song choices, great vibe, and they read the room perfectly. Best night of our lives. 10/10!"
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="John & Debbie">
+            <div class="content">
+              <div class="des">
+                "Professional, fun, and insanely talented. They had the whole place rocking from the first note. We’d book them again tomorrow — worth every penny!"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="thumbnail">
+          <div class="item active">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="James & Jane">
+            <div class="content"><div class="title">James & Jane</div></div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Paul & Anna">
+            <div class="content"><div class="title">Paul & Anna</div></div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="Rajan & Sean">
+            <div class="content"><div class="title">Rajan & Sean</div></div>
+          </div>
+          <div class="item">
+            <img src="./img/testimonials/18.08.2024-25.jpg" alt="John & Debbie">
+            <div class="content"><div class="title">John & Debbie</div></div>
+          </div>
+        </div>
+
+        <div class="arrows">
+          <button id="prev" aria-label="Previous"><</button>
+          <button id="next" aria-label="Next">></button>
+        </div>
+
+        <div class="time"></div>
+      </div>
+    </section>
+
+    <!-- Setlist, FAQs, Contact (unchanged) -->
+    <!-- ... keep the rest of your sections ... -->
+
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  </body>
+</html>
