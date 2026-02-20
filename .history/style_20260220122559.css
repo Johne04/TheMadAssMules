@@ -341,7 +341,7 @@ section:not(#contactus, #setlist) {
 
 #media {
   padding: 6rem 2rem 8rem;
-  background: linear-gradient(to bottom, var(--primary-color), #1a2028);
+  background: var();
   color: white;
 }
 
@@ -700,9 +700,7 @@ section:not(#contactus, #setlist) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 5px solid red;
 }
-
 
 .testimonial-carousel {
   /* position: relative; */
@@ -916,7 +914,7 @@ section:not(#contactus, #setlist) {
 
 #photos {
   padding: 6rem 2rem 8rem;
-  background: var(--primary-color);
+  background: var(--background-colorbackground-color);
   color: white;
 }
 
@@ -1024,11 +1022,12 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #setlist {
-  background-image: url(./img/photos/photo19.jpg);
+  /* background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: var(--background-color);
   min-height: 100vh;
   position: relative;
   color: white;
@@ -1040,7 +1039,7 @@ section:not(#contactus, #setlist) {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  /* background: rgba(0, 0, 0, 0.65); */
   z-index: 1;
 }
 

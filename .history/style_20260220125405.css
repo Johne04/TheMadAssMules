@@ -336,43 +336,160 @@ section:not(#contactus, #setlist) {
 }
 
 /* ──────────────────────────────────────────────
-   MEDIA SECTION – Balanced, Compact Two-Column Layout
+   MEDIA SECTION – White background + dark inners
 ─────────────────────────────────────────────── */
 
 #media {
   padding: 6rem 2rem 8rem;
-  background: linear-gradient(to bottom, var(--primary-color), #1a2028);
+  background-color: #ffffff;          /* white background */
+  color: #000000;                     /* dark text for readability */
+}
+
+/* Darken inner elements for contrast on white */
+.main-player-card {
+  background: var(--primary-color);   /* #28313a dark */
+  color: white;
+  border: 1px solid rgba(168,153,110,0.2);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
+.mix-preview-card {
+  background: var(--primary-color);
+  color: white;
+  border: 1px solid rgba(168,153,110,0.2);
+}
+
+.mix-preview-card.active,
+.mix-preview-card:hover {
+  background: rgba(168,153,110,0.25);
+}
+
+.cover-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+}
+
+.preview-info h4,
+.preview-info p {
+  color: white;
+}
+
+.player-buttons button {
+  color: white;
+}
+
+.testimonial-card {
+  background: var(--primary-color);
+  color: white;
+  border: 1px solid rgba(168,153,110,0.25);
+}
+
+.quote-text {
+  color: white;
+}
+
+.video-card {
+  background: var(--primary-color);
+}
+
+.video-label {
   color: white;
 }
 
 .media-heading {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);   /* smaller overall */
+  font-size: clamp(2rem, 5vw, 3.5rem);
   text-align: center;
   margin-bottom: 2rem;
   color: var(--accent-color);
   letter-spacing: 2px;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 /* Grid container – player left, choices right */
-/* ──────────────────────────────────────────────
-   MEDIA LAYOUT – Perfect vertical alignment & matching heights
-─────────────────────────────────────────────── */
-
 .media-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   max-width: 1200px;
-  align-items: stretch;              /* Forces columns to same height */
+  align-items: stretch;
 }
+
+/* ──────────────────────────────────────────────
+   TESTIMONIALS – White background + dark inners
+─────────────────────────────────────────────── */
+
+#testimonials {
+  padding: 6rem 2rem 8rem !important;
+  background-color: #ffffff;          /* white background */
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-carousel {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.carousel-inner {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  background: var(--primary-color);   /* dark bg */
+}
+
+.carousel-caption {
+  background: rgba(40,49,58,0.8);
+  color: white;
+}
+
+.des,
+.author {
+  color: white;
+}
+
+.thumb {
+  background: var(--primary-color);
+}
+
+/* ──────────────────────────────────────────────
+   FAQS – White background + dark inners
+─────────────────────────────────────────────── */
+
+#FAQs {
+  background-color: #ffffff;          /* white background */
+  color: #000000;
+}
+
+.faq-section {
+  max-width: 900px;
+  width: 90%;
+}
+
+.faq-question {
+  background: var(--primary-color);   /* dark question */
+  color: var(--accent-color);
+}
+
+.faq-answer {
+  background: rgba(40,49,58,0.9);     /* dark answer */
+  color: white;
+}
+
+/* ──────────────────────────────────────────────
+   MEDIA LAYOUT – (unchanged except dark inners above)
+─────────────────────────────────────────────── */
 
 .main-player-column,
 .mix-choices-column {
   display: flex;
   flex-direction: column;
-  height: 100%;                      /* Full height matching */
+  height: 100%;
 }
 
 .mix-choices-column{
@@ -384,7 +501,7 @@ section:not(#contactus, #setlist) {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: rgba(255,255,255,0.05);
+  background: var(--primary-color);   /* already darkened above */
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 35px rgba(0,0,0,0.4);
@@ -395,8 +512,8 @@ section:not(#contactus, #setlist) {
 /* Cover image – this controls the main visual height */
 .main-cover {
   position: relative;
-  flex: 1 1 auto;                    /* ← THIS IS THE KEY CHANGE: grow to fill remaining space */
-  min-height: 0;                     /* Prevent overflow issues in flex */
+  flex: 1 1 auto;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -419,7 +536,7 @@ section:not(#contactus, #setlist) {
 .main-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;                 /* Keeps images filling without distortion */
+  object-fit: cover;
 }
 
 .cover-overlay {
@@ -442,9 +559,9 @@ section:not(#contactus, #setlist) {
 
 /* Controls stay at bottom */
 .main-player-controls {
-  flex: 0 0 auto;                    /* Does NOT grow – stays compact */
+  flex: 0 0 auto;
   padding: 1rem 1.5rem;
-  background: rgba(0,0,0,0.4);       /* Optional: slight dark bar for contrast */
+  background: rgba(0,0,0,0.4);
 }
 
 .progress-bar {
@@ -508,16 +625,16 @@ section:not(#contactus, #setlist) {
   flex: 1;
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.05);
+  background: var(--primary-color);   /* darkened */
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.35s ease;
   border: 1px solid rgba(168,153,110,0.2);
   padding: 1rem;
-  box-shadow: none;                    /* No shadow by default */
-  transform: translateX(0);            /* Reset any shift */
-  text-align: left;                    /* Consistent text alignment */
+  box-shadow: none;
+  transform: translateX(0);
+  text-align: left;
 }
 
 .mix-preview-card * {
@@ -527,7 +644,7 @@ section:not(#contactus, #setlist) {
 
 .mix-preview-card.active,
 .mix-preview-card:hover {
-  background: rgba(168,153,110,0.15);
+  background: rgba(168,153,110,0.25);
   transform: translateX(8px);
   box-shadow: 0 10px 30px rgba(168,153,110,0.3);
 }
@@ -575,7 +692,7 @@ section:not(#contactus, #setlist) {
   }
 
   .main-cover {
-    flex: 0 0 280px;                 /* Slightly shorter on mobile */
+    flex: 0 0 280px;
   }
 
   .mix-previews {
@@ -583,9 +700,10 @@ section:not(#contactus, #setlist) {
   }
 
   .mix-preview-card {
-    min-height: 120px;               /* Minimum height so they don't collapse too much */
+    min-height: 120px;
   }
 }
+
 /* ──────────────────────────────────────────────
    ANIMATED TESTIMONIAL CARD
 ─────────────────────────────────────────────── */
@@ -598,7 +716,7 @@ section:not(#contactus, #setlist) {
 }
 
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--primary-color);   /* darkened */
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 1.5rem;
@@ -607,6 +725,7 @@ section:not(#contactus, #setlist) {
   opacity: 0;
   transform: translateY(40px) scale(0.96);
   transition: all 0.8s ease-out;
+  color: white;
 }
 
 /* Animation when visible */
@@ -619,7 +738,7 @@ section:not(#contactus, #setlist) {
 .testimonial-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 25px 70px rgba(168, 153, 110, 0.35);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(40,49,58,0.9);
 }
 
 .stars {
@@ -660,7 +779,7 @@ section:not(#contactus, #setlist) {
   }
 
   .main-cover {
-    height: 280px; /* Slightly shorter on smaller screens */
+    height: 280px;
   }
 
   .mix-choices-title {
@@ -691,32 +810,18 @@ section:not(#contactus, #setlist) {
    TESTIMONIALS – Clean Fade Carousel
 ─────────────────────────────────────────────── */
 
-#testimonials {
-  padding: 6rem 2rem 8rem !important;
-  background: linear-gradient(to bottom, var(--primary-color), #1e252e);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid red;
-}
-
-
-.testimonial-carousel {
-  /* position: relative; */
+#testimonials .testimonial-carousel {
   width: 100%;
   max-width: 1100px;
-  /* margin: 0 auto; */
 }
 
 .carousel-inner {
   position: relative;
-  height: 500px; /* adjust based on your images */
+  height: 500px;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  background: var(--primary-color);   /* dark */
 }
 
 .carousel-item {
@@ -746,7 +851,7 @@ section:not(#contactus, #setlist) {
   right: 8%;
   color: white;
   text-align: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(40,49,58,0.8);
   padding: 1.5rem;
   border-radius: 12px;
   backdrop-filter: blur(6px);
@@ -785,6 +890,7 @@ section:not(#contactus, #setlist) {
   transition: all 0.4s ease;
   position: relative;
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  background: var(--primary-color);
 }
 
 .thumb.active,
@@ -860,7 +966,7 @@ section:not(#contactus, #setlist) {
   .thumb { width: 100px; height: 100px; }
 }
 
-
+/* Videos grid – unchanged except video-card bg above */
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
@@ -868,47 +974,6 @@ section:not(#contactus, #setlist) {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.video-card {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
-  aspect-ratio: 16 / 9;
-  position: relative;
-  background: #0f141a;
-}
-
-.video-card iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.video-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-  color: white;
-  padding: 1.4rem;
-  font-size: 1.15rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholder-inner {
-  text-align: center;
-  color: var(--accent-color);
-}
-
-.placeholder-inner h3 { font-size: 2.2rem; margin-bottom: 1rem; }
-.placeholder-inner p { font-size: 1.3rem; opacity: 0.85; }
 
 /* ──────────────────────────────────────────────
    PHOTOS – Masonry Gallery + Lightbox
@@ -1047,7 +1112,7 @@ section:not(#contactus, #setlist) {
 .setlist-container {
   position: relative;
   z-index: 2;
-  column-count: 3;                    /* 3 columns on desktop */
+  column-count: 3;
   column-gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -1062,9 +1127,9 @@ section:not(#contactus, #setlist) {
   border: 1px solid rgba(168, 153, 110, 0.25);
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  break-inside: avoid-column;         /* Key: prevents breaking cards across columns */
-  margin-bottom: 2rem;                /* Space between cards vertically */
-  height: auto;                       /* Content-based height */
+  break-inside: avoid-column;
+  margin-bottom: 2rem;
+  height: auto;
 }
 
 .song-category-card:hover {
@@ -1129,17 +1194,8 @@ section:not(#contactus, #setlist) {
 }
 
 /* ──────────────────────────────────────────────
-   FAQS
+   FAQS – White background + dark inners
 ─────────────────────────────────────────────── */
-
-#FAQs {
-  background: var(--primary-color);
-}
-
-.faq-section {
-  max-width: 900px;
-  width: 90%;
-}
 
 .faq-item {
   margin-bottom: 1.2rem;
@@ -1152,7 +1208,7 @@ section:not(#contactus, #setlist) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(40,49,58,0.7);
+  background: var(--primary-color);
   color: var(--accent-color);
   padding: .8rem 1.5rem;
   cursor: pointer;
@@ -1172,7 +1228,7 @@ section:not(#contactus, #setlist) {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background: rgba(255,255,255,0.05);
+  background: rgba(40,49,58,0.9);
   color: white;
   transition: max-height 0.4s ease, padding 0.4s ease;
   padding: 0 1.5rem;
@@ -1189,14 +1245,14 @@ section:not(#contactus, #setlist) {
 #contactus {
   background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
-  background-size: cover;             /* ← restored */
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
   min-height: unset;
-  width: 100vw;                       /* ← force full width */
+  width: 100vw;
   margin: 0;   
-  padding: 0;                       /* no side gaps */
+  padding: 0;
   padding: 2rem 1rem;
   position: relative;
   display: flex;
@@ -1215,18 +1271,18 @@ section:not(#contactus, #setlist) {
 
 .contact-container {
   position: relative;
-  z-index: 2;                           /* Above overlay */
+  z-index: 2;
   width: 100%;
-  max-width: 1000px;                    /* Limit width on large screens */
+  max-width: 1000px;
   display: flex;
-  justify-content: center;              /* Horizontal center */
+  justify-content: center;
   align-items: center;
-  margin: 0;                  /* Vertical center if needed */
+  margin: 0;
 }
 
 .form {
   width: 100%;
-  max-width: 900px;                     /* Slightly wider than before */
+  max-width: 900px;
   background: rgba(40, 49, 58, 0.9);
   border-radius: 16px;
   padding: 2rem 2.5rem;
@@ -1477,6 +1533,8 @@ div[style*="background-image"] {
   box-shadow: 0 15px 40px rgba(168, 153, 110, 0.5);
   color: var(--primary-color);
 }
+
+
 
 /* Optional: subtle pulse on first appear (uncomment if you like) */
 /*

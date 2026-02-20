@@ -703,7 +703,6 @@ section:not(#contactus, #setlist) {
   border: 5px solid red;
 }
 
-
 .testimonial-carousel {
   /* position: relative; */
   width: 100%;
@@ -916,7 +915,7 @@ section:not(#contactus, #setlist) {
 
 #photos {
   padding: 6rem 2rem 8rem;
-  background: var(--primary-color);
+  background: var(--background-colorbackground-color);
   color: white;
 }
 
@@ -1024,16 +1023,19 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #setlist {
-  background-image: url(./img/photos/photo19.jpg);
+  /* background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: none
+  ;
   min-height: 100vh;
   position: relative;
   color: white;
   padding: 6rem 2rem;
   width: 100vw;
+  border: 3px solid red;
 }
 
 #setlist::before {

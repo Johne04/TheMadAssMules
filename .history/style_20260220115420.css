@@ -365,6 +365,7 @@ section:not(#contactus, #setlist) {
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   max-width: 1200px;
+  margin: 0 auto 5rem;
   align-items: stretch;              /* Forces columns to same height */
 }
 
@@ -564,7 +565,6 @@ section:not(#contactus, #setlist) {
   margin: auto;
   box-sizing: border-box;
   padding: 0;
-  font-size: 1.3rem;
 }
 
 /* Mobile – stack vertically, keep proportional heights */
@@ -696,13 +696,18 @@ section:not(#contactus, #setlist) {
   background: linear-gradient(to bottom, var(--primary-color), #1e252e);
   color: white;
   min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 5px solid red;
+  border: 2px solid red;
 }
 
+#testimonials .media-heading {
+  margin-top: 6rem;        /* adds extra space above heading */
+}
 
 .testimonial-carousel {
   /* position: relative; */
@@ -772,7 +777,6 @@ section:not(#contactus, #setlist) {
   gap: 1.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-  height: auto;
 }
 
 .thumb {

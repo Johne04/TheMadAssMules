@@ -703,7 +703,6 @@ section:not(#contactus, #setlist) {
   border: 5px solid red;
 }
 
-
 .testimonial-carousel {
   /* position: relative; */
   width: 100%;
@@ -916,7 +915,7 @@ section:not(#contactus, #setlist) {
 
 #photos {
   padding: 6rem 2rem 8rem;
-  background: var(--primary-color);
+  background: var(--background-colorbackground-color);
   color: white;
 }
 

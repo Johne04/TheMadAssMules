@@ -703,6 +703,9 @@ section:not(#contactus, #setlist) {
   border: 5px solid red;
 }
 
+/* #testimonials .media-heading {
+  margin-top: 6rem;        /* adds extra space above heading */
+} */
 
 .testimonial-carousel {
   /* position: relative; */

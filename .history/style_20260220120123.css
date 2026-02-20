@@ -696,13 +696,17 @@ section:not(#contactus, #setlist) {
   background: linear-gradient(to bottom, var(--primary-color), #1e252e);
   color: white;
   min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 5px solid red;
 }
 
+#testimonials .media-heading {
+  margin-top: 6rem;        /* adds extra space above heading */
+}
 
 .testimonial-carousel {
   /* position: relative; */

@@ -163,7 +163,7 @@ section:not(#contactus, #setlist) {
 }
 
 /* ──────────────────────────────────────────────
-   NAVIGATION – with bounce-in-from-left animation
+   NAVIGATION
 ─────────────────────────────────────────────── */
 
 .nav {
@@ -206,72 +206,22 @@ section:not(#contactus, #setlist) {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.05rem;
-  opacity: 0; /* start invisible */
-  transform: translateX(-50px); /* start off-screen left */
-  animation: bounceInFromLeft 0.8s ease-out forwards; /* entrance animation */
-  transition: color 0.3s ease, transform 0.3s ease; /* hover animation */
+  transition: color 0.3s;
 }
 
-/* Staggered delays for each link */
-.nav-main .links:nth-child(1) { animation-delay: 0.1s; }
-.nav-main .links:nth-child(2) { animation-delay: 0.2s; }
-.nav-main .links:nth-child(3) { animation-delay: 0.3s; }
-.nav-main .links:nth-child(4) { animation-delay: 0.4s; }
-.nav-main .links:nth-child(5) { animation-delay: 0.5s; }
-.nav-main .links:nth-child(6) { animation-delay: 0.6s; }
-.nav-main .links:nth-child(7) { animation-delay: 0.7s; }
-.nav-main .links:nth-child(8) { animation-delay: 0.8s; }
-
-/* Bounce-in-from-left animation */
-@keyframes bounceInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(8px); /* overshoot for bounce */
-  }
-  80% {
-    transform: translateX(-4px); /* bounce back */
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Hover effect (keeps working after entrance) */
-.links:hover,
-.links:focus {
+.links:hover, .links:focus {
   color: #d4c08a;
-  transform: scale(1.08) translateY(-1px);
 }
 
-/* Contact link – separate but animated too */
 .contact-link {
   background: var(--accent-color);
   color: var(--primary-color) !important;
   padding: 0.6rem 1.3rem;
   border-radius: 6px;
-  transition: all 0.35s ease;
 }
 
-.contact-link:hover,
-.contact-link:focus {
+.contact-link:hover {
   background: #d4c08a;
-  transform: translateY(-3px) scale(1.05);
-}
-
-/* Mobile nav – simple color change on hover */
-.nav-min a,
-.nav-min .links {
-  transition: color 0.3s ease;
-}
-
-.nav-min a:hover,
-.nav-min .links:hover {
-  color: #d4c08a;
 }
 
 /* Mobile nav */
@@ -365,6 +315,7 @@ section:not(#contactus, #setlist) {
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   max-width: 1200px;
+  margin: 0 auto 5rem;
   align-items: stretch;              /* Forces columns to same height */
 }
 
@@ -560,13 +511,6 @@ section:not(#contactus, #setlist) {
   opacity: 0.85;
 }
 
-.live_recs{
-  margin: auto;
-  box-sizing: border-box;
-  padding: 0;
-  font-size: 1.3rem;
-}
-
 /* Mobile – stack vertically, keep proportional heights */
 @media (max-width: 900px) {
   .media-content-grid {
@@ -692,23 +636,20 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #testimonials {
-  padding: 6rem 2rem 8rem !important;
+  padding: 6rem 2rem;
   background: linear-gradient(to bottom, var(--primary-color), #1e252e);
   color: white;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 5px solid red;
 }
 
-
 .testimonial-carousel {
-  /* position: relative; */
+  position: relative;
   width: 100%;
   max-width: 1100px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .carousel-inner {
@@ -772,7 +713,6 @@ section:not(#contactus, #setlist) {
   gap: 1.5rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-  height: auto;
 }
 
 .thumb {
@@ -1102,10 +1042,7 @@ section:not(#contactus, #setlist) {
   font-size: 1.1rem;
 }
 
-.genre{
-  color: #ffffff;
-  font-weight: 600;
-}
+
 
 /* Responsive – fewer columns on smaller screens */
 @media (max-width: 900px) {
