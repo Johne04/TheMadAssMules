@@ -593,7 +593,7 @@ section:not(#contactus, #setlist) {
 .testimonial-card-wrapper {
   max-width: 1200px;
   width: 90%;
-  margin: 4rem auto;
+  /* margin: 4rem auto; */
   text-align: center;
 }
 
@@ -650,7 +650,6 @@ section:not(#contactus, #setlist) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2.5rem;
-  height: 350px;
 }
 
 /* Responsive – stack on tablet/mobile */
