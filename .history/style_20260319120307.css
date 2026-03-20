@@ -602,8 +602,12 @@ section:not(#contactus, #setlist) {
   transform: translateY(-12px);
   box-shadow: 0 25px 70px rgba(168, 153, 110, 0.35);
   background: rgba(255, 255, 255, 0.12);
+  color: var(--primary-color) !important;
 }
 
+.testimonial-card > *:hover{
+  color: var(--primary-color);
+}
 
 .stars {
   color: var(--accent-color);

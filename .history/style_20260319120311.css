@@ -604,6 +604,9 @@ section:not(#contactus, #setlist) {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.testimonial-card > *:hover{
+  color: var(--primary-color);
+}
 
 .stars {
   color: var(--accent-color);

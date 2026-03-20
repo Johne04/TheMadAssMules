@@ -335,13 +335,13 @@ section:not(#contactus, #setlist) {
   color: white;
 }
 
-/* ──────────────────────────────────────────────#s
+/* ──────────────────────────────────────────────
    MEDIA SECTION – Balanced, Compact Two-Column Layout
 ─────────────────────────────────────────────── */
 
 #media {
   padding: 6rem 2rem 8rem;
-  background: white;
+  background: linear-gradient(to bottom, var(--primary-color), #1a2028);
   color: white;
 }
 
@@ -444,7 +444,7 @@ section:not(#contactus, #setlist) {
 .main-player-controls {
   flex: 0 0 auto;                    /* Does NOT grow – stays compact */
   padding: 1rem 1.5rem;
-  background-color: var(--primary-color);       /* Optional: slight dark bar for contrast */
+  background: rgba(0,0,0,0.4);       /* Optional: slight dark bar for contrast */
 }
 
 .progress-bar {
@@ -508,7 +508,7 @@ section:not(#contactus, #setlist) {
   flex: 1;
   display: flex;
   align-items: center;
-  background-color: var(--primary-color);
+  background: rgba(255,255,255,0.05);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -527,7 +527,7 @@ section:not(#contactus, #setlist) {
 
 .mix-preview-card.active,
 .mix-preview-card:hover {
-  background-color: var(--primary-color);
+  background: rgba(168,153,110,0.15);
   transform: translateX(8px);
   box-shadow: 0 10px 30px rgba(168,153,110,0.3);
 }
@@ -580,7 +580,7 @@ section:not(#contactus, #setlist) {
 }
 
 .testimonial-card {
-  background: var(--primary-color);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 1.5rem;
@@ -604,7 +604,6 @@ section:not(#contactus, #setlist) {
   background: rgba(255, 255, 255, 0.12);
 }
 
-
 .stars {
   color: var(--accent-color);
   font-size: 2.2rem;
@@ -622,7 +621,6 @@ section:not(#contactus, #setlist) {
   color: white;
   text-shadow: 0 3px 12px rgba(0,0,0,0.6);
 }
-
 
 /* Videos (below the grid) */
 .videos-section {
@@ -648,7 +646,7 @@ section:not(#contactus, #setlist) {
 
 #testimonials {
   padding: 6rem 2rem 8rem !important;
-  background: white;
+  background: linear-gradient(to bottom, var(--primary-color), #1e252e);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -1057,7 +1055,7 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #FAQs {
-  background: aliceblue;
+  background: var(--primary-color);
 }
 
 .faq-section {
@@ -1396,56 +1394,6 @@ div[style*="background-image"] {
   .nav-min { display: flex; }
   .hamburger { display: block; }
 }
-
-@media (max-width: 900px) {
-  .media-content-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  
-  .main-cover {
-    flex: 0 0 280px;                 /* Slightly shorter on mobile */
-  }
-
-  .mix-previews {
-    gap: 1.2rem;
-  }
-
-  .mix-preview-card {
-    min-height: 120px;               /* Minimum height so they don't collapse too much */
-  }
-
-    .media-content-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-
-  .main-cover {
-    height: 280px; /* Slightly shorter on smaller screens */
-  }
-
-  .mix-choices-title {
-    text-align: center;
-  }
-
-  .carousel-inner { height: 420px; }
-  .carousel-prev { left: 10px; }
-  .carousel-next { right: 10px; }
-
-    .setlist-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-    .form {
-    grid-template-columns: 1fr;
-    padding: 2.5rem 1.8rem;
-    max-width: 95%;
-  }
-  .gallery-masonry { column-count: 3; }
-  .videos-grid { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 768px) {
   .back-to-top {
     width: 50px;
@@ -1475,6 +1423,47 @@ div[style*="background-image"] {
   }
 }
 
+/* Mobile – stack vertically, keep proportional heights */
+@media (max-width: 900px) {
+  .media-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .main-cover {
+    flex: 0 0 280px;                 /* Slightly shorter on mobile */
+  }
+
+  .mix-previews {
+    gap: 1.2rem;
+  }
+
+  .mix-preview-card {
+    min-height: 120px;               /* Minimum height so they don't collapse too much */
+  }
+}
+
+@media (max-width: 900px) {
+  .media-content-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .main-cover {
+    height: 280px; /* Slightly shorter on smaller screens */
+  }
+
+  .mix-choices-title {
+    text-align: center;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .carousel-inner { height: 420px; }
+  .carousel-prev { left: 10px; }
+  .carousel-next { right: 10px; }
+}
 
 @media (max-width: 600px) {
   .carousel-inner { height: 350px; }
@@ -1483,6 +1472,11 @@ div[style*="background-image"] {
   .thumb { width: 100px; height: 100px; }
 }
 
+@media (max-width: 900px) {
+  .setlist-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
 
 @media (max-width: 600px) {
   .song-category-card {
@@ -1498,7 +1492,23 @@ div[style*="background-image"] {
   }
 }
 
+/* On smaller screens, stack the grid */
+@media (max-width: 900px) {
+  .form {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.8rem;
+    max-width: 95%;
+  }
+}
 
+
+
+
+@media (max-width: 900px) {
+  .form { grid-template-columns: 1fr; }
+  .gallery-masonry { column-count: 3; }
+  .videos-grid { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 600px) {
   .gallery-masonry { column-count: 2; }

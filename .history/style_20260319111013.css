@@ -444,7 +444,7 @@ section:not(#contactus, #setlist) {
 .main-player-controls {
   flex: 0 0 auto;                    /* Does NOT grow – stays compact */
   padding: 1rem 1.5rem;
-  background-color: var(--primary-color);       /* Optional: slight dark bar for contrast */
+  background: rgba(0,0,0,0.4);       /* Optional: slight dark bar for contrast */
 }
 
 .progress-bar {
@@ -508,7 +508,7 @@ section:not(#contactus, #setlist) {
   flex: 1;
   display: flex;
   align-items: center;
-  background-color: var(--primary-color);
+  background: rgba(255,255,255,0.05);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -527,7 +527,7 @@ section:not(#contactus, #setlist) {
 
 .mix-preview-card.active,
 .mix-preview-card:hover {
-  background-color: var(--primary-color);
+  background: rgba(168,153,110,0.15);
   transform: translateX(8px);
   box-shadow: 0 10px 30px rgba(168,153,110,0.3);
 }
@@ -580,7 +580,7 @@ section:not(#contactus, #setlist) {
 }
 
 .testimonial-card {
-  background: var(--primary-color);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 1.5rem;
@@ -604,7 +604,6 @@ section:not(#contactus, #setlist) {
   background: rgba(255, 255, 255, 0.12);
 }
 
-
 .stars {
   color: var(--accent-color);
   font-size: 2.2rem;
@@ -622,7 +621,6 @@ section:not(#contactus, #setlist) {
   color: white;
   text-shadow: 0 3px 12px rgba(0,0,0,0.6);
 }
-
 
 /* Videos (below the grid) */
 .videos-section {
@@ -648,7 +646,7 @@ section:not(#contactus, #setlist) {
 
 #testimonials {
   padding: 6rem 2rem 8rem !important;
-  background: white;
+  background: linear-gradient(to bottom, var(--primary-color), #1e252e);
   color: white;
   min-height: 100vh;
   display: flex;
@@ -966,11 +964,12 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #setlist {
-  background-image: url(./img/photos/photo19.jpg);
+  /* background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: white;
   min-height: 100vh;
   position: relative;
   color: white;
@@ -978,13 +977,13 @@ section:not(#contactus, #setlist) {
   width: 100vw;
 }
 
-#setlist::before {
+/* #setlist::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
   z-index: 1;
-}
+} */
 
 .setlist-container {
   position: relative;
@@ -1057,7 +1056,7 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #FAQs {
-  background: aliceblue;
+  background: var(--primary-color);
 }
 
 .faq-section {
@@ -1111,11 +1110,11 @@ section:not(#contactus, #setlist) {
 ─────────────────────────────────────────────── */
 
 #contactus {
-  background-image: url(./img/photos/photo19.jpg);
+  /* background-image: url(./img/photos/photo19.jpg);
   background-repeat: no-repeat;
   background-size: cover;             /* ← restored */
-  background-position: center;
-  background-attachment: fixed;
+  /* background-position: center;
+  background-attachment: fixed; */ */
   height: 100vh;
   min-height: unset;
   width: 100vw;                       /* ← force full width */
