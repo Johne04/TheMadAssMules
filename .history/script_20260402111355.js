@@ -1,5 +1,8 @@
-// GLOBAL FUNCTIONS
+// ──────────────────────────────────────────────
+// GLOBAL FUNCTIONS – available immediately
+// ──────────────────────────────────────────────
 
+// Hamburger Menu (mobile nav)
 function toggleNav() {
   const sidenav = document.getElementById("mySidenav");
   const hamburger = document.querySelector(".hamburger");
@@ -15,15 +18,38 @@ function toggleNav() {
   }
 }
 
-// MEDIA PLAYER
+// Close menu when clicking any link inside sidenav
+document.querySelectorAll("#mySidenav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (document.getElementById("mySidenav").style.width === "100%") {
+      toggleNav();
+    }
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function (e) {
+  const sidenav = document.getElementById("mySidenav");
+  const hamburger = document.querySelector(".hamburger");
+
+  if (!sidenav || !hamburger) return;
+
+  if (
+    sidenav.style.width === "100%" &&
+    !hamburger.contains(e.target) &&
+    !sidenav.contains(e.target)
+  ) {
+    toggleNav();
+  }
+});
+
+// ──────────────────────────────────────────────
+// MEDIA PLAYER – Single Player + Mix Switching
+// ──────────────────────────────────────────────
 
 let currentMix = 1;
 let isPlaying = false;
 let mainAudio, mainProgress, currentTitle, mainSlides;
-
-// LIGHTBOX
-let galleryItemsGlobal = [];
-let currentGalleryIndex = 0;
 
 window.toggleMainPlay = function () {
   if (!mainAudio) return;
@@ -66,27 +92,19 @@ window.loadMix = function (mixNumber) {
   if (currentMix === mixNumber && isPlaying) return;
 
   const tracks = {
-  1: {
-    src: "./Audio/Rumbling_Wind.mp3",
-    title: "Mix 1 – Wedding Floor Fillers",
-  },
-  2: {
-    src: "audio2.mp3",
-    title: "Mix 2 – Slow & Romantic",
-  },
-  3: {
-    src: "audio3.mp3",
-    title: "Mix 3 – Party Starters",
-  },
-  4: {
-    src: "audio4.mp3",
-    title: "Mix 4 – Rock & Anthems",
-  },
-  5: {
-    src: "audio5.mp3",
-    title: "Mix 5 – Late Night Floor Fillers",
-  },
-};
+    1: {
+      src: "./Audio/Rumbling_Wind.mp3",
+      title: "Mix 1 – Wedding Floor Fillers",
+    },
+    2: {
+      src: "audio2.mp3",
+      title: "Mix 2 – Slow & Romantic",
+    },
+    3: {
+      src: "audio3.mp3",
+      title: "Mix 3 – Party Starters",
+    },
+  };
 
   const track = tracks[mixNumber];
   if (!track) return;
@@ -124,6 +142,13 @@ window.loadMix = function (mixNumber) {
       isPlaying = false;
     });
 };
+
+// ──────────────────────────────────────────────
+// PHOTO GALLERY LIGHTBOX – globals for inline onclick
+// ──────────────────────────────────────────────
+
+let galleryItemsGlobal = [];
+let currentGalleryIndex = 0;
 
 window.showLightbox = function (index) {
   const lightbox = document.getElementById("lightbox");
@@ -164,33 +189,12 @@ window.changeImage = function (direction) {
   lightboxImg.classList.remove("zoomed");
 };
 
+// ──────────────────────────────────────────────
+// PAGE STARTUP – ONE SINGLE DOMContentLoaded
+// ──────────────────────────────────────────────
+
 document.addEventListener("DOMContentLoaded", () => {
-  // SIDENAV LINKS
-  document.querySelectorAll("#mySidenav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (document.getElementById("mySidenav").style.width === "100%") {
-        toggleNav();
-      }
-    });
-  });
-
-  // CLICK OUTSIDE SIDENAV
-  document.addEventListener("click", (e) => {
-    const sidenav = document.getElementById("mySidenav");
-    const hamburger = document.querySelector(".hamburger");
-
-    if (!sidenav || !hamburger) return;
-
-    if (
-      sidenav.style.width === "100%" &&
-      !hamburger.contains(e.target) &&
-      !sidenav.contains(e.target)
-    ) {
-      toggleNav();
-    }
-  });
-
-  // FAQ ACCORDION
+  // 1. FAQ accordion
   document.querySelectorAll(".faq-question").forEach((question) => {
     question.addEventListener("click", () => {
       const answer = question.nextElementSibling;
@@ -201,7 +205,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".faq-answer").forEach((ans) => {
         if (ans !== answer) {
           ans.style.maxHeight = null;
-          ans.style.padding = "0 1.5rem";
+          ans.style.padding = "0 15px";
+
           const otherToggle =
             ans.previousElementSibling?.querySelector(".faq-toggle");
           if (otherToggle) otherToggle.textContent = "+";
@@ -210,17 +215,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (answer.style.maxHeight) {
         answer.style.maxHeight = null;
-        answer.style.padding = "0 1.5rem";
+        answer.style.padding = "0 15px";
         toggle.textContent = "+";
       } else {
         answer.style.maxHeight = answer.scrollHeight + "px";
-        answer.style.padding = "0 1.5rem";
+        answer.style.padding = "15px 15px 15px 25px";
         toggle.textContent = "−";
       }
     });
   });
 
-  // MEDIA PLAYER SETUP
+  // 2. Media Player Setup
   mainAudio = document.getElementById("main-audio");
 
   if (mainAudio) {
@@ -247,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("main-play")?.classList.remove("hidden");
       document.getElementById("main-pause")?.classList.add("hidden");
       isPlaying = false;
+
       if (mainProgress) mainProgress.style.width = "0%";
     });
 
@@ -256,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (initialCard) initialCard.classList.add("active");
   }
 
-  // BACK TO TOP
+  // 3. Back to Top Button
   const backToTopBtn = document.getElementById("back-to-top");
 
   if (backToTopBtn) {
@@ -269,10 +275,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // LIGHTBOX
-  const galleryItems = document.querySelectorAll(
-    ".gallery-masonry .gallery-item img"
-  );
+  // 4. PHOTO GALLERY LIGHTBOX
+  const galleryItems = document.querySelectorAll(".gallery-masonry .gallery-item img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 
@@ -283,15 +287,9 @@ document.addEventListener("DOMContentLoaded", () => {
       img.addEventListener("click", () => window.showLightbox(idx));
     });
 
-    document
-      .querySelector(".close-lightbox")
-      ?.addEventListener("click", window.closeLightbox);
-    document
-      .querySelector(".prev")
-      ?.addEventListener("click", () => window.changeImage(-1));
-    document
-      .querySelector(".next")
-      ?.addEventListener("click", () => window.changeImage(1));
+    document.querySelector(".close-lightbox")?.addEventListener("click", window.closeLightbox);
+    document.querySelector(".prev")?.addEventListener("click", () => window.changeImage(-1));
+    document.querySelector(".next")?.addEventListener("click", () => window.changeImage(1));
 
     lightbox.addEventListener("click", (e) => {
       if (e.target === lightbox) window.closeLightbox();
@@ -331,8 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
       { passive: true }
     );
   }
-
-  // TESTIMONIALS SLIDER
+  // 5. TESTIMONIALS SLIDER
   const testimonialSlides = document.querySelectorAll(".testimonial-main-slide");
   const testimonialThumbs = document.querySelectorAll(".testimonial-thumb");
   const testimonialPrev = document.querySelector(".testimonial-prev");
@@ -394,7 +391,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const startTestimonialAuto = () => {
       clearInterval(testimonialInterval);
-      testimonialInterval = setInterval(nextTestimonial, 6000);
+      testimonialInterval = setInterval(() => {
+        nextTestimonial();
+      }, 6000);
     };
 
     testimonialNext.addEventListener("click", () => {
@@ -423,36 +422,8 @@ document.addEventListener("DOMContentLoaded", () => {
       startTestimonialAuto();
     });
 
-    // swipe support
-    let startX = 0;
-
-    testimonialMain.addEventListener(
-      "touchstart",
-      (e) => {
-        startX = e.changedTouches[0].screenX;
-      },
-      { passive: true }
-    );
-
-    testimonialMain.addEventListener(
-      "touchend",
-      (e) => {
-        const endX = e.changedTouches[0].screenX;
-        const diff = startX - endX;
-
-        if (Math.abs(diff) > 50) {
-          if (diff > 0) {
-            nextTestimonial();
-          } else {
-            prevTestimonial();
-          }
-          startTestimonialAuto();
-        }
-      },
-      { passive: true }
-    );
-
     showTestimonial(0, false);
     startTestimonialAuto();
   }
+  
 });

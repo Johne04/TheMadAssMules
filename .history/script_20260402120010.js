@@ -66,27 +66,19 @@ window.loadMix = function (mixNumber) {
   if (currentMix === mixNumber && isPlaying) return;
 
   const tracks = {
-  1: {
-    src: "./Audio/Rumbling_Wind.mp3",
-    title: "Mix 1 – Wedding Floor Fillers",
-  },
-  2: {
-    src: "audio2.mp3",
-    title: "Mix 2 – Slow & Romantic",
-  },
-  3: {
-    src: "audio3.mp3",
-    title: "Mix 3 – Party Starters",
-  },
-  4: {
-    src: "audio4.mp3",
-    title: "Mix 4 – Rock & Anthems",
-  },
-  5: {
-    src: "audio5.mp3",
-    title: "Mix 5 – Late Night Floor Fillers",
-  },
-};
+    1: {
+      src: "./Audio/Rumbling_Wind.mp3",
+      title: "Mix 1 – Wedding Floor Fillers",
+    },
+    2: {
+      src: "audio2.mp3",
+      title: "Mix 2 – Slow & Romantic",
+    },
+    3: {
+      src: "audio3.mp3",
+      title: "Mix 3 – Party Starters",
+    },
+  };
 
   const track = tracks[mixNumber];
   if (!track) return;

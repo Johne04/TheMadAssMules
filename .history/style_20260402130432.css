@@ -382,7 +382,6 @@ section:not(#contactus, #setlist) {
   padding: 6rem 2rem 8rem;
   background: var(--primary-color);
   color: white;
-  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .media-layout,
