@@ -116,7 +116,7 @@ window.loadMix = function (mixNumber) {
   });
 
   const clickedCard = document.querySelector(
-    `.mix-preview-card[data-mix="${mixNumber}"]`
+    `.mix-preview-card[data-mix="${mixNumber}"]`,
   );
   if (clickedCard) clickedCard.classList.add("active");
 
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const initialCard = document.querySelector(
-      '.mix-preview-card[data-mix="1"]'
+      '.mix-preview-card[data-mix="1"]',
     );
     if (initialCard) initialCard.classList.add("active");
   }
@@ -268,9 +268,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const nav = document.querySelector(".nav");
+
+  if (nav) {
+    const toggleNavScrollState = () => {
+      if (window.scrollY > 80) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    };
+
+    toggleNavScrollState();
+    window.addEventListener("scroll", toggleNavScrollState);
+  }
+
   // LIGHTBOX
   const galleryItems = document.querySelectorAll(
-    ".gallery-masonry .gallery-item img"
+    ".gallery-masonry .gallery-item img",
   );
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -316,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (e) => {
         touchStartX = e.changedTouches[0].screenX;
       },
-      { passive: true }
+      { passive: true },
     );
 
     lightbox.addEventListener(
@@ -327,13 +342,13 @@ document.addEventListener("DOMContentLoaded", () => {
           window.changeImage(diff > 0 ? 1 : -1);
         }
       },
-      { passive: true }
+      { passive: true },
     );
   }
 
   // TESTIMONIALS SLIDER
   const testimonialSlides = document.querySelectorAll(
-    ".testimonial-main-slide"
+    ".testimonial-main-slide",
   );
   const testimonialThumbs = document.querySelectorAll(".testimonial-thumb");
   const testimonialPrev = document.querySelector(".testimonial-prev");
@@ -431,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (e) => {
         startX = e.changedTouches[0].screenX;
       },
-      { passive: true }
+      { passive: true },
     );
 
     testimonialMain.addEventListener(
@@ -449,7 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
           startTestimonialAuto();
         }
       },
-      { passive: true }
+      { passive: true },
     );
 
     showTestimonial(0, false);
