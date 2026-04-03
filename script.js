@@ -15,6 +15,15 @@ function toggleNav() {
   }
 }
 
+// HEADER
+
+const nav = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+  if (!nav) return;
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+
 // MEDIA PLAYER
 
 let currentMix = 1;
