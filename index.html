@@ -20,7 +20,7 @@
         <picture>
           <source
             media="(min-width: 769px)"
-            srcset="./img/home/Anastella_Photography-21.avif 1x"
+            srcset="./img/photos/home/home.jpg"
             type="image/avif"
           />
           <source
@@ -42,7 +42,7 @@
       <div class="hero-content">
         <h1 class="hero-title">The Mad Ass Mules</h1>
         <p class="hero-tagline">
-          Ireland's Most Entertaining Wedding & Party Band
+          Ireland's Most Entertaining Wedding &amp; Party Band
         </p>
         <div class="hero-cta-wrapper">
           <a href="#contactus" class="hero-cta">Book Your Date</a>
@@ -102,7 +102,7 @@
         <a href="#contactus">Contact Us</a>
       </div>
 
-      <div class="section-divider">
+      <div class="section-divider section-divider-bottom">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
           <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
         </svg>
@@ -110,82 +110,124 @@
     </section>
 
     <section id="media">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
       <div class="media-heading">MEDIA</div>
 
-    <div class="media-layout">
-  <div class="audio-player-shell">
-    <div class="audio-player-header">
-      <div class="audio-controls-left">
-        <button id="main-play" type="button" onclick="toggleMainPlay()" aria-label="Play">
-          <i class="fas fa-play"></i>
-        </button>
-        <button id="main-pause" class="hidden" type="button" onclick="toggleMainPlay()" aria-label="Pause">
-          <i class="fas fa-pause"></i>
-        </button>
-        <button type="button" onclick="stopMainAudio()" aria-label="Stop">
-          <i class="fas fa-stop"></i>
-        </button>
+      <div class="media-layout">
+        <div class="audio-player-shell">
+          <div class="audio-player-header">
+            <div class="audio-controls-left">
+              <button
+                id="main-play"
+                type="button"
+                onclick="toggleMainPlay()"
+                aria-label="Play"
+              >
+                <i class="fas fa-play"></i>
+              </button>
+              <button
+                id="main-pause"
+                class="hidden"
+                type="button"
+                onclick="toggleMainPlay()"
+                aria-label="Pause"
+              >
+                <i class="fas fa-pause"></i>
+              </button>
+              <button type="button" onclick="stopMainAudio()" aria-label="Stop">
+                <i class="fas fa-stop"></i>
+              </button>
+            </div>
+
+            <div class="audio-track-info">
+              <span class="now-playing-label">Now Playing</span>
+              <h2 id="current-track-title">Mix 1 – Wedding Floor Fillers</h2>
+            </div>
+          </div>
+
+          <div class="audio-progress-wrap">
+            <div class="progress-bar">
+              <div class="progress-bar-fill" id="main-progress"></div>
+            </div>
+          </div>
+
+          <div class="audio-mix-list">
+            <button
+              class="mix-preview-card active"
+              data-mix="1"
+              onclick="loadMix(1)"
+              type="button"
+            >
+              <span class="mix-number">01</span>
+              <span class="mix-text">
+                <strong>Mix 1</strong>
+                <small>Wedding Floor Fillers</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="2"
+              onclick="loadMix(2)"
+              type="button"
+            >
+              <span class="mix-number">02</span>
+              <span class="mix-text">
+                <strong>Mix 2</strong>
+                <small>Slow &amp; Romantic</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="3"
+              onclick="loadMix(3)"
+              type="button"
+            >
+              <span class="mix-number">03</span>
+              <span class="mix-text">
+                <strong>Mix 3</strong>
+                <small>Party Starters</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="4"
+              onclick="loadMix(4)"
+              type="button"
+            >
+              <span class="mix-number">04</span>
+              <span class="mix-text">
+                <strong>Mix 4</strong>
+                <small>Rock &amp; Anthems</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="5"
+              onclick="loadMix(5)"
+              type="button"
+            >
+              <span class="mix-number">05</span>
+              <span class="mix-text">
+                <strong>Mix 5</strong>
+                <small>Late Night Floor Fillers</small>
+              </span>
+            </button>
+          </div>
+
+          <audio id="main-audio">
+            <source src="./Audio/Rumbling_Wind.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
       </div>
-
-      <div class="audio-track-info">
-        <span class="now-playing-label">Now Playing</span>
-        <h2 id="current-track-title">Mix 1 – Wedding Floor Fillers</h2>
-      </div>
-    </div>
-
-    <div class="audio-progress-wrap">
-      <div class="progress-bar">
-        <div class="progress-bar-fill" id="main-progress"></div>
-      </div>
-    </div>
-
-    <div class="audio-mix-list">
-      <button class="mix-preview-card active" data-mix="1" onclick="loadMix(1)" type="button">
-        <span class="mix-number">01</span>
-        <span class="mix-text">
-          <strong>Mix 1</strong>
-          <small>Wedding Floor Fillers</small>
-        </span>
-      </button>
-
-      <button class="mix-preview-card" data-mix="2" onclick="loadMix(2)" type="button">
-        <span class="mix-number">02</span>
-        <span class="mix-text">
-          <strong>Mix 2</strong>
-          <small>Slow &amp; Romantic</small>
-        </span>
-      </button>
-
-      <button class="mix-preview-card" data-mix="3" onclick="loadMix(3)" type="button">
-        <span class="mix-number">03</span>
-        <span class="mix-text">
-          <strong>Mix 3</strong>
-          <small>Party Starters</small>
-        </span>
-      </button>
-
-      <button class="mix-preview-card" data-mix="4" onclick="loadMix(4)" type="button">
-        <span class="mix-number">04</span>
-        <span class="mix-text">
-          <strong>Mix 4</strong>
-          <small>Rock &amp; Anthems</small>
-        </span>
-      </button>
-
-      <button class="mix-preview-card" data-mix="5" onclick="loadMix(5)" type="button">
-        <span class="mix-number">05</span>
-        <span class="mix-text">
-          <strong>Mix 5</strong>
-          <small>Late Night Floor Fillers</small>
-        </span>
-      </button>
-    </div>
-
-    <audio id="main-audio">
-      <source src="./Audio/Rumbling_Wind.mp3" type="audio/mpeg" />
-    </audio>
-  </div>
-</div>
 
       <div class="testimonial-card-wrapper media-bridge">
         <div class="testimonial-card visible">
@@ -198,7 +240,8 @@
           </div>
 
           <blockquote class="quote-text">
-            "THE FLOOR WAS FULL ALL NIGHT LONG – WE CAN'T THANK YOU GUYS ENOUGH!"
+            "THE FLOOR WAS FULL ALL NIGHT LONG – WE CAN'T THANK YOU GUYS
+            ENOUGH!"
           </blockquote>
 
           <div class="stars">
@@ -225,18 +268,43 @@
             <div class="video-label">Live Wedding Set</div>
           </div>
 
-          <div class="video-card large-video placeholder">
-            <div class="placeholder-inner">
-              <h3>Promo Video</h3>
-              <p>Coming Soon – Stay Tuned!</p>
+          <div class="video-card large-video">
+            <a
+              href="https://youtu.be/Y4WlaCyHt6E"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="video-link"
+            >
+              <img
+                src="https://img.youtube.com/vi/Y4WlaCyHt6E/hqdefault.jpg"
+                alt="Promo Video"
+              />
+              <div class="play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </a>
+            <div class="video-label">
+              <strong>The Mad Ass Mules – Live Wedding Promo</strong><br />
+              <span>Click to watch on YouTube</span>
             </div>
-            <div class="video-label">Teaser Reel</div>
           </div>
         </div>
+      </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
       </div>
     </section>
 
     <section id="photos">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
       <div class="lightbox" id="lightbox">
         <span class="prev" onclick="changeImage(-1)">&larr;</span>
         <img id="lightbox-img" src="" alt="Expanded gallery photo" />
@@ -249,113 +317,125 @@
       <div class="gallery-masonry">
         <div class="gallery-item">
           <img
-            src="./img/photos/photo1.jpg"
+            src="./img/photos/Photo_Gal1.jpg"
             alt="Band performing at wedding reception"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo2.jpg"
+            src="./img/photos/Photo_Gal2.jpeg"
             alt="Band on stage with lights and crowd"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo3.jpg"
+            src="./img/photos/Photo_Gal3.jpg"
             alt="First dance moment captured live"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo4.jpg"
+            src="./img/photos/Photo_Gal4.jpg"
             alt="Band members smiling during set"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo5.jpg"
+            src="./img/photos/Photo_Gal5.jpg"
             alt="Crowd dancing to upbeat song"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo6.jpg"
+            src="./img/photos/Photo_Gal6.jpg"
             alt="Close-up of guitarist solo"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo7.jpg"
+            src="./img/photos/Photo_Gal7.jpg"
             alt="Singer engaging with audience"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo8.jpg"
+            src="./img/photos/Photo_Gal8.jpg"
             alt="Full band setup on stage"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo9.jpg"
+            src="./img/photos/Photo_Gal9.jpg"
             alt="Couple's special request song"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo10.jpg"
+            src="./img/photos/Photo_Gal10.jpg"
             alt="Late-night party energy"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo11.jpg"
+            src="./img/photos/Photo_Gal11.jpg"
             alt="Band taking a quick break"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo12.jpg"
+            src="./img/photos/Photo_Gal12.jpg"
             alt="Confetti and celebration"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo13.jpg"
+            src="./img/photos/Photo_Gal13.jpg"
             alt="Drummer in action"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo14.jpg"
+            src="./img/photos/Photo_Gal14.jpg"
             alt="Group photo with happy couple"
             loading="lazy"
           />
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/photo15.jpg"
+            src="./img/photos/Photo_Gal15.jpg"
             alt="Venue lights and atmosphere"
             loading="lazy"
           />
         </div>
       </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <section id="testimonials">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
       <div class="testimonials-header">
         <h2 class="media-heading">WHAT OUR CLIENTS ARE SAYING</h2>
       </div>
@@ -384,9 +464,9 @@
             />
             <div class="testimonial-caption">
               <p class="testimonial-quote">
-                “Another incredible night. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Laboriosam nisi reprehenderit tempora at
-                laborum natus unde.”
+                “Another incredible night. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Laboriosam nisi reprehenderit
+                tempora at laborum natus unde.”
               </p>
               <h3 class="testimonial-couple">Paul &amp; Anna</h3>
             </div>
@@ -399,9 +479,9 @@
             />
             <div class="testimonial-caption">
               <p class="testimonial-quote">
-                “The floor was packed from start to finish. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Ut, exercitationem eum aperiam
-                illo illum laudantium.”
+                “The floor was packed from start to finish. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Ut, exercitationem eum
+                aperiam illo illum laudantium.”
               </p>
               <h3 class="testimonial-couple">Rajan &amp; Sean</h3>
             </div>
@@ -415,8 +495,8 @@
             <div class="testimonial-caption">
               <p class="testimonial-quote">
                 “Absolutely brilliant from beginning to end. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Explicabo, laboriosam nisi
-                reprehenderit tempora.”
+                sit amet consectetur adipisicing elit. Explicabo, laboriosam
+                nisi reprehenderit tempora.”
               </p>
               <h3 class="testimonial-couple">John &amp; Debbie</h3>
             </div>
@@ -438,7 +518,11 @@
           </button>
 
           <div class="testimonial-thumbnails">
-            <button class="testimonial-thumb active" type="button" data-index="0">
+            <button
+              class="testimonial-thumb active"
+              type="button"
+              data-index="0"
+            >
               <img
                 src="./img/testimonials/18.08.2024-25.jpg"
                 alt="James & Jane"
@@ -472,9 +556,21 @@
           </div>
         </div>
       </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <section id="setlist">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
       <div class="media-heading genre">SONG LIST</div>
 
       <div class="setlist-container">
@@ -606,9 +702,21 @@
           </ul>
         </div>
       </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <section id="FAQs" class="cont">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
       <div class="media-heading test">Frequently Asked Questions</div>
       <div class="faqs-container cont">
         <div class="faq-section">
@@ -751,9 +859,21 @@
           </div>
         </div>
       </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
     </section>
 
     <section id="contactus">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
       <div class="contact-container">
         <div class="form">
           <div class="contact-info">

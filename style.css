@@ -33,19 +33,22 @@ body {
   display: none !important;
 }
 
+section {
+  position: relative;
+}
+
 section:not(#contactus, #setlist) {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem 2rem;
-  min-height: 80vh;
+  padding: 6rem 2rem 8rem;
+  min-height: 100vh;
 }
 
 /* HERO */
 
 #home {
-  position: relative;
   height: 100vh;
   min-height: 680px;
   overflow: hidden;
@@ -54,7 +57,6 @@ section:not(#contactus, #setlist) {
   justify-content: center;
   color: white;
   background-color: #1a1f26;
-  border-bottom: 2px var(--background-color);
 }
 
 .hero-background {
@@ -165,12 +167,34 @@ section:not(#contactus, #setlist) {
   }
 }
 
-.section-divider {
+/* SECTION DIVIDER */
+
+/* .section-divider {
   position: absolute;
   bottom: -1px;
   left: 0;
   width: 100%;
   line-height: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+.section-divider path {
+  fill: var(--accent-color);
+} */
+
+.section-divider {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  pointer-events: none;
   z-index: 5;
 }
 
@@ -184,6 +208,17 @@ section:not(#contactus, #setlist) {
   fill: var(--accent-color);
 }
 
+.section-divider-top {
+  top: -1px;
+}
+
+.section-divider-top svg {
+  transform: rotate(180deg);
+}
+
+.section-divider-bottom {
+  bottom: -1px;
+}
 /* NAVIGATION */
 
 .nav {
@@ -379,10 +414,8 @@ section:not(#contactus, #setlist) {
 /* MEDIA */
 
 #media {
-  padding: 6rem 2rem 8rem;
   background: var(--primary-color);
   color: white;
-  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .media-layout,
@@ -402,8 +435,7 @@ section:not(#contactus, #setlist) {
   backdrop-filter: blur(14px);
   border-radius: 22px;
   padding: 1.2rem 1.25rem;
-  box-shadow: 
-    0 20px 50px rgba(0, 0, 0, 0.45),
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(168, 153, 110, 0.25);
   border: 1px solid rgba(168, 153, 110, 0.3);
   width: 100%;
@@ -534,159 +566,9 @@ section:not(#contactus, #setlist) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.main-player-controls {
-  padding: 0;
-  background: transparent;
-}
-
-.player-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.player-buttons button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.player-buttons button:hover {
-  color: var(--accent-color);
-  transform: scale(1.12);
-}
-
 .media-bridge {
   margin: 2rem auto 2.2rem;
 }
-
-.media-videos-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.6rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.large-video {
-  aspect-ratio: 16 / 9;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  position: relative;
-  background: #0f141a;
-}
-
-.video-card iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.video-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-  color: white;
-  padding: 1.2rem;
-  font-size: 1.05rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 320px;
-}
-
-.placeholder-inner {
-  text-align: center;
-  color: var(--accent-color);
-  padding: 1rem;
-}
-
-.placeholder-inner h3 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.placeholder-inner p {
-  font-size: 1.1rem;
-  opacity: 0.85;
-}
-
-@media (max-width: 1100px) {
-  .audio-mix-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 900px) {
-  .audio-player-header {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .audio-controls-left {
-    justify-content: center;
-  }
-
-  .audio-track-info {
-    text-align: center;
-  }
-
-  .audio-mix-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  #media {
-    padding: 5rem 1rem 6rem;
-  }
-
-  .media-layout,
-  .media-bridge,
-  .videos-section {
-    max-width: 100%;
-  }
-
-  .audio-player-shell {
-    padding: 1rem;
-  }
-
-  .audio-controls-left button {
-    width: 48px;
-    height: 48px;
-    font-size: 1.05rem;
-  }
-
-  #current-track-title {
-    font-size: 1.15rem;
-  }
-
-  .audio-mix-list {
-    grid-template-columns: 1fr;
-  }
-
-  .media-bridge {
-    margin: 1.6rem auto 1.9rem;
-  }
-
-  .placeholder {
-    min-height: 220px;
-  }
-}
-
-
-/* Testimonials */
 
 .testimonial-card-wrapper {
   width: 90%;
@@ -727,28 +609,59 @@ section:not(#contactus, #setlist) {
 }
 
 .videos-section {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .media-videos-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .video-card {
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   background: #0f141a;
 }
 
 .large-video {
   aspect-ratio: 16 / 9;
+}
+
+.video-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.video-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.video-link:hover .play-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .video-card iframe {
@@ -767,32 +680,9 @@ section:not(#contactus, #setlist) {
   text-align: center;
 }
 
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholder-inner {
-  text-align: center;
-  color: var(--accent-color);
-  padding: 1rem;
-}
-
-.placeholder-inner h3 {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.placeholder-inner p {
-  font-size: 1.15rem;
-  opacity: 0.85;
-}
-
 /* PHOTOS */
 
 #photos {
-  padding: 6rem 2rem 8rem;
   background: var(--background-color);
   color: white;
 }
@@ -911,8 +801,7 @@ section:not(#contactus, #setlist) {
 
 #testimonials {
   background: var(--primary-color);
-  padding: 6rem 2rem 7rem;
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1101,15 +990,14 @@ section:not(#contactus, #setlist) {
 /* SETLIST */
 
 #setlist {
-  background-image: url(./img/photos/photo19.jpg);
+  background-image: url(./img/Contact_BG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
-  position: relative;
   color: white;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 8rem;
   width: 100%;
 }
 
@@ -1181,12 +1069,14 @@ section:not(#contactus, #setlist) {
 .genre {
   color: #ffffff;
   font-weight: 600;
+  position: relative;
+  z-index: 2;
 }
 
 /* FAQS */
 
 #FAQs {
-  background: var(--background-color);
+  background: var(--primary-color);
 }
 
 .faq-section {
@@ -1205,7 +1095,6 @@ section:not(#contactus, #setlist) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: var(--primary-color); */
   color: var(--accent-color);
   padding: 0.8rem 1.5rem;
   cursor: pointer;
@@ -1238,7 +1127,7 @@ section:not(#contactus, #setlist) {
 /* CONTACT */
 
 #contactus {
-  background-image: url(./img/photos/photo19.jpg);
+  background-image: url(./img/Contact_BG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1247,7 +1136,6 @@ section:not(#contactus, #setlist) {
   width: 100%;
   margin: 0;
   padding: 2rem 1rem;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1467,14 +1355,23 @@ textarea.input:focus {
   .hamburger {
     display: block;
   }
+
+  .audio-mix-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 950px) {
-  .main-player-media {
+  .audio-player-header {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .mix-choices-title {
+  .audio-controls-left {
+    justify-content: center;
+  }
+
+  .audio-track-info {
     text-align: center;
   }
 
@@ -1508,6 +1405,10 @@ textarea.input:focus {
 }
 
 @media (max-width: 900px) {
+  .audio-mix-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .form {
     grid-template-columns: 1fr;
     padding: 2.5rem 1.8rem;
@@ -1530,6 +1431,10 @@ textarea.input:focus {
     font-size: 1.4rem;
     bottom: 20px;
     right: 20px;
+  }
+
+  .section-divider svg {
+    height: 75px;
   }
 }
 
@@ -1595,16 +1500,22 @@ textarea.input:focus {
     padding: 5rem 1rem 6rem;
   }
 
-  #current-track-title {
-    font-size: 1.35rem;
-  }
-  
-  .player-buttons {
-    gap: 1.6rem;
+  .audio-player-shell {
+    padding: 1rem;
   }
 
-  .player-buttons button {
-    font-size: 1.8rem;
+  .audio-controls-left button {
+    width: 48px;
+    height: 48px;
+    font-size: 1.05rem;
+  }
+
+  #current-track-title {
+    font-size: 1.15rem;
+  }
+
+  .audio-mix-list {
+    grid-template-columns: 1fr;
   }
 
   .media-bridge {
@@ -1641,5 +1552,9 @@ textarea.input:focus {
 
   .setlist-container {
     column-count: 1;
+  }
+
+  .section-divider svg {
+    height: 60px;
   }
 }

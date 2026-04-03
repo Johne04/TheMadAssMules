@@ -19,9 +19,10 @@ function toggleNav() {
 
 let currentMix = 1;
 let isPlaying = false;
-let mainAudio, mainProgress, currentTitle, mainSlides;
+let mainAudio, mainProgress, currentTitle;
 
 // LIGHTBOX
+
 let galleryItemsGlobal = [];
 let currentGalleryIndex = 0;
 
@@ -66,27 +67,27 @@ window.loadMix = function (mixNumber) {
   if (currentMix === mixNumber && isPlaying) return;
 
   const tracks = {
-  1: {
-    src: "./Audio/Rumbling_Wind.mp3",
-    title: "Mix 1 – Wedding Floor Fillers",
-  },
-  2: {
-    src: "audio2.mp3",
-    title: "Mix 2 – Slow & Romantic",
-  },
-  3: {
-    src: "audio3.mp3",
-    title: "Mix 3 – Party Starters",
-  },
-  4: {
-    src: "audio4.mp3",
-    title: "Mix 4 – Rock & Anthems",
-  },
-  5: {
-    src: "audio5.mp3",
-    title: "Mix 5 – Late Night Floor Fillers",
-  },
-};
+    1: {
+      src: "./Audio/Rumbling_Wind.mp3",
+      title: "Mix 1 – Wedding Floor Fillers",
+    },
+    2: {
+      src: "audio2.mp3",
+      title: "Mix 2 – Slow & Romantic",
+    },
+    3: {
+      src: "audio3.mp3",
+      title: "Mix 3 – Party Starters",
+    },
+    4: {
+      src: "audio4.mp3",
+      title: "Mix 4 – Rock & Anthems",
+    },
+    5: {
+      src: "audio5.mp3",
+      title: "Mix 5 – Late Night Floor Fillers",
+    },
+  };
 
   const track = tracks[mixNumber];
   if (!track) return;
@@ -226,17 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mainAudio) {
     mainProgress = document.getElementById("main-progress");
     currentTitle = document.getElementById("current-track-title");
-    mainSlides = document.querySelectorAll("#main-slideshow .mySlides");
-
-    let slideIndex = 0;
-
-    if (mainSlides.length) {
-      setInterval(() => {
-        mainSlides[slideIndex].classList.remove("active");
-        slideIndex = (slideIndex + 1) % mainSlides.length;
-        mainSlides[slideIndex].classList.add("active");
-      }, 5000);
-    }
 
     mainAudio.addEventListener("timeupdate", () => {
       const progress = (mainAudio.currentTime / mainAudio.duration) * 100 || 0;
@@ -333,7 +323,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // TESTIMONIALS SLIDER
-  const testimonialSlides = document.querySelectorAll(".testimonial-main-slide");
+  const testimonialSlides = document.querySelectorAll(
+    ".testimonial-main-slide"
+  );
   const testimonialThumbs = document.querySelectorAll(".testimonial-thumb");
   const testimonialPrev = document.querySelector(".testimonial-prev");
   const testimonialNext = document.querySelector(".testimonial-next");
@@ -423,7 +415,6 @@ document.addEventListener("DOMContentLoaded", () => {
       startTestimonialAuto();
     });
 
-    // swipe support
     let startX = 0;
 
     testimonialMain.addEventListener(
