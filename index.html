@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,26 +15,66 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-left">
+        <img
+          class="mam_logo"
+          src="./img/Logos/MAM_Logo.png"
+          alt="The Mad Ass Mules band logo"
+          loading="lazy"
+        />
+      </div>
+
+      <ul class="nav-main">
+        <li><a href="#home" class="links">Home</a></li>
+        <li><a href="#media" class="links">Media</a></li>
+        <li><a href="#photos" class="links">Photos</a></li>
+        <li><a href="#testimonials" class="links">Testimonials</a></li>
+        <li><a href="#setlist" class="links">Set List</a></li>
+        <li><a href="#FAQs" class="links">FAQ's</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="tel:0871234432" class="phone-link" aria-label="Call the band">
+          <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="#contactus" class="links contact-link">Contact Us</a>
+      </div>
+    </nav>
+
+    <div class="nav-min">
+      <button
+        class="hamburger"
+        id="main"
+        type="button"
+        onclick="toggleNav()"
+        aria-label="Open menu"
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="#home">Home</a>
+      <a href="#media">Media</a>
+      <a href="#photos">Photos</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#setlist">Set List</a>
+      <a href="#FAQs">FAQ's</a>
+      <a href="tel:0871234432">0871234432</a>
+      <a href="#contactus">Contact Us</a>
+    </div>
+
     <section id="home">
       <div class="hero-background">
-        <picture>
-          <source
-            media="(min-width: 769px)"
-            srcset="./img/photos/home/home.jpg"
-            type="image/avif"
-          />
-          <source
-            media="(max-width: 768px)"
-            srcset="./img/home/mobile-pic.jpg 1x"
-            type="image/jpeg"
-          />
-          <img
-            class="hero-image"
-            src="./img/home/Anastella_Photography-21.avif"
-            alt="The Mad Ass Mules band performing live at a wedding"
-            loading="lazy"
-          />
-        </picture>
+        <img
+          class="hero-image"
+          src="./img/photos/home/home.jpg"
+          alt="The Mad Ass Mules band performing live at a wedding"
+          fetchpriority="high"
+        />
       </div>
 
       <div class="hero-overlay"></div>
@@ -44,74 +84,11 @@
         <p class="hero-tagline">
           Ireland's Most Entertaining Wedding &amp; Party Band
         </p>
+
         <div class="hero-cta-wrapper">
           <a href="#contactus" class="hero-cta">Book Your Date</a>
           <a href="#media" class="hero-secondary-cta">Listen to Us</a>
         </div>
-      </div>
-
-      <div class="nav">
-        <div class="nav-left">
-          <img
-            class="mam_logo"
-            src="./img/Logos/MAM_Logo.png"
-            alt="The Mad Ass Mules band logo"
-            loading="lazy"
-          />
-        </div>
-
-        <ul class="nav-main">
-          <li>
-            <a href="#home" class="links">Home</a>
-            <a href="#media" class="links">Media</a>
-            <a href="#photos" class="links">Photos</a>
-            <a href="#testimonials" class="links">Testimonials</a>
-            <a href="#setlist" class="links">Set List</a>
-            <a href="#FAQs" class="links">FAQ's</a>
-          </li>
-        </ul>
-
-        <div class="nav-right">
-          <a
-            href="tel:0871234432"
-            class="phone-link"
-            aria-label="Call the band"
-          >
-            <i class="fas fa-phone-alt"></i>
-          </a>
-          <a href="#contactus" class="links contact-link">Contact Us</a>
-        </div>
-      </div>
-
-      <div class="nav-min">
-        <ul class="nav-main">
-          <li>
-            <img
-              class="mam_logo"
-              src="./img/Logos/MAM_Logo.png"
-              alt="The Mad Ass Mules band logo"
-              loading="lazy"
-            />
-            <a href="tel:0871234432">0871234432</a>
-            <a class="contact-btn" href="#contactus">Contact Us</a>
-          </li>
-        </ul>
-        <div class="hamburger" id="main" onclick="toggleNav()">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div id="mySidenav" class="sidenav">
-        <a href="#home">Home</a>
-        <a href="#media">Media</a>
-        <a href="#photos">Photos</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#setlist">Set List</a>
-        <a href="#FAQs">FAQ's</a>
-        <a href="tel:0871234432">0871234432</a>
-        <a href="#contactus">Contact Us</a>
       </div>
 
       <div class="section-divider section-divider-bottom">
@@ -142,6 +119,7 @@
               >
                 <i class="fas fa-play"></i>
               </button>
+
               <button
                 id="main-pause"
                 class="hidden"
@@ -151,6 +129,7 @@
               >
                 <i class="fas fa-pause"></i>
               </button>
+
               <button type="button" onclick="stopMainAudio()" aria-label="Stop">
                 <i class="fas fa-stop"></i>
               </button>
@@ -242,7 +221,7 @@
       </div>
 
       <div class="testimonial-card-wrapper media-bridge">
-        <div class="testimonial-card visible">
+        <div class="testimonial-card">
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -267,14 +246,21 @@
       </div>
 
       <div class="videos-section">
-        <div class="videos-grid media-videos-grid">
+        <div class="media-videos-grid">
           <div class="video-card large-video">
             <iframe
               loading="lazy"
               src="https://www.youtube.com/embed/IaRmPOdDgTg"
               title="Live Performance Highlight"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
               allowfullscreen
             ></iframe>
             <div class="video-label">Live Wedding Set</div>
@@ -295,6 +281,7 @@
                 <i class="fas fa-play"></i>
               </div>
             </a>
+
             <div class="video-label">
               <strong>The Mad Ass Mules – Live Wedding Promo</strong><br />
               <span>Click to watch on YouTube</span>
@@ -364,7 +351,7 @@
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/Photo_Gal6.jpg"
+            src="./img/photos/Photo_Gal6.jpeg"
             alt="Close-up of guitarist solo"
             loading="lazy"
           />
@@ -378,7 +365,7 @@
         </div>
         <div class="gallery-item">
           <img
-            src="./img/photos/Photo_Gal8.jpg"
+            src="./img/photos/Photo_Gal8.jpeg"
             alt="Full band setup on stage"
             loading="lazy"
           />
@@ -521,6 +508,7 @@
           >
             <i class="fas fa-chevron-left"></i>
           </button>
+
           <button
             class="testimonial-nav testimonial-next"
             type="button"
@@ -583,7 +571,7 @@
         </svg>
       </div>
 
-      <div class="media-heading genre">SONG LIST</div>
+      <div class="media-heading">SONG LIST</div>
 
       <div class="setlist-container">
         <div class="song-category-card">
@@ -722,15 +710,16 @@
       </div>
     </section>
 
-    <section id="FAQs" class="cont">
+    <section id="FAQs">
       <div class="section-divider section-divider-top">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
           <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
         </svg>
       </div>
 
-      <div class="media-heading test">Frequently Asked Questions</div>
-      <div class="faqs-container cont">
+      <div class="media-heading">Frequently Asked Questions</div>
+
+      <div class="faqs-container">
         <div class="faq-section">
           <div class="faq-item">
             <div class="faq-question">
@@ -889,13 +878,13 @@
       <div class="contact-container">
         <div class="form">
           <div class="contact-info">
-            <h3 class="title touch">Let's get in touch</h3>
+            <h3 class="title">Let's get in touch</h3>
 
             <div class="info">
               <div class="information">
                 <a
                   href="mailto:themadassmules@gmail.com"
-                  class="icon email"
+                  class="icon"
                   aria-label="Email the band"
                 >
                   <i class="fas fa-envelope"></i>
@@ -904,11 +893,7 @@
               </div>
 
               <div class="information">
-                <a
-                  href="tel:0851005374"
-                  class="icon phone"
-                  aria-label="Call Shane"
-                >
+                <a href="tel:0851005374" class="icon" aria-label="Call Shane">
                   <i class="fas fa-phone-alt"></i>
                 </a>
                 <p>Shane: 0851005374</p>
@@ -922,7 +907,6 @@
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="icon instagram"
                   aria-label="Instagram"
                 >
                   <i class="fab fa-instagram"></i>
@@ -931,7 +915,6 @@
                   href="https://www.youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="icon youtube"
                   aria-label="YouTube"
                 >
                   <i class="fab fa-youtube"></i>
@@ -940,7 +923,6 @@
                   href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="icon facebook"
                   aria-label="Facebook"
                 >
                   <i class="fab fa-facebook-f"></i>
