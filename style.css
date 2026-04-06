@@ -1250,6 +1250,7 @@ section:not(#home, #contactus, #setlist) {
 
 #FAQs {
   background: var(--primary-color);
+  min-height: 100svh !important;
 }
 
 .faqs-container {

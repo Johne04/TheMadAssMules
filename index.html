@@ -69,12 +69,19 @@
 
     <section id="home">
       <div class="hero-background">
-        <img
-          class="hero-image"
-          src="./img/photos/home/home.jpg"
-          alt="The Mad Ass Mules band performing live at a wedding"
-          fetchpriority="high"
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./img/photos/home/home-mobile.jpg"
+            type="image/jpeg"
+          />
+          <img
+            class="hero-image"
+            src="./img/photos/home/home.jpg"
+            alt="The Mad Ass Mules band performing live at a wedding"
+            fetchpriority="high"
+          />
+        </picture>
       </div>
 
       <div class="hero-overlay"></div>
