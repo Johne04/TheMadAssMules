@@ -223,7 +223,7 @@ textarea,
   text-align: center;
   padding: 0 1.25rem;
   width: min(620px, 100%);
-  margin-top: 20vh;
+  margin-top: -4vh;
   animation: heroFadeUp 1.2s ease-out forwards;
   opacity: 0;
 }
@@ -1793,14 +1793,6 @@ textarea.input {
     text-align: center;
   }
 
-  .hero-content {
-    margin-top: 20vh;
-  }
-
-  .hero-cta-wrapper {
-    margin-top: 0.85rem;
-  }
-
   .section-divider svg {
     height: 58px;
   }
@@ -1820,14 +1812,6 @@ textarea.input {
 @media (max-width: 480px) {
   .gallery-masonry {
     column-count: 1;
-  }
-
-   .hero-content {
-    margin-top: 22vh;
-  }
-
-  .hero-cta-wrapper {
-    margin-top: 0.85rem;
   }
 
   .hero-image {
