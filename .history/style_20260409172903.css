@@ -1158,25 +1158,23 @@ textarea,
       min-height: 0;
   }
 
-  /* .testimonial-slider-shell{
-    display: flex;
-    justify-content: center;
-  } */
-  /* .testimonial-viewport{
+  .testimonial-slider-shell{
+    
+  }
+  .testimonial-viewport{
     width: 90%;
-  } */
+  }
 }
 
 @media (max-width: 900px) {
   .testimonial-slider-shell {
     grid-template-columns: 1fr;
-    width: 80%;
     gap: 0.85rem;
   }
 
-  /* .testimonial-arrow {
+  .testimonial-arrow {
     display: none;
-  } */
+  }
 
   .testimonial-viewport {
     padding: 0.5rem 0;

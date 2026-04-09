@@ -1157,26 +1157,17 @@ textarea,
       grid-template-columns: 1fr;
       min-height: 0;
   }
-
-  /* .testimonial-slider-shell{
-    display: flex;
-    justify-content: center;
-  } */
-  /* .testimonial-viewport{
-    width: 90%;
-  } */
 }
 
 @media (max-width: 900px) {
   .testimonial-slider-shell {
     grid-template-columns: 1fr;
-    width: 80%;
     gap: 0.85rem;
   }
 
-  /* .testimonial-arrow {
+  .testimonial-arrow {
     display: none;
-  } */
+  }
 
   .testimonial-viewport {
     padding: 0.5rem 0;
@@ -1281,13 +1272,7 @@ textarea,
 }
 
 .song-sub-head{
-  text-align: center;
-  font-size: 1.2rem;
-  font-family: poppins, Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: 600;
-  position: relative;
-  z-index: 2;
+  
 }
 .song-category-card:hover {
   transform: translateY(-6px) scale(1.01);
@@ -1700,9 +1685,6 @@ textarea.input {
   .audio-track-info {
     text-align: center;
   }
-  .song-sub-head{
-    font-size: 1rem;
-  }
 
   .form {
     grid-template-columns: 1fr;
@@ -1772,39 +1754,6 @@ textarea.input {
     font-size: 1.25rem;
     bottom: 20px;
     right: 20px;
-  }
-
-  .testimonial-card {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 16px;
-    box-sizing: border-box;
-  }
-
-  .testimonial-slider {
-    position: relative;
-    padding: 0 40px;
-  }
-
-  .testimonial-prev,
-  .testimonial-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .testimonial-prev {
-    left: 5px;
-  }
-
-  .testimonial-next {
-    right: 5px;
   }
 }
 
