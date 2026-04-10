@@ -1845,7 +1845,7 @@ textarea.input {
 
   .media-heading {
     margin-bottom: 1.9rem;
-    font-size: clamp(1.4rem, 3vw, 2.5rem);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
   }
 
   .audio-player-shell {
