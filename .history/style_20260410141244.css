@@ -186,7 +186,7 @@ textarea,
   color: white;
   /* background-color: #1C2229; */
   background:
-    radial-gradient(circle at top, rgba(168, 153, 110, 0.12), transparent 35%),
+    radial-gradient(circle at top, rgba(168, 153, 110, 0.12), transparent 95%),
     linear-gradient(135deg, #1d242b 0%, #28313a 45%, #12171c 100%);
   padding: 5rem 1rem;
   isolation: isolate;

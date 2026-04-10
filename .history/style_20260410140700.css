@@ -361,7 +361,7 @@ textarea,
   padding: 0 1rem;
   background: rgba(40, 49, 58, 0.76);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(194, 176, 127, 0.22);
   border-radius: var(--radius-md);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);

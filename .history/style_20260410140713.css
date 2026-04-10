@@ -359,7 +359,7 @@ textarea,
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  background: rgba(40, 49, 58, 0.76);
+  background: rgba(34, 42, 49, 0.76);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(194, 176, 127, 0.22);

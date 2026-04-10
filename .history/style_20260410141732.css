@@ -191,7 +191,7 @@ textarea,
   padding: 5rem 1rem;
   isolation: isolate;
 }
-
+[=]
 .hero-background {
   position: absolute;
   inset: 0;
