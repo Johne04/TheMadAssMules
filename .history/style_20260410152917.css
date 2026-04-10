@@ -184,17 +184,11 @@ textarea,
   align-items: center;
   justify-content: center;
   color: white;
-  background: #0d1116;
+  background: #0c1015;
   padding: 5rem 1rem;
   isolation: isolate;
 }
 
-.hero-background {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  overflow: hidden;
-}
 
 /* visible stage-light beams */
 .hero-background::before {

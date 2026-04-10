@@ -184,57 +184,60 @@ textarea,
   align-items: center;
   justify-content: center;
   color: white;
-  background: #0d1116;
+  background: #0c1015;
   padding: 5rem 1rem;
   isolation: isolate;
 }
 
-.hero-background {
+/* distant dim venue lights */
+#home::before {
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 14%, rgba(255, 214, 140, 0.32) 0 10px, transparent 40px),
+    radial-gradient(circle at 18% 10%, rgba(255, 214, 140, 0.18) 0 7px, transparent 32px),
+    radial-gradient(circle at 28% 16%, rgba(255, 214, 140, 0.22) 0 8px, transparent 36px),
+
+    radial-gradient(circle at 72% 14%, rgba(255, 214, 140, 0.24) 0 8px, transparent 34px),
+    radial-gradient(circle at 82% 10%, rgba(255, 214, 140, 0.34) 0 10px, transparent 40px),
+    radial-gradient(circle at 90% 16%, rgba(255, 214, 140, 0.18) 0 7px, transparent 32px),
+
+    radial-gradient(circle at 50% 12%, rgba(255, 230, 180, 0.14) 0 8px, transparent 36px),
+    radial-gradient(circle at 40% 20%, rgba(255, 214, 140, 0.10) 0 6px, transparent 30px),
+    radial-gradient(circle at 60% 20%, rgba(255, 214, 140, 0.10) 0 6px, transparent 30px);
+  filter: blur(10px);
+  opacity: 0.95;
+}
+
+/* atmosphere / darkness */
+#home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.03), transparent 38%),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.18) 45%,
+      rgba(0, 0, 0, 0.34) 100%
+    );
+}
+
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
   overflow: hidden;
 }
 
 /* visible stage-light beams */
-.hero-background::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      transparent 38%,
-      rgba(212, 192, 138, 0.22) 46%,
-      rgba(212, 192, 138, 0.08) 52%,
-      transparent 62%
-    ),
-    linear-gradient(
-      245deg,
-      transparent 0%,
-      transparent 38%,
-      rgba(212, 192, 138, 0.22) 46%,
-      rgba(212, 192, 138, 0.08) 52%,
-      transparent 62%
-    );
-  filter: blur(10px);
-  transform: scale(1.08);
-  pointer-events: none;
-}
-
-/* top light sources + soft glow behind image */
-.hero-background::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 18% 8%, rgba(255, 230, 170, 0.45) 0%, transparent 18%),
-    radial-gradient(circle at 82% 8%, rgba(255, 230, 170, 0.45) 0%, transparent 18%),
-    radial-gradient(circle at 50% 42%, rgba(212, 192, 138, 0.14) 0%, transparent 28%);
-  filter: blur(18px);
-  pointer-events: none;
-}
 
 .hero-image {
   position: relative;
@@ -258,13 +261,8 @@ textarea,
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.10) 0%,
-    rgba(0, 0, 0, 0.18) 45%,
-    rgba(0, 0, 0, 0.30) 100%
-  );
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.08);
+  z-index: 3;
   pointer-events: none;
 }
 
