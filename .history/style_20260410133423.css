@@ -205,6 +205,7 @@ textarea,
   object-fit: contain;
   object-position: center center;
   padding: clamp(4rem, 8vw, 6rem) 0;
+  background-color: ;
 }
 
 /* .hero-overlay {
