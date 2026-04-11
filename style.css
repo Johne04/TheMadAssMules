@@ -1259,8 +1259,6 @@ textarea,
     font-size: 0.96rem;
   }
 }
-Remove these old r
-/* SETLIST */
 
 #setlist {
   background-image: url(./img/Contact_BG.jpg);
@@ -1269,7 +1267,7 @@ Remove these old r
   background-position: center;
   background-attachment: fixed;
   color: white;
-  padding: 4.75rem 1.5rem 5.75rem;
+  padding: 7.75rem 1.5rem 5.75rem;
   width: 100%;
   min-height: 100svh;
 }
