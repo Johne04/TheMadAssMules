@@ -89,7 +89,7 @@ window.loadMix = function (mixNumber) {
       title: "Sample 3 – This is the life",
     },
     4: {
-      src: "./Audio/Does-your-mother-know.mp3",
+      src: "./Audio/does-your-mother-know.mp3",
       title: "Sample 4 – Does your mother know",
     },
     5: {
