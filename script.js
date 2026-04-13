@@ -77,24 +77,24 @@ window.loadMix = function (mixNumber) {
 
   const tracks = {
     1: {
-      src: "./Audio/Rumbling_Wind.mp3",
-      title: "Mix 1 – Wedding Floor Fillers",
+      src: "./Audio/everybody-needs-somebody.mp3",
+      title: "Sample 1 - Everybody needs somebody",
     },
     2: {
-      src: "audio2.mp3",
-      title: "Mix 2 – Slow & Romantic",
+      src: "./Audio/get-lucky.mp3",
+      title: "Sample 2 - Get Lucky",
     },
     3: {
-      src: "audio3.mp3",
-      title: "Mix 3 – Party Starters",
+      src: "./Audio/this-is-the-life.mp3",
+      title: "Sample 3 – This is the life",
     },
     4: {
-      src: "audio4.mp3",
-      title: "Mix 4 – Rock & Anthems",
+      src: "./Audio/does-your-mother-know.mp3",
+      title: "Sample 4 – Does your mother know",
     },
     5: {
-      src: "audio5.mp3",
-      title: "Mix 5 – Late Night Floor Fillers",
+      src: "./Audio/dance-with-me-tonight.mp3",
+      title: "Sample 5 – Dance with me tonight",
     },
   };
 
@@ -346,128 +346,127 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-// TESTIMONIALS SLIDER
-const testimonialTrack = document.querySelector(".testimonial-track");
-const testimonialSlides = document.querySelectorAll(".testimonial-slide");
-const testimonialPrev = document.querySelector(".testimonial-arrow-prev");
-const testimonialNext = document.querySelector(".testimonial-arrow-next");
-const testimonialDots = document.querySelectorAll(".testimonial-dot");
-const testimonialViewport = document.querySelector(".testimonial-viewport");
+  // TESTIMONIALS SLIDER
+  const testimonialTrack = document.querySelector(".testimonial-track");
+  const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+  const testimonialPrev = document.querySelector(".testimonial-arrow-prev");
+  const testimonialNext = document.querySelector(".testimonial-arrow-next");
+  const testimonialDots = document.querySelectorAll(".testimonial-dot");
+  const testimonialViewport = document.querySelector(".testimonial-viewport");
 
-if (
-  testimonialTrack &&
-  testimonialSlides.length &&
-  testimonialPrev &&
-  testimonialNext &&
-  testimonialDots.length &&
-  testimonialViewport
-) {
-  let currentTestimonial = 0;
-  let testimonialInterval;
-  let startX = 0;
+  if (
+    testimonialTrack &&
+    testimonialSlides.length &&
+    testimonialPrev &&
+    testimonialNext &&
+    testimonialDots.length &&
+    testimonialViewport
+  ) {
+    let currentTestimonial = 0;
+    let testimonialInterval;
+    let startX = 0;
 
-  const updateTestimonials = (index) => {
-    const slideWidth = testimonialSlides[0].offsetWidth;
-    const trackGap =
-      parseFloat(window.getComputedStyle(testimonialTrack).gap) || 0;
-    const viewportWidth = testimonialViewport.offsetWidth;
-    const trackWidth = testimonialTrack.scrollWidth;
+    const updateTestimonials = (index) => {
+      const slideWidth = testimonialSlides[0].offsetWidth;
+      const trackGap =
+        parseFloat(window.getComputedStyle(testimonialTrack).gap) || 0;
+      const viewportWidth = testimonialViewport.offsetWidth;
+      const trackWidth = testimonialTrack.scrollWidth;
 
-    currentTestimonial = index;
+      currentTestimonial = index;
 
-    testimonialSlides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === currentTestimonial);
-    });
+      testimonialSlides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === currentTestimonial);
+      });
 
-    testimonialDots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentTestimonial);
-    });
+      testimonialDots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentTestimonial);
+      });
 
-    const rawOffset =
-      currentTestimonial * (slideWidth + trackGap) -
-      (viewportWidth - slideWidth) / 2;
+      const rawOffset =
+        currentTestimonial * (slideWidth + trackGap) -
+        (viewportWidth - slideWidth) / 2;
 
-    const maxOffset = Math.max(0, trackWidth - viewportWidth);
-    const finalOffset = Math.max(0, Math.min(rawOffset, maxOffset));
+      const maxOffset = Math.max(0, trackWidth - viewportWidth);
+      const finalOffset = Math.max(0, Math.min(rawOffset, maxOffset));
 
-    testimonialTrack.style.transform = `translateX(-${finalOffset}px)`;
-  };
+      testimonialTrack.style.transform = `translateX(-${finalOffset}px)`;
+    };
 
-  const nextTestimonial = () => {
-    const nextIndex = (currentTestimonial + 1) % testimonialSlides.length;
-    updateTestimonials(nextIndex);
-  };
+    const nextTestimonial = () => {
+      const nextIndex = (currentTestimonial + 1) % testimonialSlides.length;
+      updateTestimonials(nextIndex);
+    };
 
-  const prevTestimonial = () => {
-    const prevIndex =
-      (currentTestimonial - 1 + testimonialSlides.length) %
-      testimonialSlides.length;
-    updateTestimonials(prevIndex);
-  };
+    const prevTestimonial = () => {
+      const prevIndex =
+        (currentTestimonial - 1 + testimonialSlides.length) %
+        testimonialSlides.length;
+      updateTestimonials(prevIndex);
+    };
 
-  const startTestimonialAuto = () => {
-    clearInterval(testimonialInterval);
-    testimonialInterval = setInterval(nextTestimonial, 6000);
-  };
+    const startTestimonialAuto = () => {
+      clearInterval(testimonialInterval);
+      testimonialInterval = setInterval(nextTestimonial, 6000);
+    };
 
-  testimonialNext.addEventListener("click", () => {
-    nextTestimonial();
-    startTestimonialAuto();
-  });
-
-  testimonialPrev.addEventListener("click", () => {
-    prevTestimonial();
-    startTestimonialAuto();
-  });
-
-  testimonialDots.forEach((dot) => {
-    dot.addEventListener("click", () => {
-      const index = Number(dot.dataset.index);
-      updateTestimonials(index);
+    testimonialNext.addEventListener("click", () => {
+      nextTestimonial();
       startTestimonialAuto();
     });
-  });
 
-  testimonialViewport.addEventListener("mouseenter", () => {
-    clearInterval(testimonialInterval);
-  });
+    testimonialPrev.addEventListener("click", () => {
+      prevTestimonial();
+      startTestimonialAuto();
+    });
 
-  testimonialViewport.addEventListener("mouseleave", () => {
-    startTestimonialAuto();
-  });
-
-  testimonialViewport.addEventListener(
-    "touchstart",
-    (e) => {
-      startX = e.changedTouches[0].screenX;
-    },
-    { passive: true },
-  );
-
-  testimonialViewport.addEventListener(
-    "touchend",
-    (e) => {
-      const endX = e.changedTouches[0].screenX;
-      const diff = startX - endX;
-
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          nextTestimonial();
-        } else {
-          prevTestimonial();
-        }
+    testimonialDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const index = Number(dot.dataset.index);
+        updateTestimonials(index);
         startTestimonialAuto();
-      }
-    },
-    { passive: true },
-  );
+      });
+    });
 
-  window.addEventListener("resize", () => {
-    updateTestimonials(currentTestimonial);
-  });
+    testimonialViewport.addEventListener("mouseenter", () => {
+      clearInterval(testimonialInterval);
+    });
 
-  updateTestimonials(0);
-  startTestimonialAuto();
-}
- 
+    testimonialViewport.addEventListener("mouseleave", () => {
+      startTestimonialAuto();
+    });
+
+    testimonialViewport.addEventListener(
+      "touchstart",
+      (e) => {
+        startX = e.changedTouches[0].screenX;
+      },
+      { passive: true },
+    );
+
+    testimonialViewport.addEventListener(
+      "touchend",
+      (e) => {
+        const endX = e.changedTouches[0].screenX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            nextTestimonial();
+          } else {
+            prevTestimonial();
+          }
+          startTestimonialAuto();
+        }
+      },
+      { passive: true },
+    );
+
+    window.addEventListener("resize", () => {
+      updateTestimonials(currentTestimonial);
+    });
+
+    updateTestimonials(0);
+    startTestimonialAuto();
+  }
 });
