@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMAM</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-left">
+        <img
+          class="mam_logo"
+          src="./img/Logos/MAM_Logo.png"
+          alt="The Mad Ass Mules band logo"
+          loading="lazy"
+        />
+      </div>
+
+      <ul class="nav-main">
+        <li><a href="#home" class="links">Home</a></li>
+        <li><a href="#media" class="links">Media</a></li>
+        <li><a href="#photos" class="links">Photos</a></li>
+        <li><a href="#testimonials" class="links">Testimonials</a></li>
+        <li><a href="#setlist" class="links">Set List</a></li>
+        <li><a href="#FAQs" class="links">FAQ's</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="tel:0871234432" class="phone-link" aria-label="Call the band">
+          <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="#contactus" class="links contact-link">Contact Us</a>
+      </div>
+    </nav>
+
+    <div class="nav-min">
+      <button
+        class="hamburger"
+        id="main"
+        type="button"
+        onclick="toggleNav()"
+        aria-label="Open menu"
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="#home">Home</a>
+      <a href="#media">Media</a>
+      <a href="#photos">Photos</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#setlist">Set List</a>
+      <a href="#FAQs">FAQ's</a>
+      <a href="tel:0871234432">0871234432</a>
+      <a href="#contactus">Contact Us</a>
+    </div>
+
+    <section id="home">
+      <div class="hero-background">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./img/photos/home/home-mobile.jpg"
+            type="image/jpeg"
+          />
+          <img
+            class="hero-image"
+            src="./img/photos/home/main.JPG"
+            alt="Home page photo"
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">The Mad Ass Mules</h1>
+        <p class="hero-tagline">
+          Ireland's Most Entertaining Wedding &amp; Party Band
+        </p>
+
+        <div class="hero-cta-wrapper">
+          <a href="#contactus" class="hero-cta">Book Your Date</a>
+          <a href="#media" class="hero-secondary-cta">Listen to Us</a>
+        </div>
+      </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div class="media-heading">MEDIA</div>
+      <h4>Live recordings</h4>
+
+      <div class="media-layout">
+        <div class="audio-player-shell">
+          <div class="audio-player-header">
+            <div class="audio-controls-left">
+              <button
+                id="main-play"
+                type="button"
+                onclick="toggleMainPlay()"
+                aria-label="Play"
+              >
+                <i class="fas fa-play"></i>
+              </button>
+
+              <button
+                id="main-pause"
+                class="hidden"
+                type="button"
+                onclick="toggleMainPlay()"
+                aria-label="Pause"
+              >
+                <i class="fas fa-pause"></i>
+              </button>
+
+              <button type="button" onclick="stopMainAudio()" aria-label="Stop">
+                <i class="fas fa-stop"></i>
+              </button>
+            </div>
+
+            <div class="audio-track-info">
+              <span class="now-playing-label">Now Playing</span>
+              <h2 id="current-track-title">Mix 1 – Wedding Floor Fillers</h2>
+            </div>
+          </div>
+
+          <div class="audio-progress-wrap">
+            <div class="progress-bar">
+              <div class="progress-bar-fill" id="main-progress"></div>
+            </div>
+          </div>
+
+          <div class="audio-mix-list">
+            <button
+              class="mix-preview-card active"
+              data-mix="1"
+              onclick="loadMix(1)"
+              type="button"
+            >
+              <span class="mix-number">01</span>
+              <span class="mix-text">
+                <strong>Sample 1</strong>
+                <small>Everybody needs somebody</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="2"
+              onclick="loadMix(2)"
+              type="button"
+            >
+              <span class="mix-number">02</span>
+              <span class="mix-text">
+                <strong>Sample 2</strong>
+                <small>Get Lucky</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="3"
+              onclick="loadMix(3)"
+              type="button"
+            >
+              <span class="mix-number">03</span>
+              <span class="mix-text">
+                <strong>Sample 3</strong>
+                <small>This is the life</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="4"
+              onclick="loadMix(4)"
+              type="button"
+            >
+              <span class="mix-number">04</span>
+              <span class="mix-text">
+                <strong>Sample 4</strong>
+                <small>Does your mother know</small>
+              </span>
+            </button>
+
+            <button
+              class="mix-preview-card"
+              data-mix="5"
+              onclick="loadMix(5)"
+              type="button"
+            >
+              <span class="mix-number">05</span>
+              <span class="mix-text">
+                <strong>Sample 5</strong>
+                <small>Dance with me tonight</small>
+              </span>
+            </button>
+          </div>
+
+          <audio
+            id="main-audio"
+            src="./Audio/everybody-needs-somebody.mp3"
+          ></audio>
+        </div>
+      </div>
+
+      <div class="testimonial-card-wrapper media-bridge">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+
+          <blockquote class="quote-text">
+            "THE FLOOR WAS FULL ALL NIGHT LONG – WE CAN'T THANK YOU GUYS
+            ENOUGH!"
+          </blockquote>
+
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="videos-section">
+        <div class="media-videos-grid">
+          <div class="video-card large-video">
+            <iframe
+              loading="lazy"
+              src="https://www.youtube.com/embed/IaRmPOdDgTg"
+              title="Live Performance Highlight"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+            <div class="video-label">Live Wedding Set</div>
+          </div>
+
+          <div class="video-card large-video">
+            <a
+              href="https://youtu.be/Y4WlaCyHt6E"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="video-link"
+            >
+              <img
+                src="https://img.youtube.com/vi/Y4WlaCyHt6E/hqdefault.jpg"
+                alt="Promo Video"
+              />
+              <div class="play-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </a>
+
+            <div class="video-label">
+              <strong>The Mad Ass Mules – Live Wedding Promo</strong><br />
+              <span>Click to watch on YouTube</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="photos">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div class="lightbox" id="lightbox">
+        <span class="prev" onclick="changeImage(-1)">&larr;</span>
+        <img id="lightbox-img" src="" alt="Expanded gallery photo" />
+        <span class="next" onclick="changeImage(1)">&rarr;</span>
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+      </div>
+
+      <div class="media-heading">PHOTO GALLERY</div>
+
+      <div class="gallery-masonry">
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal1.jpg"
+            alt="Band performing at wedding reception"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal2.jpeg"
+            alt="Band on stage with lights and crowd"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal3.jpg"
+            alt="First dance moment captured live"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal4.jpg"
+            alt="Band members smiling during set"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal5.jpg"
+            alt="Crowd dancing to upbeat song"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal6.jpeg"
+            alt="Close-up of guitarist solo"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal7.jpg"
+            alt="Singer engaging with audience"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal8.jpeg"
+            alt="Full band setup on stage"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal9.jpg"
+            alt="Couple's special request song"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal10.jpg"
+            alt="Late-night party energy"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal11.jpg"
+            alt="Band taking a quick break"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal12.jpg"
+            alt="Confetti and celebration"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal13.jpg"
+            alt="Drummer in action"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal14.jpg"
+            alt="Group photo with happy couple"
+            loading="lazy"
+          />
+        </div>
+        <div class="gallery-item">
+          <img
+            src="./img/photos/Photo_Gal15.jpg"
+            alt="Venue lights and atmosphere"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div class="testimonials-header">
+        <h2 class="media-heading">WHAT OUR CLIENTS ARE SAYING</h2>
+      </div>
+
+      <div class="testimonial-slider-shell">
+        <button
+          class="testimonial-arrow testimonial-arrow-prev"
+          type="button"
+          aria-label="Previous testimonial"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="testimonial-viewport">
+          <div class="testimonial-track">
+            <!-- <article class="testimonial-slide active">
+              <div class="testimonial-card-modern">
+                <div class="testimonial-image-wrap">
+                  <img
+                    src="./img/testimonials/18.08.2024-25.jpg"
+                    alt="James & Jane testimonial"
+                  />
+                </div>
+
+                <div class="testimonial-content-modern">
+                  <div class="testimonial-stars-modern">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+
+                  <p class="testimonial-quote-modern">
+                    “The floor was packed all night and the atmosphere was
+                    incredible. From the first dance right through to the end of
+                    the night, everything felt effortless and full of energy.”
+                  </p>
+
+                  <div class="testimonial-meta-modern">
+                    <h3 class="testimonial-couple-modern">James &amp; Jane</h3>
+                    <span>Wedding Celebration</span>
+                  </div>
+                </div>
+              </div>
+            </article> -->
+
+            <article class="testimonial-slide">
+              <div class="testimonial-card-modern">
+                <div class="testimonial-image-wrap">
+                  <img
+                    src="./img/testimonials/AM-Party-66 - Aisling Killilea (1).jpg"
+                    alt="Aisling & Mark testimonial"
+                  />
+                </div>
+
+                <div class="testimonial-content-modern">
+                  <div class="testimonial-stars-modern">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+
+                  <p class="testimonial-quote-modern">
+                    “Absolutely brilliant from start to finish. The dance floor
+                    was never empty, the set list was perfect, and so many
+                    guests asked us afterwards where we found the band.”
+                  </p>
+
+                  <div class="testimonial-meta-modern">
+                    <h3 class="testimonial-couple-modern">
+                      Aisling &amp; Mark
+                    </h3>
+                    <span>Darver Castle 07/11/2025</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-slide">
+              <div class="testimonial-card-modern">
+                <div class="testimonial-image-wrap">
+                  <img
+                    src="./img/testimonials/Eilish_Stephen_863 - Stephen Quinn.webp"
+                    alt="Elish & Stephen Testimonail"
+                  />
+                </div>
+
+                <div class="testimonial-content-modern">
+                  <div class="testimonial-stars-modern">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+
+                  <p class="testimonial-quote-modern">
+                    “We wanted a band that could feel classy early in the
+                    evening and then really lift the room later on. You
+                    delivered exactly that and more.”
+                  </p>
+
+                  <div class="testimonial-meta-modern">
+                    <h3 class="testimonial-couple-modern">
+                      Eilish &amp; Stephen
+                    </h3>
+                    <span>Jacksons Hotel Ballybofey</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-slide">
+              <div class="testimonial-card-modern">
+                <div class="testimonial-image-wrap">
+                  <img
+                    src="./img/testimonials/Lisa & Kevin-2407 - Lisa Brennan.jpg"
+                    alt="Lisa & Kevin testimonial"
+                  />
+                </div>
+
+                <div class="testimonial-content-modern">
+                  <div class="testimonial-stars-modern">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+
+                  <p class="testimonial-quote-modern">
+                    "We had the absolute pleasure of having Mad Ass Mules play
+                    at our wedding, and they were nothing short of phenomenal.
+                    From the very first song to the final song, they brought
+                    incredible energy!
+                  </p>
+
+                  <div class="testimonial-meta-modern">
+                    <h3 class="testimonial-couple-modern">Lisa &amp; Kevin</h3>
+                    <span>Castle Leslie 5/2/2025</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button
+          class="testimonial-arrow testimonial-arrow-next"
+          type="button"
+          aria-label="Next testimonial"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="testimonial-dots" aria-label="Testimonial navigation">
+        <button
+          class="testimonial-dot active"
+          type="button"
+          data-index="0"
+        ></button>
+        <button class="testimonial-dot" type="button" data-index="1"></button>
+        <button class="testimonial-dot" type="button" data-index="2"></button>
+        <button class="testimonial-dot" type="button" data-index="3"></button>
+      </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="setlist">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div class="media-heading">SONG LIST</div>
+      <h5 class="song-sub-head">A short selection of songs we play</h5>
+
+      <div class="setlist-container">
+        <div class="song-category-card">
+          <h3 class="song-category">First Dances</h3>
+          <ul class="song-list">
+            <li>Bryan Adams - Heaven</li>
+            <li>Ed Sheeran - Thinking Out Loud</li>
+            <li>Alex Warren - Carry You Home</li>
+            <li>Teddy Swims - Still The One</li>
+            <li>Tom Odell - Grow Old With Me</li>
+            <li>Ed Sheeran - Perfect</li>
+            <li>Kodaline - The One</li>
+            <li>U2 - All I Want Is You</li>
+            <li>Waterboys/Ellie Goulding - How Long Will I Love You</li>
+            <li>Luke Combs - Forever After All</li>
+            <li>Luke Combs - Better Together</li>
+            <li>Saw Doctors - Never Mind the Strangers</li>
+            <li>The Fureys - I Will Love You</li>
+            <li>Paul Weller - You Do Something to Me</li>
+            <li>Jason Mraz - I'm Yours</li>
+            <li>The Righteous Brothers - Unchained Melody</li>
+            <li>James Arthur - Say You Won't Let Go</li>
+            <li>Eric Clapton - Wonderful Tonight</li>
+            <li>The Temptations - My Girl</li>
+            <li>Garth Brooks - The River</li>
+            <li>Picture This - Never Change</li>
+            <li>Lick the Tins - I Can’t Help Falling in Love</li>
+            <li>Picture This - Take My Hand</li>
+            <li>David Gray - The One I Love</li>
+            <li>Randy Travis - Forever and Ever, Amen</li>
+            <li>Cascada - Every Time We Touch</li>
+            <li>Bruno Mars - Marry You</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Dance</h3>
+          <ul class="song-list">
+            <li>Olly Murs - Dance with Me Tonight</li>
+            <li>The Blues Brothers - Everybody Needs Somebody</li>
+            <li>Paolo Nutini - Pencil Full of Lead</li>
+            <li>Gala - Freed from Desire</li>
+            <li>George Ezra - Shotgun</li>
+            <li>George Ezra - Blame It on Me</li>
+            <li>Richie Valens - La Bamba</li>
+            <li>Mark Ronson & Bruno Mars - Uptown Funk</li>
+            <li>Daft Punk - Get Lucky</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Floor Fillers</h3>
+          <ul class="song-list">
+            <li>John Cougar Mellencamp - Hurt so Good</li>
+            <li>Neil Diamond - Sweet Caroline</li>
+            <li>Bryan Adams - Summer of 69</li>
+            <li>Kenny Loggins - Footloose</li>
+            <li>Gala - Freed From Desire</li>
+            <li>Walk the Moon - Shut Up and Dance</li>
+            <li>Dexys Midnight Runners - Come On Eileen</li>
+            <li>Chic - Le Freak</li>
+            <li>A-Ha - Take On Me</li>
+            <li>The Killers - Mr. Brightside</li>
+            <li>Wheatus - Teenage Dirtbag</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Rock</h3>
+          <ul class="song-list">
+            <li>John Cougar Mellencamp - Hurt So Good</li>
+            <li>Bon Jovi - Living on a Prayer</li>
+            <li>AC/DC - You Shook Me All Night Long</li>
+            <li>AC/DC - Thunderstruck</li>
+            <li>Tina Turner - Proud Mary</li>
+            <li>Walk the Moon - Shut Up and Dance</li>
+            <li>The Killers - Mr. Brightside</li>
+            <li>Bryan Adams - Summer of 69</li>
+            <li>Kings of Leon - Sex on Fire</li>
+            <li>Queen - Don't Stop Me Now</li>
+            <li>Journey - Don’t Stop Believin'</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Sixties</h3>
+          <ul class="song-list">
+            <li>Elvis - Jailhouse Rock</li>
+            <li>Elvis - Suspicious Minds</li>
+            <li>The Temptations - My Girl</li>
+            <li>The Kingsmen - Louie Louie</li>
+            <li>Ike & Tina Turner - River Deep Mountain High</li>
+            <li>The Holding Company - Piece of My Heart</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Funk</h3>
+          <ul class="song-list">
+            <li>Wild Cherry - Play That Funky Music</li>
+            <li>Stevie Wonder - Superstition</li>
+            <li>Daft Punk - Get Lucky</li>
+            <li>Chic - Le Freak</li>
+            <li>The Bee Gees - Staying alive</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Jives</h3>
+          <ul class="song-list">
+            <li>Kenny Loggins — Footloose</li>
+            <li>Chubby Checker — Let’s Twist Again</li>
+            <li>Eddie Cochran — C’mon Everybody</li>
+            <li>Chuck Berry — Johnny B. Goode</li>
+            <li>Elvis Presley — Jailhouse Rock</li>
+            <li>Chuck Berry — Roll Over Beethoven</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Waltzes</h3>
+          <ul class="song-list">
+            <li>Your Wedding Day - Jimmy Buckley</li>
+            <li>The Fureys - Red Rose Cafe</li>
+            <li>The Fureys - When You Were Sweet Sixteen</li>
+            <li>Dean Martin - That's Amore</li>
+            <li>John Sheahan - The Marino Waltz</li>
+          </ul>
+        </div>
+
+        <div class="song-category-card">
+          <h3 class="song-category">Irish</h3>
+          <ul class="song-list">
+            <li>The Dubliners - Fields of Athenry</li>
+            <li>Sham Rock - Tell Me Ma </li>
+            <li>Drop Kick Murphys - Shipping Up To Boston</li>
+            <li>The Irish Descendants  - Rattlin Bog</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="FAQs">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div class="media-heading">Frequently Asked Questions</div>
+
+      <div class="faqs-container">
+        <div class="faq-section">
+          <div class="faq-item">
+            <div class="faq-question">
+              What is your band's availability?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our band is available for bookings throughout the year. Contact
+                us to check specific dates.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How long do you typically perform?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our standard performance is 2.15 - 2.30 hours. We can take a
+                break during when the tea is being served, or play through, the
+                choice is yours.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can you play music during breaks?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we provide background music during the break, let us know
+                if you have any requests, we will be more than happy to
+                accommodate you.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How long does setup and soundcheck take?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We typically need approx. 60 minutes for setup and sound check.
+                We aim to arrive well in advance to ensure everything runs
+                smoothly.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Do you offer a DJ service?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we can provide a DJ service to keep the party going after
+                our performance. This can be added to any package for an
+                additional fee.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can we see you perform live before booking?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, please contact us and we will try to arrange a date and
+                suitable location where you can view the band live.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How can I book your band?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                You can book our band by filling out the contact form on our
+                website, email us or contact us by phone.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Do you have a written contract?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, once your date has been agreed we will send you the
+                contract link via email, then simply fill it in and hit the
+                submit button and you're all set.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What happens if a band member is unavailable on the day?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We have cover for all our band members. In the event that a band
+                member is unable to attend, we will notify you ASAP. We can
+                assure you that you will have a great night as we are fully
+                prepared for events like this.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can we contact you by phone to discuss any queries we may have?
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! You can contact Shane on - 0851005374. If he can't
+                take your call, please leave a message and he'll get back to you
+                ASAP.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider section-divider-bottom">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="contactus">
+      <div class="section-divider section-divider-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 1080,0 1440,80 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <div class="contact-container">
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+
+            <div class="info">
+              <div class="information">
+                <a
+                  href="mailto:themadassmules@gmail.com"
+                  class="icon"
+                  aria-label="Email the band"
+                >
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <p>themadassmules@gmail.com</p>
+              </div>
+
+              <div class="information">
+                <a href="tel:0851005374" class="icon" aria-label="Call Shane">
+                  <i class="fas fa-phone-alt"></i>
+                </a>
+                <p>Shane: 0851005374</p>
+              </div>
+            </div>
+
+            <div class="social-media">
+              <p>Connect with us</p>
+              <div class="social-icons">
+                <a
+                  href="https://www.instagram.com/the_mad_ass_mules?igsh=Nm9ramttMmp4MDQx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@themadassmules5521"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form
+              action="https://api.staticforms.xyz/submit"
+              method="POST"
+              autocomplete="off"
+            >
+              <h3 class="title">Contact us</h3>
+
+              <!-- StaticForms config -->
+              <input
+                type="hidden"
+                name="accessKey"
+                value="sf_09cb67169d7fe90152e18a11"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Contact Form Submission - Mad Ass Mules"
+              />
+              <input type="hidden" name="replyTo" value="@" />
+              <input
+                type="hidden"
+                name="redirectTo"
+                value="http://127.0.0.1:5500/thank-you.html"
+              />
+
+              <!-- Anti-spam -->
+              <input type="text" name="honeypot" style="display: none" />
+
+              <div class="input-container">
+                <input
+                  id="contact-name"
+                  type="text"
+                  name="name"
+                  class="input"
+                  placeholder=" "
+                  required
+                />
+                <label for="contact-name">Name</label>
+              </div>
+
+              <div class="input-container">
+                <input
+                  id="contact-email"
+                  type="email"
+                  name="email"
+                  class="input"
+                  placeholder=" "
+                  required
+                />
+                <label for="contact-email">Email</label>
+              </div>
+
+              <div class="input-container">
+                <input
+                  id="contact-phone"
+                  type="tel"
+                  name="phone"
+                  class="input"
+                  placeholder=" "
+                />
+                <label for="contact-phone">Phone</label>
+              </div>
+
+              <div class="input-container textarea">
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="input"
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label for="contact-message">Your message</label>
+              </div>
+
+              <input type="submit" value="Send" class="send-btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
