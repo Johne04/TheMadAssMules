@@ -819,7 +819,7 @@ textarea,
 
 .live_recs{
   text-align: center;
-  font-size: 1.1rem;
+  border: 2px solid red;
 }
 
 .media-videos-grid {
